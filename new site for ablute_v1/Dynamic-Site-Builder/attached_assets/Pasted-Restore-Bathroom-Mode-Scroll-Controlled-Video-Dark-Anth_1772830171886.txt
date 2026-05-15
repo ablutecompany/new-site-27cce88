@@ -1,0 +1,225 @@
+Restore Bathroom Mode Scroll-Controlled Video + Dark Anthracite Background
+
+Use Anti-Break Editing Rules.
+
+Modify only the Bathroom Mode hero/background visual system.
+
+Do NOT modify:
+
+• Health Mode
+• navigation structure
+• page hierarchy
+• forms
+• language selector
+• typography system
+• CTA structure
+• internal pages.
+
+The goal is to restore and refine the original scroll-controlled opening animation effect in Bathroom Mode.
+
+OBJECTIVE
+
+Re-implement the Bathroom Mode hero video so that it behaves as a scroll-controlled product animation.
+
+The effect must create the illusion that the user’s scrolling action is what makes the ablute_ equipment open and close.
+
+This interaction is a core visual feature of the site and must be restored.
+
+VIDEO BEHAVIOUR
+
+A background video is used in Bathroom Mode.
+
+The video shows the ablute_ equipment opening.
+
+The playback must be synchronized with scroll.
+
+Required behaviour
+
+• when the user scrolls down → the video plays forward
+• when the user scrolls up → the video plays backward
+• when the user stops scrolling → the video pauses exactly at the current frame
+
+This must feel like continuous smooth scrubbing, not like broken frame jumps.
+
+The motion must be fluid and elegant.
+
+Avoid:
+
+• stuttering
+• frame-skipping feel
+• abrupt jumps between scroll positions
+• semi-interrupted playback.
+
+Preferred implementation logic:
+
+scroll position = video progress / currentTime
+
+Use smoothing / interpolation so the motion feels refined and premium.
+
+VIDEO POSITIONING
+
+The video must be visually positioned on the far right side of the screen.
+
+Requirements:
+
+• push the video as far right as possible
+• it is acceptable to crop or lose around 25% to 35% of the image
+• the visual priority is strong right alignment, not full visibility
+
+The equipment should feel partially outside the frame, creating a more cinematic composition.
+
+VIDEO ORIENTATION
+
+The video must be mirrored horizontally.
+
+This means the visual should be flipped left-to-right.
+
+After mirroring, the composition should still keep the equipment strongly anchored to the right side of the screen.
+
+LEFT-SIDE GRADIENT OVERLAY
+
+The left side of the video/image (after horizontal mirroring) must include a strong gradient fade.
+
+Requirements:
+
+• fade from visible image into dark background
+• left side must gradually transition to full dark
+• this helps the video blend into the page and improves text readability
+
+The gradient must feel soft and cinematic.
+
+Avoid hard edges.
+
+SCROLL TRANSITION
+
+As the user scrolls down and the opening sequence reaches its fully open state:
+
+• the page should continue scrolling normally
+• the site content should move upward naturally
+• the transition from animation to page content must feel continuous
+
+This must create the impression that:
+
+the user scrolls
+
+the equipment opens
+
+then the user enters deeper into the site
+
+BACKGROUND OF BATHROOM MODE
+
+The entire Bathroom Mode background must be redesigned to a very dark anthracite aesthetic.
+
+Use the attached reference image as inspiration for tone, texture and atmosphere.
+
+The agent must analyze the attached image and follow its visual feeling.
+
+Important:
+
+The final result should be darker than the reference image, but not pure black.
+
+BACKGROUND STYLE REQUIREMENTS
+
+Bathroom Mode background must be:
+
+• very dark anthracite
+• not pitch black
+• textured
+• layered with subtle gradients
+• visually rich but understated
+
+Include:
+
+• dark grey / anthracite base tones
+• soft shadows
+• subtle texture or material depth
+• low-contrast gradient transitions
+• slight nuance variation across the page.
+
+The atmosphere should feel:
+
+premium
+architectural
+industrial-luxury
+high-end technology.
+
+Avoid:
+
+• flat black backgrounds
+• empty plain darkness
+• overly glossy effects
+• obvious patterns.
+
+VISUAL REFERENCE RULE
+
+The attached anthracite image is the reference for the Bathroom Mode atmosphere.
+
+The AI must study it for:
+
+• tonal depth
+• texture language
+• material feeling
+• gradient behaviour.
+
+Then create a version that is:
+
+• darker
+• more immersive
+• more premium
+• compatible with white typography and blue accents.
+
+HERO COMPOSITION
+
+Bathroom Mode hero must preserve:
+
+• text on the left
+• product video/image on the right
+
+But the right-side visual must now feel more cinematic and better integrated into the background.
+
+The user should immediately perceive:
+
+• unique product design
+• motion
+• architectural transformation
+• premium dark environment.
+
+PERFORMANCE + SMOOTHNESS
+
+The scroll/video system must be optimized so the interaction remains smooth.
+
+Suggestions:
+
+• use requestAnimationFrame or equivalent smooth update logic
+• preload or optimize the video
+• ensure smooth currentTime interpolation
+• avoid lag when reversing playback.
+
+If needed, use easing between scroll delta and video currentTime to improve continuity.
+
+PRESERVE EXISTING CONTENT
+
+Do not replace the Bathroom Mode text, sections or CTA structure.
+
+Only restore and improve:
+
+• video scroll behaviour
+• video positioning
+• gradient blending
+• overall dark anthracite background atmosphere.
+
+FINAL RESULT
+
+Bathroom Mode must feel like a cinematic product reveal environment where:
+
+• scrolling opens and closes the ablute_ equipment
+• the video sits strongly on the right
+• the left side fades into darkness
+• the entire page has a rich dark anthracite atmosphere.
+
+The result should feel:
+
+refined
+smooth
+premium
+Apple/Tesla-level product storytelling.

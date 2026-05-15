@@ -1,0 +1,415 @@
+CONTINUATION PROMPT — Health Mode Architecture
+
+This section defines the structure, navigation logic and content architecture of the Health Mode of the ablute_ website.
+
+Health Mode represents the medical and scientific dimension of the platform, focusing on preventive health monitoring, biosensing technologies and clinical applications.
+
+The visual design of Health Mode must follow a clean medical interface style, similar to digital health platforms and medical device companies.
+
+Key design characteristics:
+
+• light backgrounds
+• clinical blue and teal palette
+• soft gradients
+• medical dashboard visual elements
+• structured information cards
+
+The layout style should resemble the attached interface examples, including biomarker dashboards, health score cards and medical UI blocks.
+
+MAIN HEALTH PAGE
+
+The Health Mode main page introduces the concept of transforming bathrooms into health interfaces.
+
+Headline concept:
+
+Transforming bathrooms into health interfaces
+
+Subheadline:
+
+The ablute_ platform integrates advanced sensing technology to enable continuous, non-invasive health monitoring.
+
+Visual element:
+
+A health dashboard style mobile interface showing biomarker insights.
+
+The mobile interface must be interactive.
+
+When clicked:
+
+It opens a page inviting users to download the mobile application.
+
+If the application is not yet available, display a message:
+
+"The application is not yet available. Leave your email to be notified when it becomes available."
+
+Include a simple form:
+
+Name
+Email
+
+FLOATING TECHNOLOGY ELEMENTS
+
+Floating UI elements appear near the mobile interface.
+
+Example:
+
+AI
+Lab-grade Technology
+
+When clicking:
+
+AI → opens the section Product / AI
+
+Lab-grade Technology → opens Product / Biosensing
+
+These floating UI elements visually reinforce the platform architecture.
+
+MAIN HEALTH NAVIGATION
+
+Health Mode navigation tabs:
+
+Product
+Science
+For Who
+Areas
+Client Area
+
+Additionally:
+
+Persistent CTA visible on all tabs:
+
+Host a Pilot
+
+PRODUCT TAB
+
+This section explains the technology architecture behind ablute_.
+
+Subsections:
+
+Biosensing Technology & Methods
+AI
+
+Biosensing Technology & Methods
+
+Explain the scientific foundation of the sensing system.
+
+Topics include:
+
+biosensing technology
+detection principles
+signal processing
+biomarker detection strategies
+
+The explanation should be scientific but accessible.
+
+Use diagrams showing:
+
+biosensor interaction
+signal acquisition
+data processing pipeline.
+
+AI
+
+Explain how artificial intelligence processes the biomarker data.
+
+Topics may include:
+
+signal interpretation
+pattern recognition
+health insight generation
+longitudinal monitoring.
+
+The goal is to explain how raw biosensor signals are transformed into health insights.
+
+SCIENCE TAB
+
+Title:
+
+Science Behind ablute_
+
+This section explains the scientific ecosystem and biomedical foundations of the technology.
+
+Introductory paragraph should mention:
+
+biosensors
+urinary biomarkers
+biomedical engineering
+preventive health monitoring.
+
+Also include:
+
+Scientific advisory board members (with ORCID links)
+
+Scientific collaborations with institutions such as research centers or universities.
+
+Biomarkers & Health Insights
+
+Explain the biomarkers analyzed by the system.
+
+Content format:
+
+Biomarker cards.
+
+Each card may include:
+
+biomarker name
+clinical relevance
+associated health insights.
+
+Example visual support:
+
+small diagrams
+references to scientific literature.
+
+Goal:
+
+Demonstrate biomedical depth and scientific credibility.
+
+Research & Publications
+
+This section lists scientific outputs.
+
+Content includes:
+
+peer-reviewed articles
+conference presentations
+technical white papers.
+
+Format:
+
+Title
+Journal or conference
+Year
+DOI or PDF link.
+
+This reinforces institutional scientific credibility.
+
+Science Highlights
+
+This section curates relevant scientific developments related to the ablute_ field.
+
+Examples:
+
+biomarker discoveries
+epidemiology trends
+non-invasive diagnostics
+changes in health policies.
+
+Each article includes share buttons:
+
+LinkedIn
+WhatsApp
+Instagram
+Twitter.
+
+Also include a call-to-action:
+
+Subscribe to scientific updates.
+
+Form fields:
+
+Name
+Email
+Areas of interest (checkbox).
+
+Topics may include:
+
+biomarkers
+preventive health
+digital diagnostics
+health technology.
+
+Validation & Studies
+
+This section presents experimental evidence and validation work.
+
+Examples include:
+
+pilot programs
+biosensor validation studies
+comparisons with laboratory methods
+performance metrics
+user surveys and studies.
+
+Content format:
+
+graphs
+performance indicators
+short study summaries.
+
+When pilot programs are mentioned, include a direct link to the Host a Pilot form.
+
+Goal:
+
+Demonstrate technological validation and real-world testing.
+
+FOR WHO TAB
+
+This section explains the target users of the platform.
+
+Subsections:
+
+Users
+Healthcare Providers
+Wellness & Preventive Health
+Insurance Companies
+
+Users
+
+Focus on individual health benefits.
+
+Examples:
+
+passive health monitoring
+early detection of physiological changes
+longitudinal health insights.
+
+Possible blocks:
+
+Preventive Health Monitoring
+Non-invasive Diagnostics
+Personal Health Insights.
+
+Healthcare Providers
+
+Divide visually into three groups:
+
+Hospitals & Clinics
+Physicians / Specialists
+Primary Care
+
+Explain use cases such as:
+
+preventive triage
+remote monitoring
+longitudinal biomarker data.
+
+Include a call-to-action:
+
+Request a Demo.
+
+The form asks whether the visitor represents:
+
+Physician
+Clinic / Hospital
+Primary Care Provider.
+
+Wellness & Preventive Health
+
+Focus on longevity and wellness markets.
+
+Examples:
+
+longevity clinics
+fitness and wellness centers
+corporate health programs.
+
+Possible benefits:
+
+oxidative stress monitoring
+metabolic insights
+recovery monitoring
+personalized prevention.
+
+Insurance Companies
+
+Explain risk management potential.
+
+Examples:
+
+early risk detection
+preventive population health programs
+healthcare cost reduction.
+
+Example statement:
+
+Preventive monitoring can support risk stratification and promote healthier populations.
+
+AREAS TAB
+
+Explain the physiological systems monitored by the platform.
+
+Introductory sentence:
+
+The ablute_ platform enables biomarker-based insights across multiple physiological systems.
+
+Subsections:
+
+Cardiovascular Health
+Renal Health
+Metabolic Health
+Longevity & Healthy Aging
+
+Each section includes:
+
+Focus
+What it can support
+Examples of biomarkers.
+
+CLIENT AREA
+
+Secure login page.
+
+Fields:
+
+Username
+Password.
+
+If login fails:
+
+Display message:
+
+"Invalid username or password"
+
+in red text.
+
+HOST A PILOT (GLOBAL CTA)
+
+This call-to-action appears on every Health Mode page.
+
+Purpose:
+
+Invite institutions to host pilot installations.
+
+Form fields include:
+
+Institution name
+Contact person
+Email
+Country
+Type of institution:
+
+Hospital
+Clinic
+Research center
+University
+Wellness center.
+
+FREE CREDITS PAGE
+
+Page where users can receive free credits to speak with a physician.
+
+Form includes:
+
+Name
+Email.
+
+If no physician is available:
+
+Display message:
+
+"No physician available at the moment. Please wait or schedule an appointment."
+
+If scheduling is selected:
+
+Open a calendar interface with available times.
+
+HEALTH MODE GOAL
+
+The Health Mode must communicate three key messages:
+
+ablute_ is:
+
+• a biosensing platform
+• a preventive health monitoring system
+• a bridge between everyday life and clinical diagnostics.

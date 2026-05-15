@@ -1,0 +1,139 @@
+Use the Anti-Break editing rules.
+
+Modify only the typography system used in Bathroom Mode.
+
+Do NOT modify layout, components, navigation structure or functionality.
+
+Do NOT modify Health Mode.
+
+TYPOGRAPHY REFERENCE
+
+Analyze the attached reference image carefully.
+
+The typography used in the image defines the visual style that must be applied across the entire Bathroom Mode.
+
+Replicate:
+
+• font style
+• font weight hierarchy
+• letter spacing
+• heading proportions
+• line spacing
+• text contrast
+
+The goal is to reproduce the clean, premium technology typography style visible in the reference.
+
+PRIMARY FONT
+
+Use a modern, geometric sans-serif font similar to the one in the reference image.
+
+Recommended typefaces:
+
+• Inter
+• Satoshi
+• SF Pro
+• Neue Haas Grotesk
+• Helvetica Now
+
+Avoid decorative or rounded fonts.
+
+Typography must feel:
+
+minimal
+premium
+technology-oriented.
+
+HEADING STYLE
+
+Main headline (H1):
+
+Very large
+Thin or light weight
+High visual impact
+
+Line spacing should be tight but readable.
+
+Example structure:
+
+Large stacked headline similar to:
+
+"The Next Infrastructure of Health"
+
+This headline should occupy significant visual space and create a strong hierarchy.
+
+SUBHEADINGS
+
+Subheadline text should be smaller but still elegant.
+
+Characteristics:
+
+medium weight
+high readability
+balanced spacing.
+
+Example structure:
+
+Autonomous hygiene
+Radical water efficiency
+Health intelligence
+
+FEATURE TEXT
+
+Feature items must follow a lighter and cleaner style.
+
+Example structure:
+
+• 100% autonomous cleaning
+• ultra-low water consumption
+• integrated sensing technology
+• future-ready health platform
+
+These items should use:
+
+small-medium font size
+medium weight
+clear spacing.
+
+BUTTON TYPOGRAPHY
+
+Buttons must follow the same typography system.
+
+Primary button:
+
+Medium weight
+Clean uppercase or sentence case
+Good spacing inside the button.
+
+Avoid bold heavy text.
+
+GLOBAL TYPOGRAPHY RULE
+
+All text elements inside Bathroom Mode must follow this typography system.
+
+This includes:
+
+Hero headline
+Subheadings
+Feature lists
+Section titles
+Buttons
+Captions
+
+The typography must be consistent across the entire Bathroom Mode interface.
+
+HEALTH MODE TYPOGRAPHY
+
+Do not modify the typography of Health Mode in this step.
+
+Health Mode uses a different visual style, more similar to medical dashboards.
+
+FINAL RESULT
+
+Bathroom Mode typography must look:
+
+clean
+minimal
+high-end
+similar to modern technology product websites.
+
+The visual result should resemble the typography style seen in the reference image.

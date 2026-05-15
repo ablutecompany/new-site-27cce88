@@ -1,0 +1,165 @@
+PROMPT — Global Language Selector (Multilingual System)
+
+Use Anti-Break Editing Rules.
+
+Modify only the language selection functionality of the website.
+
+Do NOT modify:
+
+• page layout
+• typography system
+• navigation structure
+• animations
+• Bathroom Mode / Health Mode toggle
+• existing content structure.
+
+OBJECTIVE
+
+Implement a global language selector that allows users to change the language of the entire website.
+
+Selecting a language must update all textual content across the website, including:
+
+• homepage
+• Product pages
+• Company pages
+• Projects pages
+• Health Mode pages
+• forms
+• buttons
+• menus
+• error messages.
+
+The language selection must apply to the full interface.
+
+LANGUAGES
+
+The site must support the following languages:
+
+Portuguese (Portugal)
+English
+French
+German
+Italian
+Arabic
+
+Important rule:
+
+Portuguese must always be Portuguese from Portugal (pt-PT).
+
+Avoid Brazilian Portuguese.
+
+LANGUAGE SELECTOR POSITION
+
+Place the language selector in the top header navigation.
+
+Position:
+
+between the navigation separators and the mode selector.
+
+Header structure (left to right):
+
+Logo — ablute_
+Product
+Company
+Projects
+Language Selector
+Mode Selector (Bathroom / Health)
+CTA button (Join the Waiting List)
+
+LANGUAGE SELECTOR ICON
+
+Use a simple monochrome icon representing language selection.
+
+Recommended icon style:
+
+• globe icon
+• minimal language symbol.
+
+The icon must be:
+
+• clean
+• minimal
+• monochromatic.
+
+ICON COLOR RULE
+
+The icon color must adapt to the mode:
+
+Bathroom Mode → light icon (white or light grey)
+
+Health Mode → dark icon (dark grey or black)
+
+This ensures the icon remains visible against the background.
+
+LANGUAGE MENU
+
+Clicking the icon opens a dropdown menu.
+
+Menu items:
+
+Português (Portugal)
+English
+Français
+Deutsch
+Italiano
+العربية
+
+Each item must display the language name in its native writing.
+
+LANGUAGE SWITCH BEHAVIOUR
+
+When a language is selected:
+
+• the entire website content must update to that language
+• navigation labels must change
+• page titles must change
+• all buttons and form fields must update
+• error messages and system text must update.
+
+The page must reload or dynamically update the content in the selected language.
+
+LANGUAGE PERSISTENCE
+
+The selected language must persist.
+
+Store preference using:
+
+• browser local storage or
+• cookies.
+
+This ensures that when the user returns to the site the language remains selected.
+
+ARABIC SUPPORT
+
+Arabic requires right-to-left layout compatibility (RTL).
+
+When Arabic is selected:
+
+• text must switch to RTL direction
+• interface alignment must adapt correctly.
+
+Do not break layout when switching to RTL.
+
+DESIGN CONSISTENCY
+
+The language selector must follow the same design system as the rest of the website.
+
+Maintain:
+
+• typography hierarchy
+• spacing
+• UI styling
+• button aesthetics.
+
+The dropdown menu should feel native to the interface, not like a third-party widget.
+
+FINAL OBJECTIVE
+
+The language selector must provide a smooth multilingual experience, allowing the ablute_ website to communicate clearly with an international audience.
+
+The system must feel:
+
+clean
+intuitive
+professional
+globally accessible.

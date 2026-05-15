@@ -1,0 +1,404 @@
+SITE BLUEPRINT — ablute_ WEBSITE
+Site Type
+
+High-end deep-tech product website.
+
+Company: ablute_
+
+Domain focus:
+
+• sanitation technology
+• environmental efficiency
+• preventive health infrastructure
+
+The site must feel:
+
+premium
+minimalist
+engineering-driven
+scientifically credible
+
+GLOBAL SITE MODES
+
+The homepage supports two visual modes.
+
+Mode 1
+
+Bathroom Mode
+(product + design perspective)
+
+Mode 2
+
+Health Mode
+(health monitoring + medical technology perspective)
+
+Mode switching changes:
+
+• visual palette
+• emphasis of content
+• call-to-action
+• tone of communication
+
+The core navigation structure remains identical.
+
+GLOBAL NAVIGATION
+
+Header layout (left → right):
+
+Logo: ablute_
+
+Typography: Comfortaa
+White text
+Underscore "_" in light blue.
+
+Navigation items:
+
+Product
+Company
+Projects
+
+Each navigation item opens a dedicated page.
+
+Mode Selector:
+
+Toggle button.
+
+Bathroom Mode
+Health Mode
+
+Primary CTA
+
+Bathroom Mode:
+
+Join the Waiting List
+
+Small subtext below:
+
+No upfront payment required.
+
+Health Mode:
+
+Apply for a Pilot.
+
+HOMEPAGE STRUCTURE
+
+The homepage introduces the platform.
+
+Sections:
+
+Hero
+Product Scroll Animation
+Features
+Technology Overview
+Environmental Impact
+Partnership Invitation
+
+HERO SECTION
+
+Large headline:
+
+The Next Infrastructure of Health
+
+Subheadline:
+
+Autonomous hygiene
+Radical water efficiency
+Health intelligence
+
+Right side:
+
+product render in modern bathroom environment.
+
+Lighting:
+
+cinematic soft lighting.
+
+Edges of the image should fade into the background.
+
+SCROLL PRODUCT ANIMATION
+
+Immediately after the hero section:
+
+A scroll-controlled animation.
+
+Behavior:
+
+scroll down → product opens
+scroll up → animation reverses
+scroll stop → animation pauses
+
+Animation represents:
+
+a transforming sanitation device.
+
+Edges of animation blend into page background.
+
+When the animation finishes, normal page scrolling continues.
+
+FEATURES SECTION
+
+Grid of feature cards.
+
+Each card includes:
+
+icon
+title
+short description.
+
+Example features:
+
+Autonomous Cleaning
+Ultra-Low Water Consumption
+Integrated Health Sensing
+Future Infrastructure Platform.
+
+Cards appear with subtle animation on scroll.
+
+PRODUCT PAGE
+
+Opening Product loads a new page.
+
+This page contains a secondary navigation bar.
+
+Subsections:
+
+Technology
+Product Sheet
+Safety & Compliance
+Development Stages
+
+Product → Technology
+
+Purpose:
+
+Explain how ablute_ works.
+
+Topics:
+
+Water Efficiency System
+Intelligent Detection
+Washing Modes
+Usage Modes
+
+Visual support:
+
+technical diagrams
+system illustrations.
+
+Product → Product Sheet
+
+Technical overview section.
+
+Includes:
+
+technical drawing style illustration.
+
+Download button:
+
+Download Technical Specification (PDF)
+
+PDF contains:
+
+dimensions
+installation requirements
+technical parameters.
+
+Product → Safety & Compliance
+
+Explain system safety design.
+
+Topics:
+
+Electrical Safety
+Mechanical Safety
+User Protection
+Technical Compliance.
+
+Examples:
+
+12V low voltage operation
+obstruction detection system
+mechanical protection systems.
+
+Product → Development Stages
+
+Show development progression.
+
+Stages:
+
+Concept Development
+Engineering Prototype
+Pilot Demonstration
+Pre-Industrial Model
+Commercial Deployment.
+
+COMPANY PAGE
+
+Purpose:
+
+Present the organization behind ablute_.
+
+Subsections:
+
+Mission & Values
+Team
+Certifications.
+
+Company → Mission & Values
+
+Explain company purpose.
+
+Themes:
+
+environmental sustainability
+engineering excellence
+preventive health innovation.
+
+Company → Team
+
+Sections:
+
+Founders
+Core Team
+Advisers
+Institutional Investors.
+
+Founder cards contain:
+
+photo
+short bio
+LinkedIn icon
+ORCID icon.
+
+Team cards contain:
+
+photo
+name
+role.
+
+Company → Certifications
+
+Display institutional recognition.
+
+Examples:
+
+innovation programs
+research funding
+technology awards.
+
+Use institutional logos when available.
+
+PROJECTS PAGE
+
+Purpose:
+
+Present collaborative ecosystem.
+
+Subsections:
+
+Consortium Projects
+Partners
+Affiliations.
+
+Projects → Consortium Projects
+
+Show collaborative innovation initiatives.
+
+Each project card includes:
+
+project name
+description
+role of ablute_.
+
+Projects → Partners
+
+Grid of partner logos.
+
+Categories may include:
+
+research partners
+technology partners
+industrial partners.
+
+Each logo links to partner website.
+
+Projects → Affiliations
+
+Display organizations where ablute_ participates.
+
+Examples:
+
+innovation clusters
+health technology ecosystems
+industry associations.
+
+HEALTH MODE DESIGN
+
+Health Mode shifts visual tone.
+
+Design characteristics:
+
+lighter background
+clinical blue palette
+medical interface aesthetics.
+
+Content emphasizes:
+
+health monitoring
+biomarker sensing
+preventive healthcare.
+
+Primary CTA:
+
+Apply for a Pilot.
+
+VISUAL DESIGN PRINCIPLES
+
+The website must resemble modern technology brands.
+
+Inspirations:
+
+Apple
+Nothing
+Tesla
+advanced medical device companies.
+
+Design rules:
+
+minimal layout
+large typography
+smooth transitions
+high contrast
+clean UI.
+
+LANGUAGE SYSTEM
+
+Website must support multiple languages.
+
+Primary language:
+
+English.
+
+Additional languages:
+
+Portuguese
+French
+German
+Spanish
+Italian
+Arabic.
+
+Language switcher must translate:
+
+interface
+content.
+
+UX OBJECTIVE
+
+Visitors should understand three things:
+
+ablute_ is:
+
+• a next-generation sanitation platform
+• an environmental efficiency technology
+• a future infrastructure for preventive health monitoring.

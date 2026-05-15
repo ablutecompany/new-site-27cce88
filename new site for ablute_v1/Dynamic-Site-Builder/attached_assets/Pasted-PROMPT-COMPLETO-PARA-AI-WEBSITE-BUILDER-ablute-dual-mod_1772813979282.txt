@@ -1,0 +1,382 @@
+PROMPT COMPLETO PARA AI WEBSITE BUILDER
+
+(ablute_ dual-mode site)
+
+Project
+
+Design and build the website for ablute_, an intelligent sanitation platform.
+
+The site must operate in two visual and conceptual modes:
+
+Bathroom Mode
+
+Health Mode
+
+The two modes represent two different narratives of the same product.
+
+Bathroom Mode communicates:
+
+• architecture
+• product design
+• water efficiency
+• autonomous cleaning
+
+Health Mode communicates:
+
+• preventive health monitoring
+• biomarker sensing
+• medical analytics
+• scientific credibility
+
+The user must be able to switch modes via a mode toggle button in the header.
+
+Global Header
+
+Sticky transparent header.
+
+Layout left → right:
+
+Logo
+
+ablute_
+
+Typography:
+
+Comfortaa
+logo text white
+underscore "_" light blue
+
+Navigation
+
+Minimal links:
+
+Product
+Company
+Projects
+
+No hover effects.
+
+Clean typography.
+
+Mode Switch
+
+Toggle button:
+
+Bathroom Mode / Health Mode
+
+Appearance:
+
+segmented selector style
+soft rounded rectangle
+
+CTA Button
+
+Primary CTA:
+
+Join the Waiting List
+
+Below the button (very small text):
+
+No upfront payment required
+
+Button style:
+
+rounded
+modern
+blue-cyan gradient
+
+MODE 1
+Bathroom Mode
+
+Bathroom Mode is the default landing experience.
+
+The visual identity is:
+
+dark
+futuristic
+architectural
+premium product
+
+Background:
+
+very dark blue / black gradient.
+
+Hero Section
+
+Left side:
+
+Headline:
+
+The Next Infrastructure of Health
+
+Subtext lines:
+
+Autonomous hygiene
+Radical water efficiency
+Health intelligence
+
+Below:
+
+feature bullets
+
+• 100% autonomous cleaning
+• ultra-low water consumption
+• integrated sensing technology
+• future-ready health platform
+
+Buttons:
+
+Join the Waiting List
+Discover Health Mode
+
+Right side:
+
+cinematic render of ablute_ toilet inside a modern bathroom environment.
+
+The toilet must look premium and architectural.
+
+Lighting:
+
+soft dramatic lighting.
+
+Edges of the image must be darkened with vignette blending into the page background.
+
+Scroll-Controlled Product Animation
+
+When user scrolls down:
+
+A product opening animation video plays.
+
+The animation shows:
+
+the equipment opening mechanically.
+
+Important behavior:
+
+Scroll down → video moves forward
+Scroll up → video reverses
+Stop scrolling → video pauses
+
+This is scroll-synchronised playback.
+
+Implementation concept:
+
+scroll position = video time.
+
+The image/video must:
+
+blend with background
+dark gradient edges
+cinematic lighting
+
+Scroll Transition
+
+When the opening animation reaches the fully open state:
+
+the page begins to scroll normally downward.
+
+This creates the illusion that:
+
+the user opened the device
+and then enters the product details.
+
+Features Section
+
+After the opening animation finishes, the site reveals feature cards.
+
+Style reference:
+
+dark cards like in images b21 / dark UI cards.
+
+Cards must contain:
+
+icon
+title
+description
+
+Examples:
+
+100% Autonomous Cleaning
+Ultra-Low Water Consumption
+Integrated Sensing Technology
+Future-Ready Health Platform
+
+Cards glow slightly on hover.
+
+Background remains dark.
+
+Bathroom Mode Story Sections
+
+Below features, additional sections explain:
+
+Design
+
+Explain the retractable architecture.
+
+Key concept:
+
+The entire bowl moves.
+
+The system retracts inside a 30cm wall cavity.
+
+Autonomous Cleaning
+
+Explain robotic sanitation system.
+
+No manual cleaning.
+
+Water Efficiency
+
+Explain radical water reduction.
+
+Show comparison bars.
+
+Traditional toilet vs ablute_.
+
+MODE 2
+Health Mode
+
+Health Mode switches to a clean medical interface.
+
+Style reference:
+
+the images labelled a12.
+
+Design characteristics:
+
+white background
+soft blue gradients
+medical UI components
+card layouts
+
+This mode must feel like:
+
+• health platform
+• clinical dashboard
+• preventive healthcare
+
+Health Mode Hero
+
+Headline:
+
+A Sanita que Analisa a Sua Saúde
+
+Subheadline:
+
+The ablute_ system performs non-invasive urine analysis and continuous health monitoring.
+
+Buttons:
+
+Learn More
+View Demo
+
+Health Monitoring Illustration
+
+Large illustration of a mobile health dashboard.
+
+Example metrics shown:
+
+Health Score
+Hydration
+Metabolism
+Renal Health
+Overall Balance
+
+Bars and percentages visible.
+
+Health Features Grid
+
+Cards like in image a121.
+
+Examples:
+
+Holistic Analysis
+
+Snapshot of your health in a single moment.
+
+Personalized Reports
+
+Insights tailored to your body.
+
+Non-Invasive Monitoring
+
+No needles. No samples.
+
+Real-Time Results
+
+Instant feedback.
+
+Sustainability Section
+
+Headline:
+
+A Sanita Mais Eficiente do Mundo
+
+Content:
+
+ablute_ uses only 0.3L of water per flush.
+
+Key stats:
+
+90% water savings
+24/7 monitoring
+0.3L per flush
+
+Visual element:
+
+comparison chart:
+
+Traditional toilet
+Efficient toilet
+ablute_
+
+Health Mode Tone
+
+This section must communicate:
+
+• medical credibility
+• preventive healthcare
+• research potential
+
+Not futuristic marketing.
+
+More clean, professional, health-tech.
+
+Motion Design
+
+Animations must be subtle.
+
+Use:
+
+GSAP or equivalent.
+
+Examples:
+
+card reveal
+fade transitions
+mode switch transition
+scroll progress indicator
+
+UX Goals
+
+The site must communicate that ablute_ is:
+
+• a premium product
+• an infrastructure innovation
+• a health monitoring platform
+
+The user must feel:
+
+this is not a gadget
+
+this is a new category of infrastructure.
+
+Key Emotional Outcome
+
+Bathroom Mode:
+
+"This is the most advanced toilet ever built."
+
+Health Mode:
+
+"This could transform preventive healthcare."

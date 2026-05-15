@@ -1,0 +1,324 @@
+PROMPT — Floating Utility Menu (Client / Partners / Investors / Contacts)
+
+Use Anti-Break Editing Rules.
+
+Modify only the utility access system of the website by implementing a floating utility menu button.
+
+Do NOT modify:
+
+• homepage hero section
+• typography system
+• product animations
+• main navigation (Product / Company / Projects)
+• Bathroom Mode / Health Mode switch
+• layout of existing sections.
+
+OBJECTIVE
+
+Create a floating utility menu system that provides access to:
+
+• client area
+• partners & suppliers
+• investors
+• contacts.
+
+This menu must function as a secondary access interface, independent from the main navigation.
+
+FLOATING MENU BUTTON
+
+The menu must appear as a floating fixed button.
+
+Position
+
+bottom-right corner of the screen
+
+The button must remain visible during:
+
+• scroll down
+• scroll up
+• page transitions
+• section animations.
+
+VISUAL STYLE
+
+The floating button must be highly visible regardless of background.
+
+Requirements:
+
+• circular or rounded button
+• premium minimal design
+• strong contrast
+• subtle shadow or glow
+• modern technology aesthetic.
+
+The button must remain visible over:
+
+• dark sections
+• light sections
+• image backgrounds
+• animated sections.
+
+DEFAULT STATE
+
+Default state shows only the icon.
+
+The icon should resemble a minimal menu / utility icon.
+
+Example:
+
+three horizontal lines
+or modern minimal grid icon.
+
+INTERACTION BEHAVIOUR
+
+The button works as a toggle.
+
+Click once:
+
+open menu panel.
+
+Click again:
+
+close menu panel.
+
+When closed:
+
+only the floating icon remains visible.
+
+PANEL ANIMATION
+
+When opened, the panel must appear as a roll-up utility panel.
+
+Animation style:
+
+• smooth expansion from the floating button
+• modern UI motion
+• fast but elegant transition.
+
+The panel must feel like a utility drawer, not a full-screen menu.
+
+PANEL CONTENT
+
+Menu items:
+
+Área Cliente
+Parceiros e Fornecedores
+Investidores
+Contactos
+
+Each item triggers a different behaviour.
+
+ITEM 1 — ÁREA CLIENTE
+
+Clicking this item opens a login modal window.
+
+Login Fields
+
+Nome
+Número de Cliente ou Número de Contrato
+
+Primary button:
+
+Entrar
+
+Invalid Login Message
+
+If login is invalid show:
+
+"Nº cliente ou contrato inválido.
+Esta área é reservada a clientes existentes.
+
+Se julga que existe algum problema com o seu login, envie-nos uma mensagem."
+
+Technical Support Button
+
+Button:
+
+Pedir Apoio Técnico
+
+Clicking opens support form.
+
+Support Form Fields
+
+Nome
+Email
+Número de Cliente ou Contrato
+Mensagem
+
+Submit button:
+
+Enviar pedido de apoio
+
+After submission show message:
+
+"A sua mensagem foi enviada.
+A nossa equipa entrará em contacto consigo brevemente."
+
+ITEM 2 — PARCEIROS E FORNECEDORES
+
+Clicking opens a dedicated overlay page.
+
+Include close button (X).
+
+Content — Partners & Suppliers
+
+Title:
+
+Parcerias Tecnológicas e Industriais
+
+Intro:
+
+ablute_ desenvolve a sua tecnologia em colaboração com parceiros industriais, fornecedores especializados e empresas tecnológicas.
+
+Estamos interessados em entidades que contribuam para:
+
+• desenvolvimento tecnológico
+• integração de sistemas
+• produção industrial
+• fornecimento de componentes especializados.
+
+Supplier Categories
+
+Tecnologia e Sensores
+Componentes Eletrónicos
+Microfluídica
+Nanotecnologia
+Software e Inteligência Artificial
+Produção Industrial.
+
+CTA
+
+Button:
+
+Propor Parceria
+
+Partnership Form
+
+Nome da empresa
+Website
+País
+Área de especialização
+Mensagem
+
+Submit button.
+
+ITEM 3 — INVESTIDORES
+
+Clicking opens Investor Information Page (overlay).
+
+Include close button (X).
+
+Content — Investors
+
+Title:
+
+Investir na próxima geração de infraestruturas de saúde.
+
+Intro:
+
+ablute_ está a desenvolver uma nova categoria tecnológica que combina eficiência ambiental, engenharia sanitária avançada e monitorização preventiva da saúde.
+
+Platform Highlights
+
+• infraestrutura sanitária inteligente
+• biossensores integrados
+• monitorização contínua de biomarcadores
+• plataforma escalável para múltiplos setores.
+
+Applications:
+
+• residências
+• clínicas e hospitais
+• centros de longevidade
+• programas de saúde preventiva.
+
+CTA
+
+Button:
+
+Solicitar Investor Brief
+
+Investor Form
+
+Nome
+Empresa ou Fundo
+Email
+Área de interesse
+Mensagem.
+
+ITEM 4 — CONTACTOS
+
+Clicking opens Contact Page Panel.
+
+Include close button (X).
+
+Contact Page Content
+
+Title:
+
+Entrar em contacto com a equipa ablute_
+
+Intro:
+
+Para informações comerciais, parcerias, imprensa ou suporte técnico utilize o formulário abaixo.
+
+Contact Form
+
+Nome
+Email
+Assunto
+
+Dropdown options:
+
+Pedido de informação
+Parcerias
+Investidores
+Suporte técnico
+Imprensa
+
+Mensagem
+
+Submit button:
+
+Enviar mensagem
+
+PANEL CLOSE BEHAVIOUR
+
+The panel must close when:
+
+• clicking the floating menu button again
+• clicking the X icon
+• optionally clicking outside the panel.
+
+After closing:
+
+the floating button remains visible.
+
+DESIGN CONSISTENCY
+
+The floating utility menu must follow the ablute_ design system.
+
+Maintain:
+
+• typography hierarchy
+• spacing system
+• UI components
+• color palette.
+
+The menu must feel native to the interface, not an external widget.
+
+FINAL OBJECTIVE
+
+The floating utility menu provides persistent access to key interactions:
+
+• client support
+• partnership opportunities
+• investor relations
+• contact communication.
+
+The experience must feel:
+
+minimal
+premium
+modern
+consistent with the ablute_ platform identity.

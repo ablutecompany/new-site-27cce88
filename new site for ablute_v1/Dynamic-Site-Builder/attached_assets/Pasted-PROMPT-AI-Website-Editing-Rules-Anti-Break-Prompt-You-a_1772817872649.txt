@@ -1,0 +1,153 @@
+PROMPT — AI Website Editing Rules (Anti-Break Prompt)
+
+You are modifying an existing website project.
+
+Your task is to update or extend specific sections without breaking or rewriting the rest of the website.
+
+Follow these strict rules.
+
+RULE 1 — PRESERVE EXISTING STRUCTURE
+
+Do NOT remove, rewrite or reorganize existing sections unless explicitly requested.
+
+The following elements must always remain intact:
+
+• global navigation
+• page hierarchy
+• mode switching (Bathroom Mode / Health Mode)
+• section order
+• design language
+
+Only modify the specific section requested.
+
+RULE 2 — NEVER DELETE FEATURES
+
+If a new instruction conflicts with an existing feature:
+
+Do NOT delete the existing feature.
+
+Instead:
+
+• adapt the implementation
+• extend the layout
+• integrate the new feature into the existing system.
+
+RULE 3 — MODIFY ONLY TARGETED COMPONENTS
+
+Before making changes:
+
+Identify the section being edited.
+
+Limit modifications to that section only.
+
+Leave all other components untouched.
+
+Example:
+
+If editing Health Mode → Science tab, do not modify:
+
+• homepage
+• Bathroom Mode
+• Product page
+• navigation layout.
+
+RULE 4 — KEEP VISUAL CONSISTENCY
+
+All new elements must follow the same visual system:
+
+• typography hierarchy
+• color palette
+• spacing
+• component style
+• animation style
+
+Do not introduce inconsistent design elements.
+
+RULE 5 — EXTEND, DO NOT REBUILD
+
+When new sections are requested:
+
+Add them as extensions of the current layout, not as replacements.
+
+Avoid rebuilding entire pages.
+
+Instead:
+
+• insert sections
+• add components
+• expand navigation.
+
+RULE 6 — DO NOT SIMPLIFY ARCHITECTURE
+
+Never reduce the site structure.
+
+Do not remove tabs, navigation items or pages unless explicitly instructed.
+
+If complexity increases, expand the structure carefully.
+
+RULE 7 — FOLLOW REFERENCE IMAGES
+
+When design reference images are provided:
+
+Analyze them carefully.
+
+Replicate:
+
+• layout proportions
+• UI structure
+• card layout
+• visual hierarchy
+• dashboard components.
+
+Do not invent completely new design systems.
+
+RULE 8 — MAINTAIN FUNCTIONAL BEHAVIOR
+
+The following interactive behaviors must remain functional:
+
+• mode switching (Bathroom Mode / Health Mode)
+• scroll animations
+• navigation between pages
+• forms and calls-to-action.
+
+If modifications affect them, update the implementation but preserve functionality.
+
+RULE 9 — VERIFY BEFORE APPLYING CHANGES
+
+Before generating output:
+
+Check that the following remain intact:
+
+• navigation structure
+• mode switching
+• existing sections
+• CTA buttons
+• forms.
+
+If any of these would break, adjust the modification.
+
+RULE 10 — OUTPUT FORMAT
+
+When implementing a modification:
+
+Clearly state:
+
+Section being modified
+
+New components added
+
+Existing components preserved.
+
+Do not rewrite unrelated sections.
+
+FINAL OBJECTIVE
+
+The website must evolve incrementally while maintaining stability.
+
+The goal is to:
+
+• extend the site
+• refine sections
+• preserve architecture.
+
+Never rebuild the entire website when a small change is requested.

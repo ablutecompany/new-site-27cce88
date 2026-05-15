@@ -1,0 +1,195 @@
+PROMPT — Team Page (Founders and R&D Team)
+
+Use Anti-Break Editing Rules.
+
+Modify only the Team page inside the Company section.
+
+Do NOT modify:
+
+• homepage
+• navigation structure
+• product pages
+• animations
+• language selector
+• Bathroom Mode / Health Mode behaviour
+• typography system.
+
+The task is to create the Team section structure and populate it with the correct members.
+
+OBJECTIVE
+
+Create a Team page that presents the leadership and research team behind ablute_.
+
+The page must feel:
+
+• credible
+• professional
+• scientific
+• consistent with a deep-tech / health-tech company.
+
+PAGE STRUCTURE
+
+The page must contain two main sections:
+
+Founders & Leadership
+Research & Development Team
+
+Each section must display profile cards.
+
+Cards should be arranged in a clean grid layout.
+
+PROFILE CARD STRUCTURE
+
+Each team member must appear as a profile card containing:
+
+Photo
+Name
+Role
+Short description (2–3 lines)
+Icons for:
+
+LinkedIn
+ORCID (only when relevant)
+
+Cards must follow the existing site design system.
+
+IMAGE FILE RULE
+
+Images will be uploaded manually.
+
+Each image file will be named using:
+
+FirstName_LastName
+
+Example:
+
+Nuno_Marujo.jpg
+Carla_Dias.jpg
+Bruno_Nascimento.jpg
+Hugo_Ferreira.jpg
+
+The AI agent must automatically match the image file name to the corresponding profile.
+
+Example rule:
+
+If image filename = Hugo_Ferreira → assign to Hugo Ferreira card.
+
+Images must be displayed as portrait profile photos.
+
+Prefer:
+
+rounded corners or circular crop.
+
+SECTION 1 — FOUNDERS & LEADERSHIP
+
+Title:
+
+Founders & Leadership
+
+Intro text:
+
+The ablute_ platform is developed by a multidisciplinary team combining engineering, medical science and technological innovation.
+
+Profiles:
+
+Nuno Marujo
+
+Co-Founder & CEO
+
+Responsible for company strategy, partnerships and business development, leading the growth and global positioning of the ablute_ platform.
+
+Carla Dias
+
+Co-Founder & CTO
+
+Leads the technical architecture of the ablute_ platform, including system design, software development and integration of sensing technologies.
+
+Bruno Nascimento
+
+Chief Medical Officer
+
+Medical doctor responsible for the clinical vision of the ablute_ platform, connecting biomarker monitoring with preventive and personalised healthcare.
+
+Hugo Ferreira
+
+Science Lead
+
+Researcher specialised in nanotechnology and biosensors for in vitro diagnostics, responsible for the scientific direction of the ablute_ sensing technologies.
+
+SECTION 2 — RESEARCH & DEVELOPMENT TEAM
+
+Title:
+
+Research & Development
+
+Intro text:
+
+The R&D team supports the development of the ablute_ platform through scientific research, engineering and biotechnology.
+
+Profiles:
+
+Alexandra Meira
+
+PhD — R&D Project Director
+
+Coordinates research and development activities and contributes to the scientific and technological advancement of the ablute_ platform.
+
+Beatriz Antunes
+
+PhD Candidate
+
+Researcher working on biosensing technologies and biomarker detection systems associated with the ablute_ platform.
+
+Joana Roque
+
+MSc Biotechnology
+
+Contributes to biotechnology and biomarker research supporting the development of the ablute_ biosensing system.
+
+Nuno Aragão
+
+Electronics Engineer
+
+Responsible for electronic system development and hardware integration within the ablute_ platform.
+
+VISUAL STYLE
+
+The Team section must follow the existing design language.
+
+Maintain:
+
+• typography hierarchy
+• spacing system
+• color palette
+• card layout
+• hover animations.
+
+Cards should feel clean, minimal and professional.
+
+INTERACTION
+
+Optional enhancements:
+
+• subtle hover animation on cards
+• LinkedIn icon linking to profile (when available)
+• ORCID icon for scientific members.
+
+Icons should appear only when a link exists.
+
+IMAGE FALLBACK RULE
+
+If a profile image is not uploaded yet:
+
+display a neutral placeholder avatar.
+
+Once the correct image file is added, replace the placeholder automatically.
+
+FINAL OBJECTIVE
+
+The Team page must communicate:
+
+• leadership credibility
+• scientific expertise
+• multidisciplinary collaboration.
+
+The result should feel consistent with a deep-tech and health innovation company.

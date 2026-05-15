@@ -1,0 +1,291 @@
+Use the Anti-Break editing rules.
+
+Modify only the navigation structure and page behaviour related to the main sections.
+
+Do NOT modify:
+
+• hero section
+• typography system already corrected
+• scroll animation
+• existing visual layout of the homepage
+• Health Mode pages.
+
+OBJECTIVE
+
+Implement the main navigation structure of the ablute_ website.
+
+The navigation must include three primary sections:
+
+Product
+Company
+Projects
+
+These items must function as independent pages, not as scroll anchors.
+
+When the user clicks a navigation item, it must open a dedicated page.
+
+The homepage remains separate.
+
+HEADER NAVIGATION
+
+The header must contain the following elements (left to right):
+
+Logo: ablute_
+
+Navigation links:
+
+Product
+Company
+Projects
+
+Mode selector:
+
+Bathroom Mode / Health Mode toggle
+
+Primary CTA:
+
+Join the Waiting List
+
+Small text under CTA:
+
+"No upfront payment required"
+
+PAGE BEHAVIOUR
+
+When the user clicks:
+
+Product
+Company
+Projects
+
+The system must open a separate page view.
+
+These pages must feel like dedicated sections of the website, not just scrolling.
+
+Users return to the homepage using navigation.
+
+SECONDARY NAVIGATION BAR
+
+Each page must include a secondary navigation bar located under the page header.
+
+This bar contains sub-sections specific to that page.
+
+Behaviour:
+
+• active tab becomes highlighted
+• inactive tabs become 40% transparent
+• clicking a tab updates the content below the bar.
+
+The transition must be smooth and modern.
+
+PRODUCT PAGE STRUCTURE
+
+Create a Product page explaining the ablute_ system.
+
+Secondary navigation items:
+
+Technology
+Product Sheet
+Safety & Compliance
+Development Stages
+
+Product → Technology
+
+Explain how the ablute_ platform works.
+
+Topics to cover:
+
+Water Efficiency System
+Intelligent Detection
+Washing Modes
+Usage Modes
+
+Use visual diagrams or system illustrations when possible.
+
+Goal:
+
+Explain engineering principles clearly without overwhelming the reader.
+
+Product → Product Sheet
+
+Create a section where users can download the technical specification sheet.
+
+Include:
+
+technical drawing style illustration
+short explanatory text
+download button.
+
+Button label:
+
+Download Technical Specification (PDF)
+
+Product → Safety & Compliance
+
+Explain safety design.
+
+Topics include:
+
+Electrical Safety
+Mechanical Safety
+User Protection
+Technical Compliance.
+
+Examples:
+
+12V low-voltage system
+obstruction detection preventing closure of the bowl
+protective mechanical systems.
+
+Avoid claiming official certifications unless verified.
+
+Product → Development Stages
+
+Display a development timeline showing technological maturity.
+
+Possible stages:
+
+Concept Development
+Engineering Prototype
+Pilot Demonstration
+Pre-Industrial Model
+Commercial Deployment
+
+This section should communicate engineering credibility and progress.
+
+COMPANY PAGE STRUCTURE
+
+Create the Company page.
+
+Secondary navigation items:
+
+Mission & Values
+Team
+Certifications
+
+Company → Mission & Values
+
+Explain the purpose of the company.
+
+Themes to highlight:
+
+environmental sustainability
+engineering innovation
+preventive healthcare infrastructure.
+
+Company → Team
+
+Create team sections:
+
+Founders
+Core Team
+Advisers
+Institutional Investors.
+
+Founder cards must include:
+
+photo
+short bio
+LinkedIn icon
+ORCID icon.
+
+Core team cards include:
+
+photo
+name
+role.
+
+Company → Certifications
+
+Display institutional recognition and participation in innovation programs.
+
+Possible examples:
+
+innovation initiatives
+research funding programs
+technology development recognition.
+
+Use logos where appropriate.
+
+PROJECTS PAGE STRUCTURE
+
+Create a Projects page presenting the collaboration ecosystem.
+
+Secondary navigation items:
+
+Consortium Projects
+Partners
+Affiliations
+
+Projects → Consortium Projects
+
+Display collaborative innovation or research projects involving ablute_.
+
+Each project card should include:
+
+project name
+short description
+role of ablute_.
+
+Projects → Partners
+
+Display a grid of partner organizations.
+
+Partners may include:
+
+research institutions
+technology partners
+industrial collaborators.
+
+Each logo links to the partner website.
+
+Projects → Affiliations
+
+Display organizations and ecosystems where ablute_ participates.
+
+Examples:
+
+innovation clusters
+health technology communities
+industry associations.
+
+DESIGN CONSISTENCY RULE
+
+All new pages must follow the same visual style already used in Bathroom Mode.
+
+Maintain:
+
+• typography hierarchy
+• spacing system
+• color palette
+• button design
+• card layout.
+
+Do not introduce different UI styles.
+
+ANTI-BREAK RULES
+
+Follow these constraints strictly.
+
+Do NOT:
+
+• rebuild the homepage
+• remove scroll animations
+• alter hero layout
+• modify Health Mode
+• remove existing sections.
+
+Only extend the site by adding the Product, Company and Projects pages with secondary navigation.
+
+If any conflict appears, adapt the implementation without removing existing components.
+
+FINAL OBJECTIVE
+
+The result should be a structured multi-page website where:
+
+• the homepage presents the platform
+• Product explains the technology
+• Company presents the organization
+• Projects shows collaborations and ecosystem.
+
+Navigation must feel clean, modern and professional, similar to high-end technology product websites.

@@ -1,0 +1,111 @@
+PROMPT — Fix Global Language Selector Scope
+
+Use Anti-Break Editing Rules.
+
+Modify only the language selector behaviour.
+
+Do NOT modify:
+
+• layout
+• typography
+• navigation structure
+• Bathroom Mode / Health Mode toggle
+• animations
+• page hierarchy
+• forms.
+
+OBJECTIVE
+
+Correct the language selector so that it affects all visible and internal textual content of the website, not only part of the interface.
+
+REQUIRED BEHAVIOUR
+
+When a language is selected, the system must translate and update the entire site, including:
+
+Header navigation
+
+• main navigation items
+• utility menu items
+• CTA buttons
+• mode selector labels.
+
+Secondary navigation
+
+• sub-navigation tabs inside Product, Company, Projects and Health Mode pages
+• all subsection labels.
+
+Page content
+
+• headlines
+• subheadlines
+• paragraphs
+• feature bullets
+• captions
+• cards
+• section titles
+• descriptions.
+
+Interactive content
+
+• form labels
+• placeholders
+• dropdown options
+• validation messages
+• login errors
+• support messages
+• modal text
+• buttons inside forms.
+
+Dynamic pages
+
+• Bathroom Mode content
+• Health Mode content
+• Product page
+• Company page
+• Projects page
+• Team page
+• Client Area
+• Partner / Investor / Contact utility pages.
+
+IMPORTANT RULE
+
+The language selector must not translate only the menu or only the homepage.
+
+It must translate all textual elements contained anywhere in the site.
+
+That includes:
+
+• text already visible
+• text loaded after clicking tabs
+• text inside opened panels
+• text inside forms and overlays.
+
+PORTUGUESE RULE
+
+Portuguese must always be Portuguese from Portugal (pt-PT).
+
+Do not use Brazilian Portuguese.
+
+ARABIC RULE
+
+When Arabic is selected:
+
+• all textual content must switch to Arabic
+• right-to-left layout must apply correctly
+• header items, sub-tabs and text blocks must also adapt.
+
+PERSISTENCE
+
+The selected language must remain active while navigating through:
+
+• pages
+• tabs
+• overlays
+• forms
+• mode switches.
+
+The language must not reset when the user changes section or opens another page.
+
+FINAL OBJECTIVE
+
+The language selector must behave as a true site-wide multilingual system, ensuring that every piece of text in the website changes to the selected language.

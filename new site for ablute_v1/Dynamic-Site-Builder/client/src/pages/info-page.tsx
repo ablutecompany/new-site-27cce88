@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { X } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { Layout } from "@/components/layout";
 import { useLanguage } from "@/context/language-context";
@@ -42,12 +43,16 @@ export default function InfoPage({ slug }: { slug: SeoPage["slug"] }) {
   const lang = usePageLang();
   const page = getSeoPage(lang, slug);
   const prefix = langPrefix[lang];
+  const [, navigate] = useLocation();
+  // Close returns to the home page; the Bathroom/Health mode the visitor was in is kept.
+  const close = () => navigate("/");
 
   return (
     <Layout>
       <div className="min-h-screen bg-anthracite" style={{ fontFamily: "Inter, sans-serif" }}>
         <article dir={lang === "ar" ? "rtl" : "ltr"} className="max-w-3xl mx-auto px-4 md:px-8 pt-32 pb-24">
-          <nav aria-label="breadcrumb" className="flex flex-wrap gap-x-6 gap-y-2 mb-12 text-sm">
+          <div className="flex items-start gap-6 mb-12">
+          <nav aria-label="breadcrumb" className="flex flex-wrap gap-x-6 gap-y-2 text-sm flex-1">
             {nav.filter((n) => n.group === page.group).map((n) => (
               <Link
                 key={n.slug}
@@ -58,6 +63,15 @@ export default function InfoPage({ slug }: { slug: SeoPage["slug"] }) {
               </Link>
             ))}
           </nav>
+          <button
+            onClick={close}
+            aria-label={lang === "pt" ? "Fechar" : "Close"}
+            data-testid="button-close-info-page"
+            className="text-white/30 hover:text-white/70 transition-colors -mt-0.5"
+          >
+            <X className="w-5 h-5" />
+          </button>
+          </div>
 
           <h1 className="text-3xl md:text-5xl font-light text-white leading-tight mb-6">{page.h1}</h1>
           <p className="text-lg text-white/60 font-light leading-relaxed mb-14">{page.lead}</p>

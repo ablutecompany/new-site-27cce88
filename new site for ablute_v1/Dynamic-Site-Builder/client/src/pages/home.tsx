@@ -1,59 +1,37 @@
-import { motion, AnimatePresence, useScroll } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Layout } from "@/components/layout";
 import { useMode } from "@/context/mode-context";
 import { useLanguage } from "@/context/language-context";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import HealthMode from "./health-mode";
 
 export default function Home() {
   const { mode } = useMode();
   const { t } = useLanguage();
-  const containerRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-    layoutEffect: false,
-  });
+  // Two copies of the opening/closing video: when one ends, cross-fade to the other and
+  // restart it, so the loop has no visible jump (same behaviour as the previous live site).
+  const [active, setActive] = useState<"a" | "b">("a");
+  const videoA = useRef<HTMLVideoElement>(null);
+  const videoB = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const START_OFFSET = 0.1;
-    const END_OFFSET   = 0.6;
-
-    let rafId: number;
-    let targetTime   = 0;
-    let displayTime  = 0;
-    let running      = true;
-
-    const unsubscribe = scrollYProgress.on("change", (p) => {
-      const mapped = START_OFFSET + p * (END_OFFSET - START_OFFSET);
-      targetTime = mapped * (video.duration || 0);
-    });
-
-    const tick = () => {
-      if (!running) return;
-      if (video.duration) {
-        const diff = targetTime - displayTime;
-        displayTime += diff * 0.1;
-        if (Math.abs(diff) > 0.0005) {
-          video.currentTime = displayTime;
-        }
-      }
-      rafId = requestAnimationFrame(tick);
-    };
-
-    rafId = requestAnimationFrame(tick);
-
+    const a = videoA.current;
+    const b = videoB.current;
+    if (!a || !b) return;
+    let alive = true;
+    const toB = () => { if (!alive) return; setActive("b"); b.currentTime = 0; b.play().catch(() => {}); };
+    const toA = () => { if (!alive) return; setActive("a"); a.currentTime = 0; a.play().catch(() => {}); };
+    a.addEventListener("ended", toB);
+    b.addEventListener("ended", toA);
+    a.play().catch(() => {});
     return () => {
-      running = false;
-      cancelAnimationFrame(rafId);
-      unsubscribe();
+      alive = false;
+      a.removeEventListener("ended", toB);
+      b.removeEventListener("ended", toA);
+      a.pause();
+      b.pause();
     };
-  }, [scrollYProgress]);
+  }, [mode]);
 
   return (
     <Layout>
@@ -66,12 +44,9 @@ export default function Home() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            {/* Scroll Container — 300vh gives room to scrub the video */}
-            <div ref={containerRef} className="relative h-[300vh]">
-
-              {/* Sticky viewport — stays pinned while user scrolls */}
+            <div className="relative">
               <div
-                className="sticky top-0 h-screen w-full overflow-hidden"
+                className="relative h-screen w-full overflow-hidden"
                 style={{
                   background:
                     "radial-gradient(ellipse at 18% 55%, #1d2024 0%, transparent 55%)," +
@@ -83,12 +58,27 @@ export default function Home() {
 
                 {/* ── Video ── mirrored, shifted right ~14vw so the toilet sits right of centre, right edge clips off-screen */}
                 <video
-                  ref={videoRef}
+                  ref={videoA}
+                  src="/videos/ablute_opening.mp4"
+                  muted
+                  autoPlay
+                  playsInline
+                  preload="auto"
+                  className={`absolute top-0 right-0 h-full object-cover transition-opacity duration-700 ${active === "a" ? "" : "invisible"}`}
+                  style={{
+                    width: "72%",
+                    opacity: 0.82,
+                    filter: "brightness(1.15) contrast(1.05)",
+                    transform: "scaleX(-1) translateX(-20%)",
+                  }}
+                />
+                <video
+                  ref={videoB}
                   src="/videos/ablute_opening.mp4"
                   muted
                   playsInline
                   preload="auto"
-                  className="absolute top-0 right-0 h-full object-cover"
+                  className={`absolute top-0 right-0 h-full object-cover transition-opacity duration-700 ${active === "b" ? "" : "invisible"}`}
                   style={{
                     width: "72%",
                     opacity: 0.82,

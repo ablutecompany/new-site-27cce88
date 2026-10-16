@@ -1,4 +1,4 @@
-import { seoPages, PageLang } from "../content/seo-pages";
+import { seoPages, PageLang, pageLangs, langPrefix, htmlLang } from "../content/seo-pages";
 
 // Per-route metadata injected into the pre-rendered HTML (script/prerender.ts).
 // Copy here is DRAFT until approved in site-copy-ablute.md — [confirmar] items must not ship as-is.
@@ -12,8 +12,8 @@ export interface RouteMeta {
   priority: number;
   breadcrumb?: string;
   lang?: PageLang;
-  // Same page in the other language, for hreflang.
-  alternate?: { lang: PageLang; path: string };
+  // The same page in every language, for hreflang.
+  alternates?: { lang: PageLang; path: string }[];
   jsonLd?: object[];
 }
 
@@ -53,16 +53,15 @@ export const publicRoutes: RouteMeta[] = [
     priority: 0.8,
     breadcrumb: "Projetos",
   },
-  ...(["pt", "en"] as PageLang[]).flatMap((lang) =>
+  ...pageLangs.flatMap((lang) =>
     seoPages[lang].map((p): RouteMeta => {
-      const path = `${lang === "en" ? "/en" : ""}/${p.slug}`;
-      const other: PageLang = lang === "en" ? "pt" : "en";
+      const path = `${langPrefix[lang]}/${p.slug}`;
       const jsonLd: object[] = [];
       if (p.faqs) {
         jsonLd.push({
           "@context": "https://schema.org",
           "@type": "FAQPage",
-          inLanguage: lang === "en" ? "en" : "pt-PT",
+          inLanguage: htmlLang[lang],
           mainEntity: p.faqs.map((f) => ({
             "@type": "Question",
             name: f.q,
@@ -75,7 +74,7 @@ export const publicRoutes: RouteMeta[] = [
           "@type": "Article",
           headline: p.h1,
           description: p.description,
-          inLanguage: lang === "en" ? "en" : "pt-PT",
+          inLanguage: htmlLang[lang],
           url: `${SITE_URL}${path}`,
           author: { "@id": `${SITE_URL}/#organization` },
           publisher: { "@id": `${SITE_URL}/#organization` },
@@ -90,7 +89,7 @@ export const publicRoutes: RouteMeta[] = [
         priority: 0.8,
         breadcrumb: p.h1,
         lang,
-        alternate: { lang: other, path: `${other === "en" ? "/en" : ""}/${p.slug}` },
+        alternates: pageLangs.map((l) => ({ lang: l, path: `${langPrefix[l]}/${p.slug}` })),
         jsonLd,
       };
     }),

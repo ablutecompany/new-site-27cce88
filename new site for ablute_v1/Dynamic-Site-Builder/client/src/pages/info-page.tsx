@@ -2,21 +2,22 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Layout } from "@/components/layout";
 import { useLanguage } from "@/context/language-context";
-import { getSeoPage, PageLang, SeoPage } from "@/content/seo-pages";
+import { getSeoPage, langPrefix, pageLangs, PageLang, SeoPage } from "@/content/seo-pages";
 
-// /en/* is always English; otherwise follow the site language (PT, or EN for the other languages).
+// A language prefix in the URL (/en, /fr, ...) wins; at the root, follow the site language selector.
 function usePageLang(): PageLang {
   const [location] = useLocation();
   const { lang } = useLanguage();
-  if (location.startsWith("/en/")) return "en";
-  return lang === "pt" ? "pt" : "en";
+  const fromUrl = pageLangs.find((l) => l !== "pt" && location.startsWith(`${langPrefix[l]}/`));
+  if (fromUrl) return fromUrl;
+  return pageLangs.includes(lang as PageLang) ? (lang as PageLang) : "en";
 }
 
 const nav: { slug: SeoPage["slug"]; group: SeoPage["group"]; label: Record<PageLang, string> }[] = [
-  { slug: "about", group: "health", label: { pt: "Sobre", en: "About" } },
-  { slug: "technology", group: "health", label: { pt: "Tecnologia", en: "Technology" } },
-  { slug: "health-faq", group: "health", label: { pt: "Perguntas frequentes", en: "FAQ" } },
-  { slug: "faq", group: "bathroom", label: { pt: "Perguntas frequentes", en: "FAQ" } },
+  { slug: "about", group: "health", label: { pt: "Sobre", en: "About", fr: "À propos", de: "Über uns", it: "Chi siamo", ar: "من نحن" } },
+  { slug: "technology", group: "health", label: { pt: "Tecnologia", en: "Technology", fr: "Technologie", de: "Technologie", it: "Tecnologia", ar: "التكنولوجيا" } },
+  { slug: "health-faq", group: "health", label: { pt: "Perguntas frequentes", en: "FAQ", fr: "FAQ", de: "FAQ", it: "FAQ", ar: "الأسئلة الشائعة" } },
+  { slug: "faq", group: "bathroom", label: { pt: "Perguntas frequentes", en: "FAQ", fr: "FAQ", de: "FAQ", it: "FAQ", ar: "الأسئلة الشائعة" } },
 ];
 
 function FaqItem({ q, a }: { q: string; a: string }) {
@@ -40,12 +41,12 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 export default function InfoPage({ slug }: { slug: SeoPage["slug"] }) {
   const lang = usePageLang();
   const page = getSeoPage(lang, slug);
-  const prefix = lang === "en" ? "/en" : "";
+  const prefix = langPrefix[lang];
 
   return (
     <Layout>
       <div className="min-h-screen bg-anthracite" style={{ fontFamily: "Inter, sans-serif" }}>
-        <article className="max-w-3xl mx-auto px-4 md:px-8 pt-32 pb-24">
+        <article dir={lang === "ar" ? "rtl" : "ltr"} className="max-w-3xl mx-auto px-4 md:px-8 pt-32 pb-24">
           <nav aria-label="breadcrumb" className="flex flex-wrap gap-x-6 gap-y-2 mb-12 text-sm">
             {nav.filter((n) => n.group === page.group).map((n) => (
               <Link
@@ -56,12 +57,6 @@ export default function InfoPage({ slug }: { slug: SeoPage["slug"] }) {
                 {n.label[lang]}
               </Link>
             ))}
-            <Link
-              href={lang === "en" ? `/${slug}` : `/en/${slug}`}
-              className="text-white/40 hover:text-white/70 transition-colors duration-200 ml-auto"
-            >
-              {lang === "en" ? "PT" : "EN"}
-            </Link>
           </nav>
 
           <h1 className="text-3xl md:text-5xl font-light text-white leading-tight mb-6">{page.h1}</h1>

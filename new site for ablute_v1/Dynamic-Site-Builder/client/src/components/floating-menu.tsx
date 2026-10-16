@@ -462,7 +462,7 @@ export function FloatingMenu() {
   const { t, lang } = useLanguage();
   const { mode } = useMode();
   const infoLabels = infoLinkLabels[lang] ?? infoLinkLabels.en;
-  const prefix = lang === "pt" ? "" : "/en";
+  const prefix = lang === "pt" ? "" : `/${lang}`;
   const infoLinks = mode === "health"
     ? [
         { href: `${prefix}/about`, label: infoLabels.about, icon: Info },

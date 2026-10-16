@@ -27,12 +27,13 @@ export async function prerender() {
   const { render } = await import(pathToFileURL(path.join(ssrDir, "entry-server.js")).href);
   const seo = await import(pathToFileURL(path.join(root, "client/src/seo/routes.ts")).href);
   const { SITE_URL, publicRoutes, organizationJsonLd, websiteJsonLd } = seo;
+  const seoLangs = await import(pathToFileURL(path.join(root, "client/src/content/seo-pages.ts")).href);
   const template = await readFile(path.join(outDir, "index.html"), "utf-8");
 
   for (const route of publicRoutes) {
     const url = `${SITE_URL}${route.path === "/" ? "/" : route.path}`;
     const jsonLd: object[] = [organizationJsonLd, websiteJsonLd, ...(route.jsonLd ?? [])];
-    const htmlLang = route.lang === "en" ? "en" : "pt-PT";
+    const htmlLang = route.lang ? seoLangs.htmlLang[route.lang] : "pt-PT";
     if (route.breadcrumb) {
       jsonLd.push({
         "@context": "https://schema.org",
@@ -49,12 +50,14 @@ export async function prerender() {
       `<link rel="canonical" href="${url}" />`,
       `<meta property="og:type" content="website" />`,
       `<meta property="og:site_name" content="ablute_" />`,
-      `<meta property="og:locale" content="${route.lang === "en" ? "en_GB" : "pt_PT"}" />`,
-      ...(route.alternate
+      `<meta property="og:locale" content="${htmlLang.replace("-", "_")}" />`,
+      ...(route.alternates
         ? [
-            `<link rel="alternate" hreflang="${htmlLang === "en" ? "en" : "pt-PT"}" href="${url}" />`,
-            `<link rel="alternate" hreflang="${route.alternate.lang === "en" ? "en" : "pt-PT"}" href="${SITE_URL}${route.alternate.path}" />`,
-            `<link rel="alternate" hreflang="x-default" href="${SITE_URL}${route.lang === "en" ? route.path : route.alternate.path}" />`,
+            ...route.alternates.map(
+              (a: { lang: string; path: string }) =>
+                `<link rel="alternate" hreflang="${seoLangs.htmlLang[a.lang]}" href="${SITE_URL}${a.path}" />`,
+            ),
+            `<link rel="alternate" hreflang="x-default" href="${SITE_URL}${route.alternates.find((a: { lang: string }) => a.lang === "en").path}" />`,
           ]
         : []),
       `<meta property="og:title" content="${esc(route.title)}" />`,
@@ -71,7 +74,7 @@ export async function prerender() {
     ].join("\n    ");
 
     const html = template
-      .replace('<html lang="pt-PT">', `<html lang="${htmlLang}">`)
+      .replace('<html lang="pt-PT">', `<html lang="${htmlLang}"${route.lang === "ar" ? ' dir="rtl"' : ""}>`)
       .replace("<!--seo-head-->", head)
       .replace('<div id="root"></div>', `<div id="root">${render(route.path)}</div>`);
 

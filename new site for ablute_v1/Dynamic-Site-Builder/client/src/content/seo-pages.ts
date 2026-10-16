@@ -2,7 +2,11 @@
 // Facts here were confirmed by Nuno (16/10/2026). Do not add claims without approval:
 // no "biosfera", no AquaSense, no clinical/diagnostic claims beyond the wording below.
 
-export type PageLang = "pt" | "en";
+export type PageLang = "pt" | "en" | "fr" | "de" | "it" | "ar";
+export const pageLangs: PageLang[] = ["pt", "en", "fr", "de", "it", "ar"];
+// URL prefix per language; PT is the default at the root.
+export const langPrefix: Record<PageLang, string> = { pt: "", en: "/en", fr: "/fr", de: "/de", it: "/it", ar: "/ar" };
+export const htmlLang: Record<PageLang, string> = { pt: "pt-PT", en: "en", fr: "fr", de: "de", it: "it", ar: "ar" };
 
 export interface Section {
   heading: string;
@@ -26,6 +30,8 @@ export interface SeoPage {
   sections: Section[];
   faqs?: Faq[];
 }
+
+import { fr, de, it, ar } from "./seo-pages-i18n";
 
 const programmes = {
   en: [
@@ -432,7 +438,7 @@ const pt: SeoPage[] = [
   },
 ];
 
-export const seoPages: Record<PageLang, SeoPage[]> = { en, pt };
+export const seoPages: Record<PageLang, SeoPage[]> = { en, pt, fr, de, it, ar };
 
 export function getSeoPage(lang: PageLang, slug: SeoPage["slug"]): SeoPage {
   return seoPages[lang].find((p) => p.slug === slug)!;

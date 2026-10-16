@@ -11,6 +11,7 @@ const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>(() => {
+    if (typeof window === "undefined") return "pt";
     const saved = localStorage.getItem("ablute_lang");
     return (saved as Lang) || "pt";
   });

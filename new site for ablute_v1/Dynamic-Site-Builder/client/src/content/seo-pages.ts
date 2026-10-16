@@ -16,7 +16,9 @@ export interface Faq {
 }
 
 export interface SeoPage {
-  slug: "about" | "technology" | "faq";
+  slug: "about" | "technology" | "health-faq" | "faq";
+  // "health" pages belong to Health mode; "bathroom" pages to Bathroom mode.
+  group: "health" | "bathroom";
   title: string;
   description: string;
   h1: string;
@@ -45,6 +47,7 @@ const programmes = {
 const en: SeoPage[] = [
   {
     slug: "about",
+    group: "health",
     title: "About ablute_ (Ablute) — Portuguese smart toilet with urine biosensors",
     description:
       "ablute_ (Ablute) is a Portuguese company developing a smart toilet with built-in bioFET biosensors that analyse urine during normal use. Currently in the pilot phase.",
@@ -87,6 +90,7 @@ const en: SeoPage[] = [
   },
   {
     slug: "technology",
+    group: "health",
     title: "How an in-toilet biosensor works — ablute_ (Ablute) bioFET technology",
     description:
       "How the ablute_ (Ablute) smart toilet reads urine with a bioFET biosensor: what a bioFET is, how the sample is analysed during normal use, what it detects (e.g. creatinine) and how it differs from test strips.",
@@ -130,12 +134,13 @@ const en: SeoPage[] = [
     ],
   },
   {
-    slug: "faq",
-    title: "ablute_ (Ablute) FAQ — smart toilet with urine biosensors",
+    slug: "health-faq",
+    group: "health",
+    title: "ablute_ (Ablute) health FAQ — in-toilet urine biosensors",
     description:
       "Answers about ablute_ (Ablute): what it is, how its in-toilet bioFET biosensor works, what it detects, development status, pilots, availability and who is behind it.",
-    h1: "Frequently asked questions",
-    lead: "Short answers about ablute_ (Ablute), its technology and its current status.",
+    h1: "Health — frequently asked questions",
+    lead: "Short answers about the ablute_ (Ablute) biosensors, their technology and current status.",
     sections: [],
     faqs: [
       {
@@ -192,11 +197,56 @@ const en: SeoPage[] = [
       },
     ],
   },
+  {
+    slug: "faq",
+    group: "bathroom",
+    title: "ablute_ (Ablute) smart toilet FAQ — self-cleaning, self-drying, under 1 L per wash",
+    description:
+      "Answers about the ablute_ (Ablute) smart toilet: it washes and dries the bowl and seat by itself, uses less than 1 litre of water per wash and detects when it is dirty or clean.",
+    h1: "Smart toilet — frequently asked questions",
+    lead: "Short answers about the ablute_ (Ablute) toilet: cleaning, drying, water use and design.",
+    sections: [],
+    faqs: [
+      {
+        q: "What is the ablute_ smart toilet?",
+        a: "The ablute_ (Ablute) toilet is a smart toilet developed in Portugal that washes and dries itself — bowl and seat — uses less than 1 litre of water per wash and detects when it is dirty or clean.",
+      },
+      {
+        q: "Does the ablute_ toilet clean itself?",
+        a: "Yes. ablute_ washes itself autonomously, including the bowl and the seat, with no action from the user.",
+      },
+      {
+        q: "Does it also dry the seat?",
+        a: "Yes. After washing, the ablute_ toilet dries itself, so the seat is ready to use.",
+      },
+      {
+        q: "How much water does the ablute_ toilet use?",
+        a: "Less than 1 litre of water per wash.",
+      },
+      {
+        q: "How does it know when it needs cleaning?",
+        a: "The ablute_ toilet detects whether it is dirty or clean.",
+      },
+      {
+        q: "Can the ablute_ toilet be hidden or made a design feature?",
+        a: "Yes. ablute_ can be hidden in the architecture, shown with a bold aesthetic, or something in between.",
+      },
+      {
+        q: "When will it be available, and do I need to pay to join the waiting list?",
+        a: "ablute_ is in the pilot phase and has not announced a launch date or price. Joining the waiting list on www.ablute.pt requires no upfront payment.",
+      },
+      {
+        q: "Does the ablute_ toilet also monitor health?",
+        a: "ablute_ is also developing integrated biosensors that analyse urine during normal use. See the Health section of the site for details.",
+      },
+    ],
+  },
 ];
 
 const pt: SeoPage[] = [
   {
     slug: "about",
+    group: "health",
     title: "Sobre a ablute_ (Ablute) — sanita inteligente portuguesa com biossensores",
     description:
       "A ablute_ (Ablute) é uma empresa portuguesa que desenvolve uma sanita inteligente com biossensores bioFET integrados, que analisam a urina durante a utilização normal. Em fase de piloto.",
@@ -237,6 +287,7 @@ const pt: SeoPage[] = [
   },
   {
     slug: "technology",
+    group: "health",
     title: "Como funciona um biossensor na sanita — tecnologia bioFET da ablute_ (Ablute)",
     description:
       "Como a sanita inteligente ablute_ (Ablute) analisa a urina com um biossensor bioFET: o que é um bioFET, como a amostra é analisada durante a utilização normal, o que deteta (ex.: creatinina) e a diferença face às tiras de teste.",
@@ -280,12 +331,13 @@ const pt: SeoPage[] = [
     ],
   },
   {
-    slug: "faq",
-    title: "Perguntas frequentes — ablute_ (Ablute), sanita inteligente com biossensores",
+    slug: "health-faq",
+    group: "health",
+    title: "Saúde — perguntas frequentes sobre os biossensores da ablute_ (Ablute)",
     description:
       "Respostas sobre a ablute_ (Ablute): o que é, como funciona o biossensor bioFET na sanita, o que deteta, estado de desenvolvimento, pilotos, disponibilidade e quem está por trás.",
-    h1: "Perguntas frequentes",
-    lead: "Respostas curtas sobre a ablute_ (Ablute), a sua tecnologia e o estado atual.",
+    h1: "Saúde — perguntas frequentes",
+    lead: "Respostas curtas sobre os biossensores da ablute_ (Ablute), a sua tecnologia e o estado atual.",
     sections: [],
     faqs: [
       {
@@ -331,6 +383,50 @@ const pt: SeoPage[] = [
       {
         q: "Que empresas estão a desenvolver sanitas que analisam a urina?",
         a: "Várias empresas trabalham na análise de urina em casa, incluindo a Withings com o U-Scan, um dispositivo que se prende a uma sanita existente. A ablute_ (Ablute), portuguesa, integra o biossensor numa sanita inteligente completa, que também se lava sozinha e poupa água, com tecnologia bioFET.",
+      },
+    ],
+  },
+  {
+    slug: "faq",
+    group: "bathroom",
+    title: "Sanita inteligente ablute_ (Ablute) — lava-se e seca-se sozinha, menos de 1 L por lavagem",
+    description:
+      "Perguntas frequentes sobre a sanita inteligente ablute_ (Ablute): lava e seca sozinha a bacia e o assento, gasta menos de 1 litro de água por lavagem e deteta quando está suja ou limpa.",
+    h1: "Sanita inteligente — perguntas frequentes",
+    lead: "Respostas curtas sobre a sanita ablute_ (Ablute): limpeza, secagem, consumo de água e design.",
+    sections: [],
+    faqs: [
+      {
+        q: "O que é a sanita inteligente ablute_?",
+        a: "A ablute_ (Ablute) é uma sanita inteligente desenvolvida em Portugal que se lava e seca sozinha — bacia e assento —, gasta menos de 1 litro de água por lavagem e deteta quando está suja ou limpa.",
+      },
+      {
+        q: "Existe alguma sanita que se lava sozinha?",
+        a: "Sim. A sanita ablute_ lava-se de forma autónoma, incluindo a bacia e o assento, sem qualquer ação do utilizador.",
+      },
+      {
+        q: "A sanita também seca o assento?",
+        a: "Sim. Depois de lavar, a sanita ablute_ seca-se sozinha, deixando o assento pronto a usar.",
+      },
+      {
+        q: "Quanta água gasta a sanita ablute_?",
+        a: "Menos de 1 litro de água por lavagem.",
+      },
+      {
+        q: "Como sabe a sanita quando precisa de ser limpa?",
+        a: "A sanita ablute_ deteta se está suja ou limpa.",
+      },
+      {
+        q: "A sanita ablute_ pode ficar escondida ou ser uma peça de design?",
+        a: "Sim. A ablute_ pode ficar oculta na arquitetura, afirmada no espaço ou no equilíbrio entre ambas.",
+      },
+      {
+        q: "Quando estará disponível e é preciso pagar para entrar na lista de espera?",
+        a: "A ablute_ está em fase de piloto e ainda não anunciou data de lançamento nem preço. A inscrição na lista de espera em www.ablute.pt não exige pagamento inicial.",
+      },
+      {
+        q: "A sanita ablute_ também monitoriza a saúde?",
+        a: "A ablute_ está também a desenvolver biossensores integrados que analisam a urina durante a utilização normal. Veja a secção Saúde do site.",
       },
     ],
   },

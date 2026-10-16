@@ -24,9 +24,11 @@ function Router() {
       <Route path="/about">{() => <InfoPage slug="about" />}</Route>
       <Route path="/technology">{() => <InfoPage slug="technology" />}</Route>
       <Route path="/faq">{() => <InfoPage slug="faq" />}</Route>
+      <Route path="/health-faq">{() => <InfoPage slug="health-faq" />}</Route>
       <Route path="/en/about">{() => <InfoPage slug="about" />}</Route>
       <Route path="/en/technology">{() => <InfoPage slug="technology" />}</Route>
       <Route path="/en/faq">{() => <InfoPage slug="faq" />}</Route>
+      <Route path="/en/health-faq">{() => <InfoPage slug="health-faq" />}</Route>
       <Route path="/posts/:id" component={PostDetail} />
       <Route component={NotFound} />
     </Switch>

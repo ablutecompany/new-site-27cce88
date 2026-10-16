@@ -12,10 +12,11 @@ function usePageLang(): PageLang {
   return lang === "pt" ? "pt" : "en";
 }
 
-const nav: { slug: SeoPage["slug"]; label: Record<PageLang, string> }[] = [
-  { slug: "about", label: { pt: "Sobre", en: "About" } },
-  { slug: "technology", label: { pt: "Tecnologia", en: "Technology" } },
-  { slug: "faq", label: { pt: "Perguntas frequentes", en: "FAQ" } },
+const nav: { slug: SeoPage["slug"]; group: SeoPage["group"]; label: Record<PageLang, string> }[] = [
+  { slug: "about", group: "health", label: { pt: "Sobre", en: "About" } },
+  { slug: "technology", group: "health", label: { pt: "Tecnologia", en: "Technology" } },
+  { slug: "health-faq", group: "health", label: { pt: "Perguntas frequentes", en: "FAQ" } },
+  { slug: "faq", group: "bathroom", label: { pt: "Perguntas frequentes", en: "FAQ" } },
 ];
 
 function FaqItem({ q, a }: { q: string; a: string }) {
@@ -46,7 +47,7 @@ export default function InfoPage({ slug }: { slug: SeoPage["slug"] }) {
       <div className="min-h-screen bg-anthracite" style={{ fontFamily: "Inter, sans-serif" }}>
         <article className="max-w-3xl mx-auto px-4 md:px-8 pt-32 pb-24">
           <nav aria-label="breadcrumb" className="flex flex-wrap gap-x-6 gap-y-2 mb-12 text-sm">
-            {nav.map((n) => (
+            {nav.filter((n) => n.group === page.group).map((n) => (
               <Link
                 key={n.slug}
                 href={`${prefix}/${n.slug}`}

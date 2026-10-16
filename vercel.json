@@ -1,5 +1,8 @@
 {
-  "outputDirectory": "dist/public",
+  "framework": null,
+  "installCommand": "cd \"new site for ablute_v1/Dynamic-Site-Builder\" && npm ci",
+  "buildCommand": "cd \"new site for ablute_v1/Dynamic-Site-Builder\" && npm run build",
+  "outputDirectory": "new site for ablute_v1/Dynamic-Site-Builder/dist/public",
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [

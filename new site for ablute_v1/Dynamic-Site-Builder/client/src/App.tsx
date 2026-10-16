@@ -12,6 +12,7 @@ import PostDetail from "./pages/post-detail";
 import Product from "./pages/product";
 import Company from "./pages/company";
 import Projects from "./pages/projects";
+import InfoPage from "./pages/info-page";
 
 function Router() {
   return (
@@ -20,6 +21,11 @@ function Router() {
       <Route path="/product" component={Product} />
       <Route path="/company" component={Company} />
       <Route path="/projects" component={Projects} />
+      {["", "/en", "/fr", "/de", "/it", "/ar"].flatMap((prefix) =>
+        (["about", "technology", "health-faq", "faq"] as const).map((slug) => (
+          <Route key={`${prefix}/${slug}`} path={`${prefix}/${slug}`}>{() => <InfoPage slug={slug} />}</Route>
+        )),
+      )}
       <Route path="/posts/:id" component={PostDetail} />
       <Route component={NotFound} />
     </Switch>

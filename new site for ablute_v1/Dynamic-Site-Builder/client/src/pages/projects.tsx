@@ -6,10 +6,13 @@ import { useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Layers, Network } from "lucide-react";
 
-const projectsMeta = [
-  { name: "AquaSense", program: "FCT / ANI R&D", period: "2023 – 2025", tags: ["Biosensing", "Photonics", "Water"] },
-  { name: "HealthInfra", program: "EIT Health", period: "2024 – 2026", tags: ["Preventive Health", "Smart Home", "Kidney"] },
-  { name: "CircularSan", program: "Horizon Europe", period: "2024 – 2027", tags: ["Water Circular Economy", "Building Systems", "EU Funded"] },
+// Confirmed by Nuno (16/10/2026). Add period/description only once confirmed.
+const programmes: { name: string; program: string }[] = [
+  { name: "T-PRISM", program: "R&D programme" },
+  { name: "PRR — Agenda HfPT", program: "Health from Portugal · Recovery and Resilience Plan" },
+  { name: "Rebuild", program: "Programme" },
+  { name: "Innomed Catalyst", program: "Programme" },
+  { name: "Women in Tech EU", program: "Award — Carla Dias, co-founder & CTO" },
 ];
 
 const partners = [
@@ -40,13 +43,9 @@ export default function Projects() {
   useEffect(() => { if (mode === "health") navigate("/"); }, [mode]);
   useEffect(() => { setSubNavVisible(true); }, []);
 
-  const tabs = [t.projectsPage.tab1, t.projectsPage.tab2, t.projectsPage.tab3];
+  // Partners and Affiliations tabs are hidden until their lists are confirmed.
+  const tabs = [t.projectsPage.tab1];
 
-  const consortiumProjects = [
-    { ...projectsMeta[0], desc: t.projects.proj1Desc, role: t.projects.proj1Role },
-    { ...projectsMeta[1], desc: t.projects.proj2Desc, role: t.projects.proj2Role },
-    { ...projectsMeta[2], desc: t.projects.proj3Desc, role: t.projects.proj3Role },
-  ];
 
   const affiliationDescs = [
     t.projects.aff1Desc,
@@ -116,10 +115,9 @@ export default function Projects() {
               <div className="space-y-12">
                 <div className="max-w-2xl">
                   <h2 className="text-2xl font-light text-white mb-3">{t.projects.consortTitle}</h2>
-                  <p className="text-white/50 font-light leading-relaxed">{t.projects.consortDesc}</p>
                 </div>
-                <div className="space-y-5">
-                  {consortiumProjects.map((proj, i) => (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  {programmes.map((proj, i) => (
                     <motion.div
                       key={proj.name}
                       initial={{ opacity: 0, y: 10 }}
@@ -128,27 +126,12 @@ export default function Projects() {
                       className="border border-white/8 rounded-2xl p-8 bg-white/[0.02] hover:border-white/16 transition-all duration-300"
                     >
                       <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8">
-                        <div className="md:w-48 shrink-0">
+                        <div>
                           <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-400/20 flex items-center justify-center mb-4">
                             <Layers className="w-5 h-5 text-blue-300/80" />
                           </div>
                           <h3 className="text-lg font-light text-white">{proj.name}</h3>
                           <p className="text-xs text-white/30 font-light mt-1">{proj.program}</p>
-                          <p className="text-xs text-white/25 font-mono mt-0.5">{proj.period}</p>
-                        </div>
-                        <div className="flex-1 space-y-4">
-                          <p className="text-sm text-white/45 font-light leading-relaxed">{proj.desc}</p>
-                          <div className="flex items-start gap-2">
-                            <span className="text-xs text-white/25 font-medium uppercase tracking-wider shrink-0 pt-0.5">{t.projects.roleLabel}</span>
-                            <p className="text-sm text-white/60 font-light">{proj.role}</p>
-                          </div>
-                          <div className="flex flex-wrap gap-2">
-                            {proj.tags.map((tag) => (
-                              <span key={tag} className="text-[11px] px-2.5 py-1 rounded-full border border-white/10 text-white/35 font-normal">
-                                {tag}
-                              </span>
-                            ))}
-                          </div>
                         </div>
                       </div>
                     </motion.div>

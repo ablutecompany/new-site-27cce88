@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Grid3x3, User, Handshake, TrendingUp, Mail, CheckCircle2, ChevronRight, Briefcase, MapPin, Clock } from "lucide-react";
+import { X, Grid3x3, User, Handshake, TrendingUp, Mail, CheckCircle2, ChevronRight, Briefcase, MapPin, Clock, Info, Cpu, HelpCircle } from "lucide-react";
 import { useLanguage } from "@/context/language-context";
+import { Link } from "wouter";
+import { useMode } from "@/context/mode-context";
 
 type Overlay = "client" | "partners" | "workwithus" | "investors" | "contacts" | null;
 type ClientView = "login" | "error" | "support" | "support-sent";
@@ -438,6 +440,16 @@ function Contacts({ onClose }: { onClose: () => void }) {
   );
 }
 
+// Links to the factual pages: Health mode shows About/Technology/FAQ, Bathroom mode the toilet FAQ.
+const infoLinkLabels: Record<string, { about: string; technology: string; faq: string }> = {
+  pt: { about: "Sobre a ablute_", technology: "Tecnologia", faq: "Perguntas frequentes" },
+  en: { about: "About ablute_", technology: "Technology", faq: "FAQ" },
+  fr: { about: "À propos d'ablute_", technology: "Technologie", faq: "FAQ" },
+  de: { about: "Über ablute_", technology: "Technologie", faq: "FAQ" },
+  it: { about: "Chi è ablute_", technology: "Tecnologia", faq: "FAQ" },
+  ar: { about: "عن ablute_", technology: "التكنولوجيا", faq: "الأسئلة الشائعة" },
+};
+
 const menuItemIds = [
   { id: "client" as Overlay, icon: User },
   { id: "partners" as Overlay, icon: Handshake },
@@ -447,7 +459,17 @@ const menuItemIds = [
 ];
 
 export function FloatingMenu() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const { mode } = useMode();
+  const infoLabels = infoLinkLabels[lang] ?? infoLinkLabels.en;
+  const prefix = lang === "pt" ? "" : `/${lang}`;
+  const infoLinks = mode === "health"
+    ? [
+        { href: `${prefix}/about`, label: infoLabels.about, icon: Info },
+        { href: `${prefix}/technology`, label: infoLabels.technology, icon: Cpu },
+        { href: `${prefix}/health-faq`, label: infoLabels.faq, icon: HelpCircle },
+      ]
+    : [{ href: `${prefix}/faq`, label: infoLabels.faq, icon: HelpCircle }];
   const [isOpen, setIsOpen] = useState(false);
   const [activeOverlay, setActiveOverlay] = useState<Overlay>(null);
   const menuItemLabels: Record<string, string> = {
@@ -481,12 +503,24 @@ export function FloatingMenu() {
               className="bg-[#111111] border border-white/12 rounded-2xl shadow-2xl overflow-hidden min-w-[210px]"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
-              {menuItemIds.map((item, i) => (
+              {infoLinks.map((item, i) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className={`w-full flex items-center gap-3 px-5 py-3.5 text-sm font-light text-white/70 hover:text-white hover:bg-white/5 transition-all text-left ${i > 0 ? "border-t border-white/6" : ""}`}
+                >
+                  <item.icon className="w-3.5 h-3.5 text-white/30 shrink-0" />
+                  {item.label}
+                  <ChevronRight className="w-3 h-3 text-white/20 ml-auto" />
+                </Link>
+              ))}
+              {menuItemIds.map((item) => (
                 <button
                   key={item.id}
                   data-testid={`floating-menu-${item.id}`}
                   onClick={() => openOverlay(item.id)}
-                  className={`w-full flex items-center gap-3 px-5 py-3.5 text-sm font-light text-white/70 hover:text-white hover:bg-white/5 transition-all text-left ${i > 0 ? "border-t border-white/6" : ""}`}
+                  className="w-full flex items-center gap-3 px-5 py-3.5 text-sm font-light text-white/70 hover:text-white hover:bg-white/5 transition-all text-left border-t border-white/6"
                 >
                   <item.icon className="w-3.5 h-3.5 text-white/30 shrink-0" />
                   {menuItemLabels[item.id!]}

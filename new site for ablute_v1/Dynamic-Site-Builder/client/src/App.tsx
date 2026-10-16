@@ -12,6 +12,7 @@ import PostDetail from "./pages/post-detail";
 import Product from "./pages/product";
 import Company from "./pages/company";
 import Projects from "./pages/projects";
+import InfoPage from "./pages/info-page";
 
 function Router() {
   return (
@@ -20,6 +21,12 @@ function Router() {
       <Route path="/product" component={Product} />
       <Route path="/company" component={Company} />
       <Route path="/projects" component={Projects} />
+      <Route path="/about">{() => <InfoPage slug="about" />}</Route>
+      <Route path="/technology">{() => <InfoPage slug="technology" />}</Route>
+      <Route path="/faq">{() => <InfoPage slug="faq" />}</Route>
+      <Route path="/en/about">{() => <InfoPage slug="about" />}</Route>
+      <Route path="/en/technology">{() => <InfoPage slug="technology" />}</Route>
+      <Route path="/en/faq">{() => <InfoPage slug="faq" />}</Route>
       <Route path="/posts/:id" component={PostDetail} />
       <Route component={NotFound} />
     </Switch>

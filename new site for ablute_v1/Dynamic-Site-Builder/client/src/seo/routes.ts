@@ -1,3 +1,5 @@
+import { seoPages, PageLang } from "../content/seo-pages";
+
 // Per-route metadata injected into the pre-rendered HTML (script/prerender.ts).
 // Copy here is DRAFT until approved in site-copy-ablute.md — [confirmar] items must not ship as-is.
 export const SITE_URL = "https://www.ablute.pt";
@@ -9,6 +11,10 @@ export interface RouteMeta {
   changefreq: "weekly" | "monthly";
   priority: number;
   breadcrumb?: string;
+  lang?: PageLang;
+  // Same page in the other language, for hreflang.
+  alternate?: { lang: PageLang; path: string };
+  jsonLd?: object[];
 }
 
 export const publicRoutes: RouteMeta[] = [
@@ -47,6 +53,48 @@ export const publicRoutes: RouteMeta[] = [
     priority: 0.8,
     breadcrumb: "Projetos",
   },
+  ...(["pt", "en"] as PageLang[]).flatMap((lang) =>
+    seoPages[lang].map((p): RouteMeta => {
+      const path = `${lang === "en" ? "/en" : ""}/${p.slug}`;
+      const other: PageLang = lang === "en" ? "pt" : "en";
+      const jsonLd: object[] = [];
+      if (p.faqs) {
+        jsonLd.push({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          inLanguage: lang === "en" ? "en" : "pt-PT",
+          mainEntity: p.faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        });
+      } else {
+        jsonLd.push({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: p.h1,
+          description: p.description,
+          inLanguage: lang === "en" ? "en" : "pt-PT",
+          url: `${SITE_URL}${path}`,
+          author: { "@id": `${SITE_URL}/#organization` },
+          publisher: { "@id": `${SITE_URL}/#organization` },
+          about: { "@id": `${SITE_URL}/#organization` },
+        });
+      }
+      return {
+        path,
+        title: p.title,
+        description: p.description,
+        changefreq: "monthly",
+        priority: 0.8,
+        breadcrumb: p.h1,
+        lang,
+        alternate: { lang: other, path: `${other === "en" ? "/en" : ""}/${p.slug}` },
+        jsonLd,
+      };
+    }),
+  ),
 ];
 
 // [confirmar] Every field and every sameAs URL must be confirmed by Nuno before deploy.
@@ -58,7 +106,13 @@ export const organizationJsonLd = {
   alternateName: "Ablute",
   url: `${SITE_URL}/`,
   logo: `${SITE_URL}/favicon.png`,
+  description:
+    "Portuguese company developing a smart toilet with built-in bioFET biosensors that analyse urine during normal use. Pilot phase.",
   address: { "@type": "PostalAddress", addressCountry: "PT" },
+  founder: [
+    { "@type": "Person", name: "Nuno Marujo", jobTitle: "Co-Founder & CEO" },
+    { "@type": "Person", name: "Carla Dias", jobTitle: "Co-Founder & CTO", award: "Women in Tech EU" },
+  ],
   sameAs: ["https://www.linkedin.com/company/ablute", "https://app.dealroom.co/companies/ablute"],
 };
 

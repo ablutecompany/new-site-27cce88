@@ -31,7 +31,8 @@ export async function prerender() {
 
   for (const route of publicRoutes) {
     const url = `${SITE_URL}${route.path === "/" ? "/" : route.path}`;
-    const jsonLd: object[] = [organizationJsonLd, websiteJsonLd];
+    const jsonLd: object[] = [organizationJsonLd, websiteJsonLd, ...(route.jsonLd ?? [])];
+    const htmlLang = route.lang === "en" ? "en" : "pt-PT";
     if (route.breadcrumb) {
       jsonLd.push({
         "@context": "https://schema.org",
@@ -48,7 +49,14 @@ export async function prerender() {
       `<link rel="canonical" href="${url}" />`,
       `<meta property="og:type" content="website" />`,
       `<meta property="og:site_name" content="ablute_" />`,
-      `<meta property="og:locale" content="pt_PT" />`,
+      `<meta property="og:locale" content="${route.lang === "en" ? "en_GB" : "pt_PT"}" />`,
+      ...(route.alternate
+        ? [
+            `<link rel="alternate" hreflang="${htmlLang === "en" ? "en" : "pt-PT"}" href="${url}" />`,
+            `<link rel="alternate" hreflang="${route.alternate.lang === "en" ? "en" : "pt-PT"}" href="${SITE_URL}${route.alternate.path}" />`,
+            `<link rel="alternate" hreflang="x-default" href="${SITE_URL}${route.lang === "en" ? route.path : route.alternate.path}" />`,
+          ]
+        : []),
       `<meta property="og:title" content="${esc(route.title)}" />`,
       `<meta property="og:description" content="${esc(route.description)}" />`,
       `<meta property="og:url" content="${url}" />`,
@@ -63,6 +71,7 @@ export async function prerender() {
     ].join("\n    ");
 
     const html = template
+      .replace('<html lang="pt-PT">', `<html lang="${htmlLang}">`)
       .replace("<!--seo-head-->", head)
       .replace('<div id="root"></div>', `<div id="root">${render(route.path)}</div>`);
 

@@ -81,7 +81,7 @@ export default function Home() {
                 }}
               >
 
-                {/* ── Video ── mirrored, shifted right ~20vw, right edge clips off-screen */}
+                {/* ── Video ── mirrored, shifted right ~14vw so the toilet sits right of centre, right edge clips off-screen */}
                 <video
                   ref={videoRef}
                   src="/videos/ablute_opening.mp4"
@@ -93,7 +93,7 @@ export default function Home() {
                     width: "72%",
                     opacity: 0.82,
                     filter: "brightness(1.15) contrast(1.05)",
-                    transform: "scaleX(-1) translateX(-28%)",
+                    transform: "scaleX(-1) translateX(-20%)",
                   }}
                 />
 

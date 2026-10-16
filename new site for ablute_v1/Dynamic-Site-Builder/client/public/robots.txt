@@ -1,14 +1,40 @@
+# ablute_ (Ablute) — https://www.ablute.pt
 User-agent: *
 Allow: /
-Disallow: /admin
-Disallow: /api
+Disallow: /api/
 
-Sitemap: https://ablute.pt/sitemap.xml
-
+# Search and AI assistants are explicitly welcome.
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://www.ablute.pt/sitemap.xml

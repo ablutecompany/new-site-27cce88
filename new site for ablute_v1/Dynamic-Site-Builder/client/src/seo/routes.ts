@@ -121,9 +121,9 @@ export const organizationJsonLd = {
   url: `${SITE_URL}/`,
   logo: `${SITE_URL}/favicon.png`,
   description:
-    "Portuguese company developing a smart toilet with built-in bioFET biosensors that analyse urine during normal use. Pilot phase.",
+    "Portuguese company developing a residential-size smart toilet with built-in bioFET biosensors that measure urinary biomarkers, stool analysis (in development), seat-integrated ECG, PPG, weight and temperature sensing, and autonomous washing of bowl and seat with about 0.5 litres of water. Pilot phase.",
   address: { "@type": "PostalAddress", addressCountry: "PT" },
-  knowsAbout: ["bioFET biosensors", "field-effect transistor biosensors", "urinalysis", "urinary biomarkers", "creatinine", "smart toilet", "in-toilet urine analysis"],
+  knowsAbout: ["smart toilet health monitoring", "self-cleaning toilet", "stool analysis", "occult blood detection", "bioFET biosensors", "field-effect transistor biosensors", "urinalysis", "urinary biomarkers", "creatinine", "smart toilet", "in-toilet urine analysis"],
   founder: [
     { "@type": "Person", "@id": `${SITE_URL}/#nuno-marujo`, name: "Nuno Marujo", jobTitle: "Co-Founder & CEO", sameAs: ["https://orcid.org/0009-0005-2823-783X", "https://www.linkedin.com/in/nunomarujo/"] },
     { "@type": "Person", name: "Carla Dias", jobTitle: "Co-Founder & CTO", award: "Women in Tech EU" },

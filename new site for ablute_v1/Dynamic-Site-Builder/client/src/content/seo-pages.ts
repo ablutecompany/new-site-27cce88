@@ -71,9 +71,23 @@ const en: SeoPage[] = [
         ],
       },
       {
+        heading: "What makes ablute_ different",
+        paragraphs: [
+          "Many health-monitoring toilet products are add-on devices that read a single type of signal. ablute_ (Ablute) is designed as a complete, residential-size toilet that combines:",
+        ],
+        list: [
+          "Urinary biomarker measurement with bioFET biosensors that detect and quantify markers such as creatinine, developed together with the University of Lisbon (IBEB).",
+          "Stool analysis, including detection of occult (hidden) blood, under development as part of the platform.",
+          "Seat-integrated sensors designed for ECG, PPG, bioimpedance, body weight and temperature, for passive monitoring during routine use.",
+          "A real wash, not only a flush: the toilet detects whether the bowl and the seat are soiled, washes both, and stops when it detects they are clean.",
+          "Low water use: about 0.5 litres for a complete wash (less than 1 litre), against around 6 litres for a conventional full flush.",
+          "Domestic dimensions (47 × 29.5 × 41–51 cm) and a design that can disappear into the architecture or stand out as a statement piece.",
+        ],
+      },
+      {
         heading: "Current status",
         paragraphs: [
-          "ablute_ is in the pilot phase. Its core sensing technology — a bioFET (biologically sensitive field-effect transistor) — has been demonstrated and is working; it detects creatinine, for example.",
+          "ablute_ is in the pilot phase. Its core sensing technology — a bioFET (biologically sensitive field-effect transistor) — has been demonstrated and is working; it detects and quantifies creatinine, for example. The other capabilities listed above are at different stages of development.",
           "ablute_ is not yet a certified medical device. It does not provide a diagnosis and does not replace medical advice or laboratory tests.",
         ],
       },
@@ -136,6 +150,23 @@ const en: SeoPage[] = [
         refs: [{"text": "Sequeira-Antunes B., Viana A.S., Martins A.F., Marujo N., Cardoso S., Ferreira H.A. (2024). Field-Effect Transistor-Based Biosensor for pH Sensing and IgG Detection. Engineering Proceedings 73(1), 7 (4th International Electronic Conference on Biosensors). A bio-FET with microfabricated gold electrodes for urinary pH measurement (sensitivity of 2.20 µA/pH) and IgG detection (a measurable current change of about 4 µA).", "href": "https://doi.org/10.3390/engproc2024073007"}, {"text": "Sequeira-Antunes B., Ferreira H.A. (2023). Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review. Biomedicines 11(4), 1051.", "href": "https://doi.org/10.3390/biomedicines11041051"}, {"text": "Sequeira-Antunes B., Ferreira H.A. (2023). Nucleic Acid Aptamer-Based Biosensors: A Review. Biomedicines 11(12), 3201.", "href": "https://doi.org/10.3390/biomedicines11123201"}],
       },
       {
+        heading: "A multimodal sensing platform",
+        paragraphs: [
+          "The bioFET is one part of a modular platform. ablute_ is designed to combine urinary biomarker measurement with stool analysis and physiological sensors in the seat, and to interpret them together as trends over time.",
+        ],
+        list: [
+          "Urine: bioFET biosensors that detect and quantify creatinine; further markers are in development.",
+          "Stool: analysis of stool, including detection of occult (hidden) blood, under development; optional computer-vision modules can assess stool characteristics.",
+          "Seat: sensors designed for ECG, PPG, bioimpedance, body weight and temperature, for passive cardiovascular and physiological monitoring during routine use.",
+        ],
+      },
+      {
+        heading: "Status",
+        paragraphs: [
+          "These capabilities are at different stages of development. ablute_ is in the pilot phase, is not yet a certified medical device and does not provide a diagnosis.",
+        ],
+      },
+      {
         heading: "From the toilet to the user",
         paragraphs: [
           "The sensing module sits inside the ablute_ toilet and analyses the sample during normal use. Readings are processed by the device and shown to the user as trends over time, so that the focus is on changes rather than on a single value.",
@@ -193,6 +224,18 @@ const en: SeoPage[] = [
       {
         q: "Is there a smart toilet that uses bioFET biosensors?",
         a: "ablute_ (Ablute), from Portugal, builds a bioFET biosensor into a complete smart toilet that also washes itself and saves water. It is in the pilot phase and is not yet a certified medical device.",
+      },
+      {
+        q: "Can a smart toilet detect occult blood in stool?",
+        a: "ablute_ is developing stool analysis, including detection of occult (hidden) blood, as part of its toilet platform. Occult blood is blood in stool that cannot be seen by eye, and it is a marker used in colorectal screening programmes. This capability is under development and not yet validated; ablute_ is not a certified medical device and does not provide a diagnosis.",
+      },
+      {
+        q: "Which sensors does the ablute_ toilet include besides the urine biosensor?",
+        a: "The ablute_ seat is designed to integrate ECG, PPG, bioimpedance, body weight and temperature sensors for passive cardiovascular and physiological monitoring during routine use, and the platform includes stool analysis under development. Together with the urinary bioFET, readings are interpreted as trends over time.",
+      },
+      {
+        q: "What makes ablute_ different from other smart toilets that monitor health?",
+        a: "Many health-monitoring toilet products are add-on devices that read one type of signal, such as a urine cartridge or a stool camera. ablute_ is designed as a complete, residential-size toilet that combines bioFET urinary biomarker measurement, stool analysis under development, and seat-integrated ECG, PPG, weight and temperature sensing, and that also washes the bowl and seat with about 0.5 litres of water.",
       },
       {
         q: "What is a bioFET?",
@@ -260,11 +303,19 @@ const en: SeoPage[] = [
       },
       {
         q: "How much water does the ablute_ toilet use?",
-        a: "Less than 1 litre of water per wash.",
+        a: "Less than 1 litre of water per wash: about 0.5 litres for a complete wash, against around 6 litres for a conventional full flush, which is more than 90% less water.",
       },
       {
         q: "How does it know when it needs cleaning?",
         a: "The ablute_ toilet detects whether it is dirty or clean.",
+      },
+      {
+        q: "What is the difference between a toilet that flushes and one that washes?",
+        a: "Flushing moves water through the bowl; washing removes soiling from the surfaces. In many toilets described as self-cleaning, the cleaning comes from the flush or from a rinse of the bowl. The ablute_ toilet detects whether the bowl and the seat are soiled, washes both, and stops when it detects they are clean.",
+      },
+      {
+        q: "Is the ablute_ toilet a normal household size?",
+        a: "Yes. It is designed for homes, at 47 × 29.5 × 41–51 cm (width × depth × height), with wall or floor drain connection.",
       },
       {
         q: "Can the ablute_ toilet be hidden or made a design feature?",
@@ -276,7 +327,7 @@ const en: SeoPage[] = [
       },
       {
         q: "Does the ablute_ toilet also monitor health?",
-        a: "ablute_ is also developing integrated biosensors that analyse urine during normal use. See the Health section of the site for details.",
+        a: "ablute_ is also developing integrated biosensors that analyse urine during normal use, seat-integrated sensors (ECG, PPG, body weight, temperature) and stool analysis. See the Health section of the site for details.",
       },
     ],
   },
@@ -301,9 +352,23 @@ const pt: SeoPage[] = [
         ],
       },
       {
+        heading: "O que torna a ablute_ diferente",
+        paragraphs: [
+          "Muitos produtos de monitorização de saúde para sanitas são dispositivos adicionais que leem um só tipo de sinal. A ablute_ (Ablute) foi concebida como uma sanita completa, de dimensões domésticas, que combina:",
+        ],
+        list: [
+          "Medição de biomarcadores urinários com biossensores bioFET que detetam e quantificam marcadores como a creatinina, desenvolvidos em conjunto com a Universidade de Lisboa (IBEB).",
+          "Análise fecal, incluindo a deteção de sangue oculto, em desenvolvimento como parte da plataforma.",
+          "Sensores integrados no assento concebidos para ECG, PPG, bioimpedância, peso corporal e temperatura, para monitorização passiva durante a utilização de rotina.",
+          "Uma lavagem verdadeira, e não apenas uma descarga: a sanita deteta se a bacia e o assento estão sujos, lava ambos e termina quando deteta que estão limpos.",
+          "Baixo consumo de água: cerca de 0,5 litros por lavagem completa (menos de 1 litro), contra cerca de 6 litros numa descarga completa convencional.",
+          "Dimensões domésticas (47 × 29,5 × 41–51 cm) e um design que pode desaparecer na arquitetura ou afirmar-se como peça de design.",
+        ],
+      },
+      {
         heading: "Estado atual",
         paragraphs: [
-          "A ablute_ está em fase de piloto. A tecnologia de deteção central — um bioFET (transístor de efeito de campo biologicamente sensível) — está demonstrada e a funcionar; deteta, por exemplo, a creatinina.",
+          "A ablute_ está em fase de piloto. A tecnologia de deteção central — um bioFET (transístor de efeito de campo biologicamente sensível) — está demonstrada e a funcionar; deteta e quantifica, por exemplo, a creatinina. As restantes capacidades indicadas acima estão em diferentes fases de desenvolvimento.",
           "A ablute_ ainda não é um dispositivo médico certificado. Não faz diagnósticos e não substitui o aconselhamento médico nem as análises laboratoriais.",
         ],
       },
@@ -362,6 +427,23 @@ const pt: SeoPage[] = [
           "Publicações da equipa sobre biossensores de transístor de efeito de campo, biomarcadores urinários e equipamentos de urianálise:",
         ],
         refs: [{"text": "Sequeira-Antunes B., Viana A.S., Martins A.F., Marujo N., Cardoso S., Ferreira H.A. (2024). Field-Effect Transistor-Based Biosensor for pH Sensing and IgG Detection. Engineering Proceedings 73(1), 7 (4th International Electronic Conference on Biosensors). Um bio-FET com elétrodos de ouro microfabricados para medir o pH urinário (sensibilidade de 2,20 µA/pH) e detetar IgG (variação de corrente mensurável de cerca de 4 µA).", "href": "https://doi.org/10.3390/engproc2024073007"}, {"text": "Sequeira-Antunes B., Ferreira H.A. (2023). Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review. Biomedicines 11(4), 1051.", "href": "https://doi.org/10.3390/biomedicines11041051"}, {"text": "Sequeira-Antunes B., Ferreira H.A. (2023). Nucleic Acid Aptamer-Based Biosensors: A Review. Biomedicines 11(12), 3201.", "href": "https://doi.org/10.3390/biomedicines11123201"}],
+      },
+      {
+        heading: "Uma plataforma de deteção multimodal",
+        paragraphs: [
+          "O bioFET é uma parte de uma plataforma modular. A ablute_ foi concebida para combinar a medição de biomarcadores urinários com a análise fecal e com sensores fisiológicos no assento, e para os interpretar em conjunto como tendências ao longo do tempo.",
+        ],
+        list: [
+          "Urina: biossensores bioFET que detetam e quantificam creatinina; outros marcadores estão em desenvolvimento.",
+          "Fezes: análise fecal, incluindo a deteção de sangue oculto, em desenvolvimento; módulos opcionais de visão computacional podem avaliar características das fezes.",
+          "Assento: sensores concebidos para ECG, PPG, bioimpedância, peso corporal e temperatura, para monitorização cardiovascular e fisiológica passiva durante a utilização de rotina.",
+        ],
+      },
+      {
+        heading: "Estado",
+        paragraphs: [
+          "Estas capacidades estão em diferentes fases de desenvolvimento. A ablute_ está em fase de piloto, ainda não é um dispositivo médico certificado e não faz diagnósticos.",
+        ],
       },
       {
         heading: "Da sanita ao utilizador",
@@ -427,6 +509,18 @@ const pt: SeoPage[] = [
         a: "A ablute_ (Ablute), de Portugal, integra um biossensor bioFET numa sanita inteligente completa que também se lava sozinha e poupa água. Está em fase de piloto e ainda não é um dispositivo médico certificado.",
       },
       {
+        q: "Uma sanita inteligente consegue detetar sangue oculto nas fezes?",
+        a: "A ablute_ está a desenvolver a análise fecal, incluindo a deteção de sangue oculto, como parte da sua plataforma. O sangue oculto é sangue nas fezes que não se vê a olho nu, e é um marcador usado em programas de rastreio do cancro colorretal. Esta capacidade está em desenvolvimento e ainda não foi validada; a ablute_ não é um dispositivo médico certificado e não faz diagnósticos.",
+      },
+      {
+        q: "Que sensores inclui a sanita ablute_ além do biossensor urinário?",
+        a: "O assento da ablute_ foi concebido para integrar sensores de ECG, PPG, bioimpedância, peso corporal e temperatura, para monitorização cardiovascular e fisiológica passiva durante a utilização de rotina, e a plataforma inclui análise fecal em desenvolvimento. Em conjunto com o bioFET urinário, as leituras são interpretadas como tendências ao longo do tempo.",
+      },
+      {
+        q: "O que distingue a ablute_ de outras sanitas inteligentes que monitorizam a saúde?",
+        a: "Muitos produtos de monitorização de saúde para sanitas são dispositivos adicionais que leem um só tipo de sinal, como um cartucho de urina ou uma câmara para fezes. A ablute_ foi concebida como uma sanita completa, de dimensões domésticas, que combina medição de biomarcadores urinários por bioFET, análise fecal em desenvolvimento e sensores no assento para ECG, PPG, peso e temperatura, e que também lava a bacia e o assento com cerca de 0,5 litros de água.",
+      },
+      {
         q: "A ablute_ é um dispositivo médico?",
         a: "Ainda não. A ablute_ está em fase de piloto e ainda não é um dispositivo médico certificado. Não faz diagnósticos.",
       },
@@ -480,11 +574,19 @@ const pt: SeoPage[] = [
       },
       {
         q: "Quanta água gasta a sanita ablute_?",
-        a: "Menos de 1 litro de água por lavagem.",
+        a: "Menos de 1 litro de água por lavagem: cerca de 0,5 litros por lavagem completa, contra cerca de 6 litros numa descarga completa convencional, o que representa mais de 90% menos água.",
       },
       {
         q: "Como sabe a sanita quando precisa de ser limpa?",
         a: "A sanita ablute_ deteta se está suja ou limpa.",
+      },
+      {
+        q: "Qual é a diferença entre uma sanita que faz descarga e uma que lava?",
+        a: "A descarga faz passar água pela bacia; a lavagem remove a sujidade das superfícies. Em muitas sanitas descritas como autolimpantes, a limpeza resulta da descarga ou de um enxaguamento da bacia. A sanita ablute_ deteta se a bacia e o assento estão sujos, lava ambos e termina quando deteta que estão limpos.",
+      },
+      {
+        q: "A sanita ablute_ tem dimensões domésticas normais?",
+        a: "Sim. Foi concebida para habitações, com 47 × 29,5 × 41–51 cm (largura × profundidade × altura), com ligação de drenagem à parede ou ao chão.",
       },
       {
         q: "A sanita ablute_ pode ficar escondida ou ser uma peça de design?",
@@ -496,7 +598,7 @@ const pt: SeoPage[] = [
       },
       {
         q: "A sanita ablute_ também monitoriza a saúde?",
-        a: "A ablute_ está também a desenvolver biossensores integrados que analisam a urina durante a utilização normal. Veja a secção Saúde do site.",
+        a: "A ablute_ está também a desenvolver biossensores integrados que analisam a urina durante a utilização normal, sensores no assento (ECG, PPG, peso corporal, temperatura) e análise fecal. Veja a secção Saúde do site.",
       },
     ],
   },

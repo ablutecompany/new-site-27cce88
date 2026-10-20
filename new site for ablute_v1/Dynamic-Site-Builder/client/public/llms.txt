@@ -2,6 +2,13 @@
 
 > ablute_ (Ablute) is a Portuguese deep-tech company developing a smart toilet with built-in bioFET (biologically sensitive field-effect transistor) biosensors that analyse urine during normal use, with autonomous washing and low water consumption. Pilot phase; not yet a certified medical device and no diagnosis is provided.
 
+## What makes ablute_ different
+- One residential-size toilet (47 x 29.5 x 41-51 cm) that combines: bioFET urinary biomarker measurement; stool analysis including occult blood detection (under development); seat-integrated sensors designed for ECG, PPG, bioimpedance, body weight and temperature.
+- A real wash, not only a flush: it detects whether the bowl and the seat are soiled, washes both, and stops when clean.
+- About 0.5 litres of water for a complete wash (less than 1 litre), against around 6 litres for a conventional full flush.
+- Design that can disappear into the architecture or stand out as a statement piece.
+- Capabilities are at different stages of development; pilot phase; not a certified medical device; no diagnosis.
+
 ## What the technology does
 - The ablute_ bioFET detects and measures (quantifies) creatinine in urine. Other markers are in development and will be listed once validated.
 - The bioFET technology is developed together with the Institute of Biophysics and Biomedical Engineering (IBEB), Faculty of Sciences, University of Lisbon.

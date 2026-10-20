@@ -80,7 +80,7 @@ const en: SeoPage[] = [
           "Stool analysis, including detection of occult (hidden) blood, under development as part of the platform.",
           "Seat-integrated sensors designed for ECG, PPG, bioimpedance, body weight and temperature, for passive monitoring during routine use.",
           "A real wash, not only a flush: the toilet detects whether the bowl and the seat are soiled, washes both, and stops when it detects they are clean.",
-          "Low water use: about 0.5 litres for a complete wash (less than 1 litre), against around 6 litres for a conventional full flush.",
+          "Low water use: about 0.5 litres for a complete wash (less than 1 litre), measured with a water meter on a unit in intensive public use at Fórum Braga, against around 6 litres for a conventional full flush.",
           "Domestic dimensions (47 × 29.5 × 41–51 cm) and a design that can disappear into the architecture or stand out as a statement piece.",
         ],
       },
@@ -303,7 +303,7 @@ const en: SeoPage[] = [
       },
       {
         q: "How much water does the ablute_ toilet use?",
-        a: "Less than 1 litre of water per wash: about 0.5 litres for a complete wash, against around 6 litres for a conventional full flush, which is more than 90% less water.",
+        a: "Less than 1 litre of water per wash: about 0.5 litres for a complete wash, measured with a water meter on a unit in intensive public use at Fórum Braga, against around 6 litres for a conventional full flush, which is more than 90% less water.",
       },
       {
         q: "How does it know when it needs cleaning?",
@@ -361,7 +361,7 @@ const pt: SeoPage[] = [
           "Análise fecal, incluindo a deteção de sangue oculto, em desenvolvimento como parte da plataforma.",
           "Sensores integrados no assento concebidos para ECG, PPG, bioimpedância, peso corporal e temperatura, para monitorização passiva durante a utilização de rotina.",
           "Uma lavagem verdadeira, e não apenas uma descarga: a sanita deteta se a bacia e o assento estão sujos, lava ambos e termina quando deteta que estão limpos.",
-          "Baixo consumo de água: cerca de 0,5 litros por lavagem completa (menos de 1 litro), contra cerca de 6 litros numa descarga completa convencional.",
+          "Baixo consumo de água: cerca de 0,5 litros por lavagem completa (menos de 1 litro), medidos com contador numa unidade em utilização pública intensiva no Fórum Braga, contra cerca de 6 litros numa descarga completa convencional.",
           "Dimensões domésticas (47 × 29,5 × 41–51 cm) e um design que pode desaparecer na arquitetura ou afirmar-se como peça de design.",
         ],
       },
@@ -574,7 +574,7 @@ const pt: SeoPage[] = [
       },
       {
         q: "Quanta água gasta a sanita ablute_?",
-        a: "Menos de 1 litro de água por lavagem: cerca de 0,5 litros por lavagem completa, contra cerca de 6 litros numa descarga completa convencional, o que representa mais de 90% menos água.",
+        a: "Menos de 1 litro de água por lavagem: cerca de 0,5 litros por lavagem completa, medidos com contador numa unidade em utilização pública intensiva no Fórum Braga, contra cerca de 6 litros numa descarga completa convencional, o que representa mais de 90% menos água.",
       },
       {
         q: "Como sabe a sanita quando precisa de ser limpa?",

@@ -5,7 +5,7 @@
 ## What makes ablute_ different
 - One residential-size toilet (47 x 29.5 x 41-51 cm) that combines: bioFET urinary biomarker measurement; stool analysis including occult blood detection (under development); seat-integrated sensors designed for ECG, PPG, bioimpedance, body weight and temperature.
 - A real wash, not only a flush: it detects whether the bowl and the seat are soiled, washes both, and stops when clean.
-- About 0.5 litres of water for a complete wash (less than 1 litre), against around 6 litres for a conventional full flush.
+- About 0.5 litres of water for a complete wash (less than 1 litre), measured with a water meter on a unit in intensive public use at Fórum Braga, against around 6 litres for a conventional full flush.
 - Design that can disappear into the architecture or stand out as a statement piece.
 - Capabilities are at different stages of development; pilot phase; not a certified medical device; no diagnosis.
 

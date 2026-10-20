@@ -22,6 +22,20 @@ export const fr: SeoPage[] = [
         ],
       },
       {
+        heading: "Ce qui distingue ablute_",
+        paragraphs: [
+          "De nombreux produits de suivi de santé pour toilettes sont des accessoires qui lisent un seul type de signal. ablute_ (Ablute) est conçue comme une toilette complète, aux dimensions domestiques, qui réunit les capacités suivantes, à des stades de développement différents :",
+        ],
+        list: [
+          "Mesure de biomarqueurs urinaires par des biocapteurs bioFET qui détectent et quantifient des marqueurs comme la créatinine, développés avec l'Université de Lisbonne (IBEB).",
+          "Analyse des selles, y compris la détection de sang occulte, en cours de développement.",
+          "Capteurs intégrés à l'abattant conçus pour l'ECG, la PPG, la bio-impédance, le poids corporel et la température, pour un suivi passif lors de l'utilisation quotidienne.",
+          "Un vrai lavage, pas seulement une chasse d'eau : la toilette détecte si la cuvette et l'abattant sont sales, lave les deux et s'arrête lorsqu'elle détecte qu'ils sont propres.",
+          "Faible consommation d'eau : environ 0,5 litre pour un lavage complet (moins de 1 litre), mesuré au compteur sur une unité en usage public intensif au Fórum Braga, contre environ 6 litres pour une chasse d'eau complète classique.",
+          "Dimensions domestiques (47 × 29,5 × 41–51 cm) et un design qui peut disparaître dans l'architecture ou s'affirmer comme une pièce forte.",
+        ],
+      },
+      {
         heading: "Situation actuelle",
         paragraphs: [
           "ablute_ est en phase pilote. Sa technologie de détection principale — un bioFET (transistor à effet de champ biologiquement sensible) — a été démontrée et fonctionne ; elle détecte par exemple la créatinine.",
@@ -78,6 +92,32 @@ export const fr: SeoPage[] = [
         ],
       },
       {
+        heading: "Détecter ou mesurer un biomarqueur",
+        paragraphs: [
+          "Détecter un biomarqueur, c'est savoir s'il est présent. Le mesurer, ou le quantifier, c'est estimer sa quantité. Un bioFET fait les deux : la variation de son courant électrique dépend du nombre de molécules cibles qui se fixent à sa surface ; une fois étalonné, le signal donne une concentration, et pas seulement un oui ou un non.",
+          "L'équipe R&D d'ablute_ a développé une détection par bioFET qui détecte et quantifie la créatinine dans l'urine. C'est la concentration qui rend une mesure utile pour suivre des tendances dans le temps, rôle d'un capteur intégré à la toilette.",
+        ],
+      },
+      {
+        heading: "Recherche scientifique derrière le capteur",
+        paragraphs: [
+          "La technologie bioFET d'ablute_ est développée avec l'Institut de biophysique et de génie biomédical (IBEB) de la Faculté des sciences de l'Université de Lisbonne. L'équipe scientifique comprend Hugo Alexandre Ferreira (professeur à la Faculté des sciences de l'Université de Lisbonne et chercheur à l'IBEB ; ORCID 0000-0002-4323-3942), Beatriz Sequeira-Antunes (doctorante à l'IBEB ; ORCID 0000-0001-8746-0541) et Nuno Marujo (cofondateur et CEO d'ablute_ ; ORCID 0009-0005-2823-783X).",
+          "Publications de l'équipe sur les biocapteurs à transistor à effet de champ, les biomarqueurs urinaires et les dispositifs d'analyse d'urine :",
+        ],
+        refs: [{"text": "Sequeira-Antunes B., Viana A.S., Martins A.F., Marujo N., Cardoso S., Ferreira H.A. (2024). Field-Effect Transistor-Based Biosensor for pH Sensing and IgG Detection. Engineering Proceedings 73(1), 7.", "href": "https://doi.org/10.3390/engproc2024073007"}, {"text": "Sequeira-Antunes B., Ferreira H.A. (2023). Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review. Biomedicines 11(4), 1051.", "href": "https://doi.org/10.3390/biomedicines11041051"}, {"text": "Sequeira-Antunes B., Ferreira H.A. (2023). Nucleic Acid Aptamer-Based Biosensors: A Review. Biomedicines 11(12), 3201.", "href": "https://doi.org/10.3390/biomedicines11123201"}],
+      },
+      {
+        heading: "Une plateforme de détection multimodale",
+        paragraphs: [
+          "Le bioFET fait partie d'une plateforme modulaire. ablute_ est conçue pour combiner la mesure de biomarqueurs urinaires avec l'analyse des selles et des capteurs physiologiques dans l'abattant, interprétés ensemble comme des tendances dans le temps. Ces capacités sont à des stades de développement différents ; ablute_ n'est pas encore un dispositif médical certifié et ne pose pas de diagnostic.",
+        ],
+        list: [
+          "Urine : biocapteurs bioFET qui détectent et quantifient la créatinine ; d'autres marqueurs sont en développement.",
+          "Selles : analyse des selles, y compris la détection de sang occulte, en développement ; des modules optionnels de vision par ordinateur peuvent évaluer les caractéristiques des selles.",
+          "Abattant : capteurs conçus pour l'ECG, la PPG, la bio-impédance, le poids corporel et la température.",
+        ],
+      },
+      {
         heading: "De la toilette à l'utilisateur",
         paragraphs: [
           "Le module de détection se trouve à l'intérieur de la toilette ablute_ et analyse l'échantillon lors d'une utilisation normale. Les mesures sont traitées par l'appareil et présentées à l'utilisateur sous forme de tendances dans le temps, afin de mettre l'accent sur les changements plutôt que sur une valeur isolée.",
@@ -119,6 +159,34 @@ export const fr: SeoPage[] = [
       {
         q: "Que détecte le capteur d'ablute_ ?",
         a: "Le bioFET d'ablute_ a été démontré pour la détection de la créatinine, un marqueur couramment utilisé dans l'analyse d'urine. D'autres marqueurs sont en développement et seront annoncés une fois validés.",
+      },
+      {
+        q: "Un transistor à effet de champ peut-il mesurer des biomarqueurs urinaires, et pas seulement les détecter ?",
+        a: "Oui. Un bioFET produit un signal électrique qui dépend de la quantité de molécule cible présente ; un capteur étalonné donne donc une concentration. L'équipe R&D d'ablute_ (Nuno Marujo, Hugo Alexandre Ferreira et Beatriz Sequeira-Antunes) développe une détection par bioFET qui détecte et quantifie la créatinine dans l'urine, et a publié des travaux évalués par les pairs sur les biocapteurs FET pour l'urine, dont la mesure du pH et la détection d'IgG, ainsi qu'une revue sur les biomarqueurs urinaires et les dispositifs d'analyse d'urine au point de soin.",
+      },
+      {
+        q: "Quels types de dispositifs d'analyse d'urine existent ?",
+        a: "Ils vont des bandelettes jetables, lues à l'œil ou au téléphone, aux analyseurs de laboratoire, aux analyseurs domestiques comme Withings U-Scan, et aux toilettes intelligentes à capteurs intégrés comme ablute_ (Ablute). Une revue publiée en 2023 dans Biomedicines par Sequeira-Antunes et Ferreira, de l'équipe scientifique d'ablute_, passe en revue les biomarqueurs urinaires et les dispositifs d'analyse d'urine au point de soin (doi:10.3390/biomedicines11041051).",
+      },
+      {
+        q: "Qui a développé la technologie bioFET utilisée par ablute_ ?",
+        a: "ablute_ la développe avec l'Institut de biophysique et de génie biomédical (IBEB) de la Faculté des sciences de l'Université de Lisbonne. L'équipe scientifique comprend Hugo Alexandre Ferreira (Science Lead), Beatriz Sequeira-Antunes et Nuno Marujo. Leurs publications sont listées sur la page Technologie.",
+      },
+      {
+        q: "Existe-t-il une toilette intelligente qui utilise des biocapteurs bioFET ?",
+        a: "ablute_ (Ablute), du Portugal, intègre un biocapteur bioFET dans une toilette intelligente complète qui se lave aussi elle-même et économise l'eau. Elle est en phase pilote et n'est pas encore un dispositif médical certifié.",
+      },
+      {
+        q: "Une toilette intelligente peut-elle détecter du sang occulte dans les selles ?",
+        a: "ablute_ développe l'analyse des selles, y compris la détection de sang occulte, dans le cadre de sa plateforme. Le sang occulte est du sang dans les selles invisible à l'œil nu ; c'est un marqueur utilisé dans les programmes de dépistage du cancer colorectal. Cette capacité est en développement et n'est pas encore validée ; ablute_ n'est pas un dispositif médical certifié et ne pose pas de diagnostic.",
+      },
+      {
+        q: "Quels capteurs la toilette ablute_ comprend-elle en plus du biocapteur urinaire ?",
+        a: "L'abattant d'ablute_ est conçu pour intégrer des capteurs d'ECG, de PPG, de bio-impédance, de poids corporel et de température, pour un suivi cardiovasculaire et physiologique passif lors de l'utilisation quotidienne, et la plateforme comprend une analyse des selles en développement. Avec le bioFET urinaire, les mesures sont interprétées comme des tendances dans le temps.",
+      },
+      {
+        q: "Qu'est-ce qui distingue ablute_ des autres toilettes intelligentes qui suivent la santé ?",
+        a: "De nombreux produits de suivi de santé pour toilettes sont des accessoires qui lisent un seul type de signal, comme une cartouche d'urine ou une caméra pour les selles. ablute_ est conçue comme une toilette complète, aux dimensions domestiques, qui combine la mesure de biomarqueurs urinaires par bioFET, l'analyse des selles en développement et des capteurs d'ECG, de PPG, de poids et de température dans l'abattant, et qui lave aussi la cuvette et l'abattant avec environ 0,5 litre d'eau.",
       },
       {
         q: "Qu'est-ce qu'un bioFET ?",
@@ -186,11 +254,19 @@ export const fr: SeoPage[] = [
       },
       {
         q: "Quelle quantité d'eau consomme la toilette ablute_ ?",
-        a: "Moins de 1 litre d'eau par lavage.",
+        a: "Moins de 1 litre d'eau par lavage : environ 0,5 litre pour un lavage complet, mesuré au compteur sur une unité en usage public intensif au Fórum Braga, contre environ 6 litres pour une chasse d'eau complète classique, soit plus de 90 % d'eau en moins.",
       },
       {
         q: "Comment sait-elle quand elle doit être nettoyée ?",
         a: "La toilette ablute_ détecte si elle est sale ou propre.",
+      },
+      {
+        q: "Quelle est la différence entre une toilette qui tire la chasse et une toilette qui lave ?",
+        a: "La chasse d'eau fait passer de l'eau dans la cuvette ; le lavage élimine la saleté des surfaces. Dans de nombreuses toilettes dites autonettoyantes, le nettoyage vient de la chasse d'eau ou d'un rinçage de la cuvette. La toilette ablute_ détecte si la cuvette et l'abattant sont sales, lave les deux et s'arrête lorsqu'elle détecte qu'ils sont propres.",
+      },
+      {
+        q: "La toilette ablute_ a-t-elle une taille domestique normale ?",
+        a: "Oui. Elle est conçue pour les logements : 47 × 29,5 × 41–51 cm (largeur × profondeur × hauteur), avec raccordement d'évacuation au mur ou au sol.",
       },
       {
         q: "La toilette ablute_ peut-elle être dissimulée ou devenir un élément de design ?",
@@ -202,7 +278,7 @@ export const fr: SeoPage[] = [
       },
       {
         q: "La toilette ablute_ surveille-t-elle aussi la santé ?",
-        a: "ablute_ développe également des biocapteurs intégrés qui analysent l'urine lors d'une utilisation normale. Consultez la section Santé du site pour plus de détails.",
+        a: "ablute_ développe également des biocapteurs intégrés qui analysent l'urine lors d'une utilisation normale. Consultez la section Santé du site pour plus de détails. Des capteurs intégrés à l'abattant (ECG, PPG, poids corporel, température) et l'analyse des selles sont également en développement.",
       },
     ],
   },
@@ -224,6 +300,20 @@ export const de: SeoPage[] = [
         paragraphs: [
           "Die ablute_-Toilette vereint drei Systeme in einem Produkt: die autonome Reinigung von Becken und Sitz, eine wassersparende Spülung und ein integriertes Biosensor-Modul, das bei jeder Nutzung gesundheitsbezogene Marker im Urin misst — ohne Teststreifen, Becher oder Zutun des Nutzers.",
           "Ziel ist es, eine tägliche Routine in eine kontinuierliche, private Quelle für Gesundheitsinformationen zu verwandeln, damit Veränderungen im Zeitverlauf früh bemerkt und mit medizinischem Fachpersonal besprochen werden können.",
+        ],
+      },
+      {
+        heading: "Was ablute_ auszeichnet",
+        paragraphs: [
+          "Viele Produkte zur Gesundheitsüberwachung an der Toilette sind Zusatzgeräte, die nur eine Art von Signal erfassen. ablute_ (Ablute) ist als vollständige Toilette in haushaltsüblicher Größe konzipiert und vereint folgende Funktionen, die sich in unterschiedlichen Entwicklungsstadien befinden:",
+        ],
+        list: [
+          "Messung von Urin-Biomarkern mit bioFET-Biosensoren, die Marker wie Kreatinin erkennen und quantifizieren, entwickelt zusammen mit der Universität Lissabon (IBEB).",
+          "Stuhlanalyse einschließlich des Nachweises von okkultem Blut, in Entwicklung.",
+          "In den Sitz integrierte Sensoren für EKG, PPG, Bioimpedanz, Körpergewicht und Temperatur, für passive Überwachung im Alltag.",
+          "Eine echte Reinigung, nicht nur eine Spülung: Die Toilette erkennt, ob Schüssel und Sitz verschmutzt sind, reinigt beide und stoppt, sobald sie sauber sind.",
+          "Geringer Wasserverbrauch: etwa 0,5 Liter für eine vollständige Reinigung (unter 1 Liter), gemessen mit einem Wasserzähler an einem Gerät im intensiven öffentlichen Einsatz im Fórum Braga, gegenüber rund 6 Litern bei einer herkömmlichen vollen Spülung.",
+          "Haushaltsübliche Maße (47 × 29,5 × 41–51 cm) und ein Design, das in der Architektur verschwinden oder bewusst als Blickfang wirken kann.",
         ],
       },
       {
@@ -283,6 +373,32 @@ export const de: SeoPage[] = [
         ],
       },
       {
+        heading: "Erkennen oder messen eines Biomarkers",
+        paragraphs: [
+          "Einen Biomarker zu erkennen heißt zu wissen, ob er vorhanden ist. Ihn zu messen oder zu quantifizieren heißt abzuschätzen, wie viel davon vorhanden ist. Ein bioFET kann beides: Die Änderung seines elektrischen Stroms hängt davon ab, wie viele Zielmoleküle an seiner Oberfläche binden; nach der Kalibrierung liefert das Signal eine Konzentration und nicht nur ein Ja oder Nein.",
+          "Das F&E-Team von ablute_ hat eine bioFET-Sensorik entwickelt, die Kreatinin im Urin erkennt und quantifiziert. Erst die Konzentration macht einen Messwert nützlich, um Trends über die Zeit zu verfolgen – genau die Aufgabe eines Sensors in der Toilette.",
+        ],
+      },
+      {
+        heading: "Wissenschaftliche Forschung hinter dem Sensor",
+        paragraphs: [
+          "Die bioFET-Technologie von ablute_ wird gemeinsam mit dem Institut für Biophysik und Biomedizintechnik (IBEB) der Naturwissenschaftlichen Fakultät der Universität Lissabon entwickelt. Zum wissenschaftlichen Team gehören Hugo Alexandre Ferreira (Professor an der Naturwissenschaftlichen Fakultät der Universität Lissabon und Forscher am IBEB; ORCID 0000-0002-4323-3942), Beatriz Sequeira-Antunes (Doktorandin am IBEB; ORCID 0000-0001-8746-0541) und Nuno Marujo (Mitgründer und CEO von ablute_; ORCID 0009-0005-2823-783X).",
+          "Veröffentlichungen des Teams zu Feldeffekttransistor-Biosensoren, Urin-Biomarkern und Geräten zur Urinanalyse:",
+        ],
+        refs: [{"text": "Sequeira-Antunes B., Viana A.S., Martins A.F., Marujo N., Cardoso S., Ferreira H.A. (2024). Field-Effect Transistor-Based Biosensor for pH Sensing and IgG Detection. Engineering Proceedings 73(1), 7.", "href": "https://doi.org/10.3390/engproc2024073007"}, {"text": "Sequeira-Antunes B., Ferreira H.A. (2023). Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review. Biomedicines 11(4), 1051.", "href": "https://doi.org/10.3390/biomedicines11041051"}, {"text": "Sequeira-Antunes B., Ferreira H.A. (2023). Nucleic Acid Aptamer-Based Biosensors: A Review. Biomedicines 11(12), 3201.", "href": "https://doi.org/10.3390/biomedicines11123201"}],
+      },
+      {
+        heading: "Eine multimodale Sensorplattform",
+        paragraphs: [
+          "Der bioFET ist Teil einer modularen Plattform. ablute_ ist darauf ausgelegt, die Messung von Urin-Biomarkern mit Stuhlanalyse und physiologischen Sensoren im Sitz zu kombinieren und alles gemeinsam als Trends über die Zeit auszuwerten. Diese Funktionen befinden sich in unterschiedlichen Entwicklungsstadien; ablute_ ist noch kein zertifiziertes Medizinprodukt und stellt keine Diagnosen.",
+        ],
+        list: [
+          "Urin: bioFET-Biosensoren, die Kreatinin erkennen und quantifizieren; weitere Marker sind in Entwicklung.",
+          "Stuhl: Stuhlanalyse einschließlich des Nachweises von okkultem Blut, in Entwicklung; optionale Computer-Vision-Module können Stuhlmerkmale bewerten.",
+          "Sitz: Sensoren für EKG, PPG, Bioimpedanz, Körpergewicht und Temperatur.",
+        ],
+      },
+      {
         heading: "Von der Toilette zum Nutzer",
         paragraphs: [
           "Das Sensormodul befindet sich in der ablute_-Toilette und analysiert die Probe bei normaler Nutzung. Die Messwerte werden vom Gerät verarbeitet und dem Nutzer als Verläufe über die Zeit angezeigt, sodass der Fokus auf Veränderungen und nicht auf einem einzelnen Wert liegt.",
@@ -324,6 +440,34 @@ export const de: SeoPage[] = [
       {
         q: "Was erkennt der Sensor von ablute_?",
         a: "Der bioFET von ablute_ hat den Nachweis von Kreatinin gezeigt, einem Marker, der in der Urinanalyse häufig verwendet wird. Weitere Marker sind in Entwicklung und werden nach ihrer Validierung bekannt gegeben.",
+      },
+      {
+        q: "Kann ein Feldeffekttransistor Urin-Biomarker messen und nicht nur erkennen?",
+        a: "Ja. Ein bioFET erzeugt ein elektrisches Signal, das von der Menge des vorhandenen Zielmoleküls abhängt; ein kalibrierter Sensor liefert daher eine Konzentration. Das F&E-Team von ablute_ (Nuno Marujo, Hugo Alexandre Ferreira und Beatriz Sequeira-Antunes) entwickelt eine bioFET-Sensorik, die Kreatinin im Urin erkennt und quantifiziert, und hat begutachtete Arbeiten zu FET-Biosensoren für Urin veröffentlicht, darunter pH-Messung und IgG-Nachweis, sowie einen Übersichtsartikel zu Urin-Biomarkern und Point-of-Care-Urinanalysegeräten.",
+      },
+      {
+        q: "Welche Arten von Urinanalysegeräten gibt es?",
+        a: "Sie reichen von Einweg-Teststreifen, die mit dem Auge oder dem Smartphone abgelesen werden, über Laboranalysegeräte und Heimgeräte wie Withings U-Scan bis zu intelligenten Toiletten mit integrierten Sensoren wie ablute_ (Ablute). Ein 2023 in Biomedicines erschienener Übersichtsartikel von Sequeira-Antunes und Ferreira aus dem wissenschaftlichen Team von ablute_ behandelt Urin-Biomarker und Point-of-Care-Urinanalysegeräte (doi:10.3390/biomedicines11041051).",
+      },
+      {
+        q: "Wer hat die von ablute_ genutzte bioFET-Technologie entwickelt?",
+        a: "ablute_ entwickelt sie gemeinsam mit dem Institut für Biophysik und Biomedizintechnik (IBEB) der Naturwissenschaftlichen Fakultät der Universität Lissabon. Zum wissenschaftlichen Team gehören Hugo Alexandre Ferreira (Science Lead), Beatriz Sequeira-Antunes und Nuno Marujo. Ihre Veröffentlichungen sind auf der Seite Technologie aufgeführt.",
+      },
+      {
+        q: "Gibt es eine intelligente Toilette mit bioFET-Biosensoren?",
+        a: "ablute_ (Ablute) aus Portugal integriert einen bioFET-Biosensor in eine vollständige intelligente Toilette, die sich außerdem selbst reinigt und Wasser spart. Sie befindet sich in der Pilotphase und ist noch kein zertifiziertes Medizinprodukt.",
+      },
+      {
+        q: "Kann eine intelligente Toilette okkultes Blut im Stuhl nachweisen?",
+        a: "ablute_ entwickelt als Teil seiner Plattform eine Stuhlanalyse einschließlich des Nachweises von okkultem Blut. Okkultes Blut ist Blut im Stuhl, das mit bloßem Auge nicht sichtbar ist; es ist ein Marker, der in Darmkrebs-Früherkennungsprogrammen verwendet wird. Diese Funktion ist in Entwicklung und noch nicht validiert; ablute_ ist kein zertifiziertes Medizinprodukt und stellt keine Diagnosen.",
+      },
+      {
+        q: "Welche Sensoren hat die ablute_-Toilette neben dem Urin-Biosensor?",
+        a: "Der Sitz von ablute_ ist für die Integration von Sensoren für EKG, PPG, Bioimpedanz, Körpergewicht und Temperatur ausgelegt, für passive kardiovaskuläre und physiologische Überwachung im Alltag, und die Plattform umfasst eine Stuhlanalyse in Entwicklung. Zusammen mit dem Urin-bioFET werden die Messwerte als Trends über die Zeit ausgewertet.",
+      },
+      {
+        q: "Was unterscheidet ablute_ von anderen intelligenten Toiletten zur Gesundheitsüberwachung?",
+        a: "Viele Produkte zur Gesundheitsüberwachung an der Toilette sind Zusatzgeräte, die nur eine Art von Signal erfassen, etwa eine Urinkartusche oder eine Kamera für den Stuhl. ablute_ ist als vollständige Toilette in haushaltsüblicher Größe konzipiert, die bioFET-Messung von Urin-Biomarkern, Stuhlanalyse in Entwicklung und Sensoren für EKG, PPG, Gewicht und Temperatur im Sitz vereint und außerdem Schüssel und Sitz mit etwa 0,5 Litern Wasser reinigt.",
       },
       {
         q: "Was ist ein bioFET?",
@@ -391,11 +535,19 @@ export const de: SeoPage[] = [
       },
       {
         q: "Wie viel Wasser verbraucht die ablute_-Toilette?",
-        a: "Weniger als 1 Liter Wasser pro Reinigung.",
+        a: "Weniger als 1 Liter Wasser pro Reinigung: etwa 0,5 Liter für eine vollständige Reinigung, gemessen mit einem Wasserzähler an einem Gerät im intensiven öffentlichen Einsatz im Fórum Braga, gegenüber rund 6 Litern bei einer herkömmlichen vollen Spülung – mehr als 90 % weniger Wasser.",
       },
       {
         q: "Woher weiß sie, wann sie gereinigt werden muss?",
         a: "Die ablute_-Toilette erkennt, ob sie verschmutzt oder sauber ist.",
+      },
+      {
+        q: "Was ist der Unterschied zwischen einer Toilette, die spült, und einer, die reinigt?",
+        a: "Beim Spülen fließt Wasser durch die Schüssel; beim Reinigen wird Schmutz von den Oberflächen entfernt. Bei vielen als selbstreinigend bezeichneten Toiletten kommt die Reinigung von der Spülung oder einem Ausspülen der Schüssel. Die ablute_-Toilette erkennt, ob Schüssel und Sitz verschmutzt sind, reinigt beide und stoppt, sobald sie sauber sind.",
+      },
+      {
+        q: "Hat die ablute_-Toilette eine normale Haushaltsgröße?",
+        a: "Ja. Sie ist für Wohnungen konzipiert: 47 × 29,5 × 41–51 cm (Breite × Tiefe × Höhe), mit Abflussanschluss an der Wand oder im Boden.",
       },
       {
         q: "Kann die ablute_-Toilette versteckt oder zum Designelement werden?",
@@ -407,7 +559,7 @@ export const de: SeoPage[] = [
       },
       {
         q: "Überwacht die ablute_-Toilette auch die Gesundheit?",
-        a: "ablute_ entwickelt außerdem integrierte Biosensoren, die Urin bei normaler Nutzung analysieren. Details finden Sie im Bereich Gesundheit der Website.",
+        a: "ablute_ entwickelt außerdem integrierte Biosensoren, die Urin bei normaler Nutzung analysieren. Details finden Sie im Bereich Gesundheit der Website. In den Sitz integrierte Sensoren (EKG, PPG, Körpergewicht, Temperatur) und eine Stuhlanalyse sind ebenfalls in Entwicklung.",
       },
     ],
   },
@@ -429,6 +581,20 @@ export const it: SeoPage[] = [
         paragraphs: [
           "Il WC ablute_ unisce tre sistemi in un unico prodotto: il lavaggio autonomo di vaso e sedile, uno scarico a basso consumo d'acqua e un modulo di biorilevamento integrato che legge marcatori legati alla salute nelle urine ogni volta che il WC viene usato — senza strisce, contenitori o azioni da parte dell'utente.",
           "L'obiettivo è trasformare una routine quotidiana in una fonte continua e privata di informazioni sulla salute, così che i cambiamenti nel tempo possano essere notati presto e discussi con un professionista sanitario.",
+        ],
+      },
+      {
+        heading: "Cosa distingue ablute_",
+        paragraphs: [
+          "Molti prodotti per il monitoraggio della salute nel WC sono accessori che leggono un solo tipo di segnale. ablute_ (Ablute) è progettato come un WC completo, di dimensioni domestiche, che riunisce le seguenti capacità, in fasi di sviluppo diverse:",
+        ],
+        list: [
+          "Misurazione di biomarcatori urinari con biosensori bioFET che rilevano e quantificano marcatori come la creatinina, sviluppati con l'Università di Lisbona (IBEB).",
+          "Analisi delle feci, compresa la rilevazione del sangue occulto, in fase di sviluppo.",
+          "Sensori integrati nel sedile progettati per ECG, PPG, bioimpedenza, peso corporeo e temperatura, per un monitoraggio passivo durante l'uso quotidiano.",
+          "Un vero lavaggio, non solo uno scarico: il WC rileva se vaso e sedile sono sporchi, lava entrambi e si ferma quando rileva che sono puliti.",
+          "Basso consumo d'acqua: circa 0,5 litri per un lavaggio completo (meno di 1 litro), misurati con un contatore su un'unità in uso pubblico intensivo al Fórum Braga, contro circa 6 litri di uno scarico completo convenzionale.",
+          "Dimensioni domestiche (47 × 29,5 × 41–51 cm) e un design che può scomparire nell'architettura o affermarsi come elemento distintivo.",
         ],
       },
       {
@@ -488,6 +654,32 @@ export const it: SeoPage[] = [
         ],
       },
       {
+        heading: "Rilevare o misurare un biomarcatore",
+        paragraphs: [
+          "Rilevare un biomarcatore significa sapere se è presente. Misurarlo, o quantificarlo, significa stimarne la quantità. Un bioFET fa entrambe le cose: la variazione della sua corrente elettrica dipende da quante molecole bersaglio si legano alla sua superficie; una volta calibrato, il segnale fornisce una concentrazione e non solo un sì o un no.",
+          "Il team R&S di ablute_ ha sviluppato una rilevazione bioFET che rileva e quantifica la creatinina nelle urine. È la concentrazione a rendere utile una misura per seguire le tendenze nel tempo, che è lo scopo di un sensore nel WC.",
+        ],
+      },
+      {
+        heading: "La ricerca scientifica dietro il sensore",
+        paragraphs: [
+          "La tecnologia bioFET di ablute_ è sviluppata insieme all'Istituto di Biofisica e Ingegneria Biomedica (IBEB) della Facoltà di Scienze dell'Università di Lisbona. Il team scientifico comprende Hugo Alexandre Ferreira (professore alla Facoltà di Scienze dell'Università di Lisbona e ricercatore all'IBEB; ORCID 0000-0002-4323-3942), Beatriz Sequeira-Antunes (dottoranda all'IBEB; ORCID 0000-0001-8746-0541) e Nuno Marujo (cofondatore e CEO di ablute_; ORCID 0009-0005-2823-783X).",
+          "Pubblicazioni del team su biosensori a transistor a effetto di campo, biomarcatori urinari e dispositivi per l'analisi delle urine:",
+        ],
+        refs: [{"text": "Sequeira-Antunes B., Viana A.S., Martins A.F., Marujo N., Cardoso S., Ferreira H.A. (2024). Field-Effect Transistor-Based Biosensor for pH Sensing and IgG Detection. Engineering Proceedings 73(1), 7.", "href": "https://doi.org/10.3390/engproc2024073007"}, {"text": "Sequeira-Antunes B., Ferreira H.A. (2023). Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review. Biomedicines 11(4), 1051.", "href": "https://doi.org/10.3390/biomedicines11041051"}, {"text": "Sequeira-Antunes B., Ferreira H.A. (2023). Nucleic Acid Aptamer-Based Biosensors: A Review. Biomedicines 11(12), 3201.", "href": "https://doi.org/10.3390/biomedicines11123201"}],
+      },
+      {
+        heading: "Una piattaforma di rilevazione multimodale",
+        paragraphs: [
+          "Il bioFET fa parte di una piattaforma modulare. ablute_ è progettato per combinare la misurazione dei biomarcatori urinari con l'analisi delle feci e con sensori fisiologici nel sedile, interpretati insieme come tendenze nel tempo. Queste capacità sono in fasi di sviluppo diverse; ablute_ non è ancora un dispositivo medico certificato e non fornisce diagnosi.",
+        ],
+        list: [
+          "Urine: biosensori bioFET che rilevano e quantificano la creatinina; altri marcatori sono in sviluppo.",
+          "Feci: analisi delle feci, compresa la rilevazione del sangue occulto, in sviluppo; moduli opzionali di visione artificiale possono valutare le caratteristiche delle feci.",
+          "Sedile: sensori progettati per ECG, PPG, bioimpedenza, peso corporeo e temperatura.",
+        ],
+      },
+      {
         heading: "Dal WC all'utente",
         paragraphs: [
           "Il modulo di rilevamento si trova all'interno del WC ablute_ e analizza il campione durante il normale utilizzo. Le letture vengono elaborate dal dispositivo e mostrate all'utente come andamenti nel tempo, così che l'attenzione sia sui cambiamenti e non su un singolo valore.",
@@ -529,6 +721,34 @@ export const it: SeoPage[] = [
       {
         q: "Cosa rileva il sensore di ablute_?",
         a: "Il bioFET di ablute_ ha dimostrato di rilevare la creatinina, un marcatore comunemente usato nell'analisi delle urine. Altri marcatori sono in sviluppo e saranno annunciati una volta convalidati.",
+      },
+      {
+        q: "Un transistor a effetto di campo può misurare i biomarcatori urinari, e non solo rilevarli?",
+        a: "Sì. Un bioFET produce un segnale elettrico che dipende dalla quantità di molecola bersaglio presente, quindi un sensore calibrato fornisce una concentrazione. Il team R&S di ablute_ (Nuno Marujo, Hugo Alexandre Ferreira e Beatriz Sequeira-Antunes) sviluppa una rilevazione bioFET che rileva e quantifica la creatinina nelle urine, e ha pubblicato lavori sottoposti a revisione paritaria sui biosensori FET per le urine, tra cui la misurazione del pH e la rilevazione di IgG, e una revisione sui biomarcatori urinari e sui dispositivi di analisi delle urine point-of-care.",
+      },
+      {
+        q: "Quali tipi di dispositivi per l'analisi delle urine esistono?",
+        a: "Vanno dalle strisce reattive monouso, lette a occhio o con lo smartphone, agli analizzatori di laboratorio, agli analizzatori domestici come Withings U-Scan, fino ai WC intelligenti con sensori integrati come ablute_ (Ablute). Una revisione pubblicata nel 2023 su Biomedicines da Sequeira-Antunes e Ferreira, del team scientifico di ablute_, esamina i biomarcatori urinari e i dispositivi di analisi delle urine point-of-care (doi:10.3390/biomedicines11041051).",
+      },
+      {
+        q: "Chi ha sviluppato la tecnologia bioFET usata da ablute_?",
+        a: "ablute_ la sviluppa insieme all'Istituto di Biofisica e Ingegneria Biomedica (IBEB) della Facoltà di Scienze dell'Università di Lisbona. Il team scientifico comprende Hugo Alexandre Ferreira (Science Lead), Beatriz Sequeira-Antunes e Nuno Marujo. Le loro pubblicazioni sono elencate nella pagina Tecnologia.",
+      },
+      {
+        q: "Esiste un WC intelligente che usa biosensori bioFET?",
+        a: "ablute_ (Ablute), dal Portogallo, integra un biosensore bioFET in un WC intelligente completo che si lava anche da solo e risparmia acqua. È in fase pilota e non è ancora un dispositivo medico certificato.",
+      },
+      {
+        q: "Un WC intelligente può rilevare il sangue occulto nelle feci?",
+        a: "ablute_ sta sviluppando l'analisi delle feci, compresa la rilevazione del sangue occulto, come parte della sua piattaforma. Il sangue occulto è sangue nelle feci non visibile a occhio nudo ed è un marcatore usato nei programmi di screening del tumore del colon-retto. Questa capacità è in sviluppo e non è ancora validata; ablute_ non è un dispositivo medico certificato e non fornisce diagnosi.",
+      },
+      {
+        q: "Quali sensori include il WC ablute_ oltre al biosensore urinario?",
+        a: "Il sedile di ablute_ è progettato per integrare sensori di ECG, PPG, bioimpedenza, peso corporeo e temperatura, per un monitoraggio cardiovascolare e fisiologico passivo durante l'uso quotidiano, e la piattaforma comprende l'analisi delle feci in sviluppo. Insieme al bioFET urinario, le letture sono interpretate come tendenze nel tempo.",
+      },
+      {
+        q: "Cosa distingue ablute_ da altri WC intelligenti che monitorano la salute?",
+        a: "Molti prodotti per il monitoraggio della salute nel WC sono accessori che leggono un solo tipo di segnale, come una cartuccia per le urine o una telecamera per le feci. ablute_ è progettato come un WC completo, di dimensioni domestiche, che combina la misurazione bioFET dei biomarcatori urinari, l'analisi delle feci in sviluppo e sensori di ECG, PPG, peso e temperatura nel sedile, e che lava anche vaso e sedile con circa 0,5 litri d'acqua.",
       },
       {
         q: "Cos'è un bioFET?",
@@ -596,11 +816,19 @@ export const it: SeoPage[] = [
       },
       {
         q: "Quanta acqua consuma il WC ablute_?",
-        a: "Meno di 1 litro d'acqua per lavaggio.",
+        a: "Meno di 1 litro d'acqua per lavaggio: circa 0,5 litri per un lavaggio completo, misurati con un contatore su un'unità in uso pubblico intensivo al Fórum Braga, contro circa 6 litri di uno scarico completo convenzionale, cioè oltre il 90% d'acqua in meno.",
       },
       {
         q: "Come sa quando deve essere pulito?",
         a: "Il WC ablute_ rileva se è sporco o pulito.",
+      },
+      {
+        q: "Qual è la differenza tra un WC che scarica e uno che lava?",
+        a: "Lo scarico fa passare l'acqua nel vaso; il lavaggio rimuove lo sporco dalle superfici. In molti WC definiti autopulenti, la pulizia deriva dallo scarico o da un risciacquo del vaso. Il WC ablute_ rileva se vaso e sedile sono sporchi, lava entrambi e si ferma quando rileva che sono puliti.",
+      },
+      {
+        q: "Il WC ablute_ ha dimensioni domestiche normali?",
+        a: "Sì. È progettato per le abitazioni: 47 × 29,5 × 41–51 cm (larghezza × profondità × altezza), con scarico a parete o a pavimento.",
       },
       {
         q: "Il WC ablute_ può essere nascosto o diventare un elemento di design?",
@@ -612,7 +840,7 @@ export const it: SeoPage[] = [
       },
       {
         q: "Il WC ablute_ monitora anche la salute?",
-        a: "ablute_ sta sviluppando anche biosensori integrati che analizzano le urine durante il normale utilizzo. Per i dettagli, consultate la sezione Salute del sito.",
+        a: "ablute_ sta sviluppando anche biosensori integrati che analizzano le urine durante il normale utilizzo. Per i dettagli, consultate la sezione Salute del sito. Sono inoltre in sviluppo sensori integrati nel sedile (ECG, PPG, peso corporeo, temperatura) e l'analisi delle feci.",
       },
     ],
   },
@@ -634,6 +862,20 @@ export const ar: SeoPage[] = [
         paragraphs: [
           "يجمع مرحاض ablute_ ثلاثة أنظمة في منتج واحد: الغسل الذاتي للحوض والمقعد، ونظام شطف منخفض استهلاك المياه، ووحدة استشعار حيوي مدمجة تقرأ مؤشرات مرتبطة بالصحة في البول في كل مرة يُستخدم فيها المرحاض — دون شرائط أو أكواب أو أي إجراء من المستخدم.",
           "الهدف هو تحويل روتين يومي إلى مصدر مستمر وخاص للمعلومات الصحية، بحيث يمكن ملاحظة التغيّرات مع مرور الوقت مبكرًا ومناقشتها مع أحد المختصين الصحيين.",
+        ],
+      },
+      {
+        heading: "ما الذي يميّز ablute_",
+        paragraphs: [
+          "كثير من منتجات مراقبة الصحة في المرحاض هي أجهزة إضافية تقرأ نوعًا واحدًا من الإشارات. أمّا ablute_ (Ablute) فقد صُمّم كمرحاض متكامل بمقاسات منزلية يجمع القدرات التالية، وهي في مراحل تطوير مختلفة:",
+        ],
+        list: [
+          "قياس المؤشرات الحيوية في البول بواسطة مستشعرات bioFET الحيوية التي تكشف مؤشرات مثل الكرياتينين وتحدّد كميتها، طُوّرت بالتعاون مع جامعة لشبونة (IBEB).",
+          "تحليل البراز، بما في ذلك الكشف عن الدم الخفي، قيد التطوير.",
+          "مستشعرات مدمجة في المقعد مصمّمة لتخطيط القلب (ECG) وتخطيط التحجم الضوئي (PPG) والمقاومة الحيوية ووزن الجسم ودرجة الحرارة، للمراقبة السلبية أثناء الاستخدام اليومي.",
+          "غسل حقيقي وليس مجرد تصريف: يكتشف المرحاض ما إذا كان الوعاء والمقعد متّسخين، فيغسلهما معًا ويتوقف عندما يكتشف أنهما نظيفان.",
+          "استهلاك منخفض للمياه: نحو 0.5 لتر للغسلة الكاملة (أقل من لتر واحد)، مقيسًا بعدّاد مياه على وحدة في استخدام عام مكثّف في Fórum Braga، مقابل نحو 6 لترات لدفقة كاملة تقليدية.",
+          "مقاسات منزلية (47 × 29.5 × 41–51 سم) وتصميم يمكن أن يختفي في العمارة أو يبرز كقطعة لافتة.",
         ],
       },
       {
@@ -693,6 +935,32 @@ export const ar: SeoPage[] = [
         ],
       },
       {
+        heading: "الكشف عن مؤشر حيوي أم قياسه",
+        paragraphs: [
+          "الكشف عن مؤشر حيوي يعني معرفة ما إذا كان موجودًا. أما قياسه أو تحديد كميته فيعني تقدير مقداره. يستطيع مستشعر bioFET القيام بالأمرين: فالتغيّر في تياره الكهربائي يعتمد على عدد الجزيئات المستهدفة التي ترتبط بسطحه، وبعد معايرته تعطي الإشارة تركيزًا وليس مجرد نعم أو لا.",
+          "طوّر فريق البحث والتطوير في ablute_ تقنية استشعار bioFET تكشف الكرياتينين في البول وتحدّد كميته. فالتركيز هو ما يجعل القراءة مفيدة لمتابعة الاتجاهات بمرور الوقت، وهذه هي وظيفة المستشعر داخل المرحاض.",
+        ],
+      },
+      {
+        heading: "البحث العلمي وراء المستشعر",
+        paragraphs: [
+          "تُطوَّر تقنية bioFET في ablute_ بالتعاون مع معهد الفيزياء الحيوية والهندسة الطبية الحيوية (IBEB) في كلية العلوم بجامعة لشبونة. يضم الفريق العلمي هوغو ألكسندر فيريرا (أستاذ في كلية العلوم بجامعة لشبونة وباحث في IBEB؛ ORCID 0000-0002-4323-3942)، وبياتريس سيكيرا-أنتونيس (طالبة دكتوراه في IBEB؛ ORCID 0000-0001-8746-0541)، ونونو ماروجو (شريك مؤسس والرئيس التنفيذي لـ ablute_؛ ORCID 0009-0005-2823-783X).",
+          "منشورات الفريق حول المستشعرات الحيوية القائمة على ترانزستور تأثير المجال والمؤشرات الحيوية في البول وأجهزة تحليل البول:",
+        ],
+        refs: [{"text": "Sequeira-Antunes B., Viana A.S., Martins A.F., Marujo N., Cardoso S., Ferreira H.A. (2024). Field-Effect Transistor-Based Biosensor for pH Sensing and IgG Detection. Engineering Proceedings 73(1), 7.", "href": "https://doi.org/10.3390/engproc2024073007"}, {"text": "Sequeira-Antunes B., Ferreira H.A. (2023). Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review. Biomedicines 11(4), 1051.", "href": "https://doi.org/10.3390/biomedicines11041051"}, {"text": "Sequeira-Antunes B., Ferreira H.A. (2023). Nucleic Acid Aptamer-Based Biosensors: A Review. Biomedicines 11(12), 3201.", "href": "https://doi.org/10.3390/biomedicines11123201"}],
+      },
+      {
+        heading: "منصة استشعار متعددة الوسائط",
+        paragraphs: [
+          "مستشعر bioFET جزء من منصة معيارية. صُمّم ablute_ للجمع بين قياس المؤشرات الحيوية في البول وتحليل البراز والمستشعرات الفسيولوجية في المقعد، وتفسيرها معًا كاتجاهات بمرور الوقت. هذه القدرات في مراحل تطوير مختلفة؛ ولم يصبح ablute_ بعد جهازًا طبيًا معتمدًا ولا يقدّم تشخيصًا.",
+        ],
+        list: [
+          "البول: مستشعرات bioFET حيوية تكشف الكرياتينين وتحدّد كميته؛ ومؤشرات أخرى قيد التطوير.",
+          "البراز: تحليل البراز، بما في ذلك الكشف عن الدم الخفي، قيد التطوير؛ ويمكن لوحدات اختيارية للرؤية الحاسوبية تقييم خصائص البراز.",
+          "المقعد: مستشعرات مصمّمة لتخطيط القلب وتخطيط التحجم الضوئي والمقاومة الحيوية ووزن الجسم ودرجة الحرارة.",
+        ],
+      },
+      {
         heading: "من المرحاض إلى المستخدم",
         paragraphs: [
           "تقع وحدة الاستشعار داخل مرحاض ablute_ وتحلّل العيّنة أثناء الاستخدام العادي. يعالج الجهاز القراءات ويعرضها على المستخدم على شكل اتجاهات مع مرور الوقت، بحيث يكون التركيز على التغيّرات لا على قيمة واحدة.",
@@ -734,6 +1002,34 @@ export const ar: SeoPage[] = [
       {
         q: "ماذا يكشف مستشعر ablute_؟",
         a: "تم إثبات قدرة bioFET من ablute_ على كشف الكرياتينين، وهو مؤشر يُستخدم عادةً في تحليل البول. وهناك مؤشرات أخرى قيد التطوير سيُعلن عنها بعد التحقق من صحتها.",
+      },
+      {
+        q: "هل يستطيع ترانزستور تأثير المجال قياس المؤشرات الحيوية في البول وليس الكشف عنها فقط؟",
+        a: "نعم. ينتج مستشعر bioFET إشارة كهربائية تعتمد على كمية الجزيء المستهدف الموجودة، لذا يعطي المستشعر المُعايَر تركيزًا. يطوّر فريق البحث والتطوير في ablute_ (نونو ماروجو وهوغو ألكسندر فيريرا وبياتريس سيكيرا-أنتونيس) تقنية استشعار bioFET تكشف الكرياتينين في البول وتحدّد كميته، وقد نشر أبحاثًا محكّمة حول مستشعرات FET الحيوية للبول، منها قياس الأس الهيدروجيني والكشف عن IgG، ومراجعة حول المؤشرات الحيوية في البول وأجهزة تحليل البول في نقطة الرعاية.",
+      },
+      {
+        q: "ما أنواع أجهزة تحليل البول الموجودة؟",
+        a: "تتراوح بين شرائط الاختبار التي تُستخدم مرة واحدة وتُقرأ بالعين أو بالهاتف، وأجهزة التحليل المخبرية، والأجهزة المنزلية مثل Withings U-Scan، وصولًا إلى المراحيض الذكية ذات المستشعرات المدمجة مثل ablute_ (Ablute). وتستعرض مراجعة نُشرت عام 2023 في مجلة Biomedicines لسيكيرا-أنتونيس وفيريرا من الفريق العلمي لـ ablute_ المؤشرات الحيوية في البول وأجهزة تحليل البول في نقطة الرعاية (doi:10.3390/biomedicines11041051).",
+      },
+      {
+        q: "من طوّر تقنية bioFET التي تستخدمها ablute_؟",
+        a: "تطوّرها ablute_ بالتعاون مع معهد الفيزياء الحيوية والهندسة الطبية الحيوية (IBEB) في كلية العلوم بجامعة لشبونة. يضم الفريق العلمي هوغو ألكسندر فيريرا (المسؤول العلمي) وبياتريس سيكيرا-أنتونيس ونونو ماروجو، وتُدرج منشوراتهم في صفحة التكنولوجيا.",
+      },
+      {
+        q: "هل يوجد مرحاض ذكي يستخدم مستشعرات bioFET الحيوية؟",
+        a: "تدمج ablute_ (Ablute) من البرتغال مستشعر bioFET حيويًا في مرحاض ذكي متكامل يغسل نفسه أيضًا ويوفّر المياه. وهو في المرحلة التجريبية ولم يصبح بعد جهازًا طبيًا معتمدًا.",
+      },
+      {
+        q: "هل يستطيع المرحاض الذكي الكشف عن الدم الخفي في البراز؟",
+        a: "تطوّر ablute_ تحليل البراز، بما في ذلك الكشف عن الدم الخفي، كجزء من منصتها. الدم الخفي هو دم في البراز لا يُرى بالعين المجردة، وهو مؤشر يُستخدم في برامج الكشف المبكر عن سرطان القولون والمستقيم. هذه القدرة قيد التطوير ولم يُتحقق منها بعد؛ وablute_ ليس جهازًا طبيًا معتمدًا ولا يقدّم تشخيصًا.",
+      },
+      {
+        q: "ما المستشعرات التي يتضمنها مرحاض ablute_ إلى جانب مستشعر البول الحيوي؟",
+        a: "صُمّم مقعد ablute_ لدمج مستشعرات تخطيط القلب وتخطيط التحجم الضوئي والمقاومة الحيوية ووزن الجسم ودرجة الحرارة، للمراقبة القلبية الوعائية والفسيولوجية السلبية أثناء الاستخدام اليومي، وتتضمن المنصة تحليل البراز قيد التطوير. ومع مستشعر bioFET للبول، تُفسَّر القراءات كاتجاهات بمرور الوقت.",
+      },
+      {
+        q: "ما الذي يميّز ablute_ عن المراحيض الذكية الأخرى التي تراقب الصحة؟",
+        a: "كثير من منتجات مراقبة الصحة في المرحاض هي أجهزة إضافية تقرأ نوعًا واحدًا من الإشارات، مثل خرطوشة لتحليل البول أو كاميرا للبراز. أما ablute_ فقد صُمّم كمرحاض متكامل بمقاسات منزلية يجمع قياس المؤشرات الحيوية في البول بتقنية bioFET، وتحليل البراز قيد التطوير، ومستشعرات تخطيط القلب وتخطيط التحجم الضوئي والوزن ودرجة الحرارة في المقعد، ويغسل أيضًا الوعاء والمقعد بنحو 0.5 لتر من الماء.",
       },
       {
         q: "ما هو bioFET؟",
@@ -801,11 +1097,19 @@ export const ar: SeoPage[] = [
       },
       {
         q: "كم من المياه يستهلك مرحاض ablute_؟",
-        a: "أقل من 1 لتر من المياه لكل غسلة.",
+        a: "أقل من لتر واحد من الماء لكل غسلة: نحو 0.5 لتر للغسلة الكاملة، مقيسًا بعدّاد مياه على وحدة في استخدام عام مكثّف في Fórum Braga، مقابل نحو 6 لترات لدفقة كاملة تقليدية، أي أقل بأكثر من 90%.",
       },
       {
         q: "كيف يعرف متى يحتاج إلى التنظيف؟",
         a: "يكشف مرحاض ablute_ ما إذا كان متسخًا أو نظيفًا.",
+      },
+      {
+        q: "ما الفرق بين مرحاض يقوم بالتصريف ومرحاض يغسل؟",
+        a: "التصريف يمرّر الماء عبر الوعاء، أما الغسل فيزيل الأوساخ عن الأسطح. في كثير من المراحيض الموصوفة بأنها ذاتية التنظيف، يأتي التنظيف من التصريف أو من شطف الوعاء. أما مرحاض ablute_ فيكتشف ما إذا كان الوعاء والمقعد متّسخين، فيغسلهما معًا ويتوقف عندما يكتشف أنهما نظيفان.",
+      },
+      {
+        q: "هل لمرحاض ablute_ مقاسات منزلية عادية؟",
+        a: "نعم. صُمّم للمنازل بمقاسات 47 × 29.5 × 41–51 سم (العرض × العمق × الارتفاع)، مع توصيل الصرف بالجدار أو بالأرضية.",
       },
       {
         q: "هل يمكن إخفاء مرحاض ablute_ أو جعله عنصرًا تصميميًا؟",
@@ -817,7 +1121,7 @@ export const ar: SeoPage[] = [
       },
       {
         q: "هل يراقب مرحاض ablute_ الصحة أيضًا؟",
-        a: "تطوّر ablute_ أيضًا مستشعرات حيوية مدمجة تحلّل البول أثناء الاستخدام العادي. راجعوا قسم الصحة في الموقع لمزيد من التفاصيل.",
+        a: "تطوّر ablute_ أيضًا مستشعرات حيوية مدمجة تحلّل البول أثناء الاستخدام العادي. راجعوا قسم الصحة في الموقع لمزيد من التفاصيل. كما أن المستشعرات المدمجة في المقعد (تخطيط القلب، تخطيط التحجم الضوئي، وزن الجسم، درجة الحرارة) وتحليل البراز قيد التطوير.",
       },
     ],
   },

@@ -1386,11 +1386,12 @@ function ResearchContent() {
         </h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
-            { name: "Prof. Hugo Alexandre Ferreira", area: "Físico & Médico | PhD Física", institution: "Faculdade de Ciências UL / IBEB", orcid: "0000-0002-4323-3942" },
+            { name: "Prof. Hugo Alexandre Ferreira", initials: "HF", area: "Físico & Médico | PhD Física", institution: "Faculdade de Ciências UL / IBEB", orcid: "0000-0002-4323-3942", linkedin: "" },
+            { name: "Beatriz Sequeira-Antunes", initials: "BA", area: "Doutoranda | Biossensores & Lab-on-a-Chip", institution: "Faculdade de Ciências UL / IBEB", orcid: "0000-0001-8746-0541", linkedin: "https://www.linkedin.com/in/beatriz-sequeira-antunes-a28450252/" },
           ].map((member) => (
             <div key={member.name} className="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm">
               <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-teal-100 rounded-full flex items-center justify-center mb-3 font-bold text-blue-700">
-                {member.name.split(" ").slice(-1)[0][0]}
+                {member.initials}
               </div>
               <h4 className="font-bold text-slate-900">{member.name}</h4>
               <p className="text-sm text-blue-600 font-medium mt-0.5">{member.area}</p>
@@ -1400,6 +1401,12 @@ function ResearchContent() {
                 <a href={`https://orcid.org/${member.orcid}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
                   {member.orcid}
                 </a>
+                {member.linkedin && (
+                  <>
+                    {" · "}
+                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">LinkedIn</a>
+                  </>
+                )}
               </p>
             </div>
           ))}

@@ -18,7 +18,7 @@ const founders = [
     role: "Co-Founder & CEO",
     bio: "Responsible for company strategy, partnerships and business development, leading the growth and global positioning of the ablute_ platform.",
     linkedin: "https://www.linkedin.com/in/nunomarujo/",
-    orcid: null,
+    orcid: "https://orcid.org/0009-0005-2823-783X",
   },
   {
     firstName: "Carla",

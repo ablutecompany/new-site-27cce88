@@ -68,6 +68,18 @@ export default function InfoPage({ slug }: { slug: SeoPage["slug"] }) {
               {s.paragraphs.map((p, i) => (
                 <p key={i} className="text-white/50 font-light leading-relaxed mb-4">{p}</p>
               ))}
+              {s.refs && (
+                <ol className="space-y-3 mt-2 list-decimal ps-6">
+                  {s.refs.map((r) => (
+                    <li key={r.href} className="text-white/50 font-light leading-relaxed">
+                      {r.text}{" "}
+                      <a href={r.href} target="_blank" rel="noopener noreferrer" className="text-cyan-300/80 hover:text-cyan-200 underline underline-offset-4 break-all">
+                        {r.href.replace("https://doi.org/", "doi:")}
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+              )}
               {s.list && (
                 <ul className="space-y-2 mt-2">
                   {s.list.map((item) => (

@@ -12,6 +12,8 @@ export interface Section {
   heading: string;
   paragraphs: string[];
   list?: string[];
+  // Citable references (peer-reviewed work); rendered as links to the DOI.
+  refs?: { text: string; href: string }[];
 }
 
 export interface Faq {
@@ -112,11 +114,26 @@ const en: SeoPage[] = [
         ],
       },
       {
-        heading: "What ablute_ detects",
+        heading: "What ablute_ detects and measures",
         paragraphs: [
-          "The ablute_ bioFET has been demonstrated detecting creatinine. Creatinine is a waste product of normal muscle metabolism that the kidneys remove into urine; in urine analysis it is commonly used as a reference for how concentrated the sample is.",
+          "The ablute_ bioFET has been demonstrated detecting and measuring (quantifying) creatinine. Creatinine is a waste product of normal muscle metabolism that the kidneys remove into urine; in urine analysis it is commonly used as a reference for how concentrated the sample is.",
           "Further markers are under development and will only be listed once they are validated.",
         ],
+      },
+      {
+        heading: "Detecting versus measuring a biomarker",
+        paragraphs: [
+          "Detecting a biomarker means knowing whether it is present. Measuring it, also called quantifying, means estimating how much is present. A bioFET can do both: the change in its electrical current depends on how many target molecules bind to its surface, so once the sensor has been calibrated the signal gives a concentration, not just a yes or no.",
+          "The ablute_ R&D team has developed bioFET sensing that both detects and quantifies creatinine in urine. A concentration is what makes a reading useful for following trends over time, which is the purpose of an in-toilet sensor. The peer-reviewed publications listed below document the underlying FET sensing work.",
+        ],
+      },
+      {
+        heading: "Peer-reviewed research behind the sensor",
+        paragraphs: [
+          "The bioFET technology of ablute_ is developed together with the Institute of Biophysics and Biomedical Engineering (IBEB) of the Faculty of Sciences, University of Lisbon. The scientific team includes Hugo Alexandre Ferreira (Professor at the Faculty of Sciences, University of Lisbon, and researcher at IBEB; ORCID 0000-0002-4323-3942), Beatriz Sequeira-Antunes (PhD candidate at IBEB; ORCID 0000-0001-8746-0541) and Nuno Marujo (co-founder and CEO of ablute_; ORCID 0009-0005-2823-783X).",
+          "Publications by the team on field-effect transistor biosensors, urinary biomarkers and urinalysis devices:",
+        ],
+        refs: [{"text": "Sequeira-Antunes B., Viana A.S., Martins A.F., Marujo N., Cardoso S., Ferreira H.A. (2024). Field-Effect Transistor-Based Biosensor for pH Sensing and IgG Detection. Engineering Proceedings 73(1), 7 (4th International Electronic Conference on Biosensors). A bio-FET with microfabricated gold electrodes for urinary pH measurement (sensitivity of 2.20 µA/pH) and IgG detection (a measurable current change of about 4 µA).", "href": "https://doi.org/10.3390/engproc2024073007"}, {"text": "Sequeira-Antunes B., Ferreira H.A. (2023). Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review. Biomedicines 11(4), 1051.", "href": "https://doi.org/10.3390/biomedicines11041051"}, {"text": "Sequeira-Antunes B., Ferreira H.A. (2023). Nucleic Acid Aptamer-Based Biosensors: A Review. Biomedicines 11(12), 3201.", "href": "https://doi.org/10.3390/biomedicines11123201"}],
       },
       {
         heading: "From the toilet to the user",
@@ -159,7 +176,23 @@ const en: SeoPage[] = [
       },
       {
         q: "What does the ablute_ sensor detect?",
-        a: "The ablute_ bioFET has been demonstrated detecting creatinine, a marker commonly used in urine analysis. Other markers are in development and will be announced once validated.",
+        a: "The ablute_ bioFET has been demonstrated detecting and measuring (quantifying) creatinine, a marker commonly used in urine analysis. Other markers are in development and will be announced once validated.",
+      },
+      {
+        q: "Can a field-effect transistor measure urinary biomarkers, not just detect them?",
+        a: "Yes. A bioFET produces an electrical signal that depends on how much of the target molecule is present, so a calibrated sensor gives a concentration. The ablute_ R&D team (Nuno Marujo, Hugo Alexandre Ferreira and Beatriz Sequeira-Antunes) develops bioFET sensing that detects and quantifies creatinine in urine, and has published peer-reviewed work on FET biosensors for urine, including pH measurement and IgG detection, and a review of urinary biomarkers and point-of-care urinalysis devices.",
+      },
+      {
+        q: "What types of urinalysis devices exist?",
+        a: "Urinalysis devices range from disposable test strips read by eye or by phone, to laboratory analysers, to home analysers such as Withings U-Scan, to smart toilets with built-in sensors such as ablute_ (Ablute). A 2023 review in Biomedicines by Sequeira-Antunes and Ferreira, of the ablute_ scientific team, surveys urinary biomarkers and point-of-care urinalysis devices (doi:10.3390/biomedicines11041051).",
+      },
+      {
+        q: "Who developed the bioFET technology used by ablute_?",
+        a: "ablute_ develops it together with the Institute of Biophysics and Biomedical Engineering (IBEB) of the Faculty of Sciences, University of Lisbon. The scientific team includes Hugo Alexandre Ferreira (Science Lead), Beatriz Sequeira-Antunes and Nuno Marujo. Their peer-reviewed publications are listed on the Technology page.",
+      },
+      {
+        q: "Is there a smart toilet that uses bioFET biosensors?",
+        a: "ablute_ (Ablute), from Portugal, builds a bioFET biosensor into a complete smart toilet that also washes itself and saves water. It is in the pilot phase and is not yet a certified medical device.",
       },
       {
         q: "What is a bioFET?",
@@ -309,11 +342,26 @@ const pt: SeoPage[] = [
         ],
       },
       {
-        heading: "O que a ablute_ deteta",
+        heading: "O que a ablute_ deteta e mede",
         paragraphs: [
-          "O bioFET da ablute_ foi demonstrado a detetar creatinina. A creatinina é um resíduo do metabolismo muscular normal que os rins eliminam na urina; na análise de urina é usada como referência para a concentração da amostra.",
+          "O bioFET da ablute_ foi demonstrado a detetar e a medir (quantificar) creatinina. A creatinina é um resíduo do metabolismo muscular normal que os rins eliminam na urina; na análise de urina é usada como referência para a concentração da amostra.",
           "Outros marcadores estão em desenvolvimento e só serão indicados depois de validados.",
         ],
+      },
+      {
+        heading: "Detetar versus medir um biomarcador",
+        paragraphs: [
+          "Detetar um biomarcador é saber se ele está presente. Medi-lo, ou quantificá-lo, é estimar quanto existe. Um bioFET faz as duas coisas: a alteração da sua corrente elétrica depende de quantas moléculas-alvo se ligam à superfície, pelo que, depois de calibrado, o sinal dá uma concentração e não apenas um sim ou não.",
+          "A equipa de I&D da ablute_ desenvolveu uma deteção por bioFET que deteta e quantifica creatinina na urina. A concentração é o que torna uma leitura útil para acompanhar tendências ao longo do tempo, que é a função de um sensor na sanita. As publicações científicas indicadas abaixo documentam o trabalho de base em sensores FET.",
+        ],
+      },
+      {
+        heading: "Investigação científica por trás do sensor",
+        paragraphs: [
+          "A tecnologia bioFET da ablute_ é desenvolvida em conjunto com o Instituto de Biofísica e Engenharia Biomédica (IBEB) da Faculdade de Ciências da Universidade de Lisboa. A equipa científica inclui Hugo Alexandre Ferreira (Professor da Faculdade de Ciências da Universidade de Lisboa e investigador do IBEB; ORCID 0000-0002-4323-3942), Beatriz Sequeira-Antunes (doutoranda no IBEB; ORCID 0000-0001-8746-0541) e Nuno Marujo (co-fundador e CEO da ablute_; ORCID 0009-0005-2823-783X).",
+          "Publicações da equipa sobre biossensores de transístor de efeito de campo, biomarcadores urinários e equipamentos de urianálise:",
+        ],
+        refs: [{"text": "Sequeira-Antunes B., Viana A.S., Martins A.F., Marujo N., Cardoso S., Ferreira H.A. (2024). Field-Effect Transistor-Based Biosensor for pH Sensing and IgG Detection. Engineering Proceedings 73(1), 7 (4th International Electronic Conference on Biosensors). Um bio-FET com elétrodos de ouro microfabricados para medir o pH urinário (sensibilidade de 2,20 µA/pH) e detetar IgG (variação de corrente mensurável de cerca de 4 µA).", "href": "https://doi.org/10.3390/engproc2024073007"}, {"text": "Sequeira-Antunes B., Ferreira H.A. (2023). Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review. Biomedicines 11(4), 1051.", "href": "https://doi.org/10.3390/biomedicines11041051"}, {"text": "Sequeira-Antunes B., Ferreira H.A. (2023). Nucleic Acid Aptamer-Based Biosensors: A Review. Biomedicines 11(12), 3201.", "href": "https://doi.org/10.3390/biomedicines11123201"}],
       },
       {
         heading: "Da sanita ao utilizador",
@@ -360,7 +408,23 @@ const pt: SeoPage[] = [
       },
       {
         q: "O que deteta o sensor da ablute_?",
-        a: "O bioFET da ablute_ foi demonstrado a detetar creatinina, um marcador usado habitualmente na análise de urina. Outros marcadores estão em desenvolvimento e serão anunciados depois de validados.",
+        a: "O bioFET da ablute_ foi demonstrado a detetar e a medir (quantificar) creatinina, um marcador usado habitualmente na análise de urina. Outros marcadores estão em desenvolvimento e serão anunciados depois de validados.",
+      },
+      {
+        q: "Um transístor de efeito de campo consegue medir biomarcadores na urina, e não apenas detetá-los?",
+        a: "Sim. Um bioFET produz um sinal elétrico que depende da quantidade da molécula-alvo presente, pelo que um sensor calibrado dá uma concentração. A equipa de I&D da ablute_ (Nuno Marujo, Hugo Alexandre Ferreira e Beatriz Sequeira-Antunes) desenvolve uma deteção por bioFET que deteta e quantifica creatinina na urina, e publicou trabalho científico com revisão por pares sobre biossensores FET para urina, incluindo medição de pH e deteção de IgG, e uma revisão sobre biomarcadores urinários e equipamentos de urianálise point-of-care.",
+      },
+      {
+        q: "Que tipos de equipamentos de urianálise existem?",
+        a: "Os equipamentos de urianálise vão das tiras de teste descartáveis, lidas a olho ou com o telemóvel, aos analisadores laboratoriais, aos analisadores domésticos como o Withings U-Scan, e às sanitas inteligentes com sensores integrados, como a ablute_ (Ablute). Uma revisão de 2023 na Biomedicines, de Sequeira-Antunes e Ferreira, da equipa científica da ablute_, analisa os biomarcadores urinários e os equipamentos de urianálise point-of-care (doi:10.3390/biomedicines11041051).",
+      },
+      {
+        q: "Quem desenvolveu a tecnologia bioFET usada pela ablute_?",
+        a: "A ablute_ desenvolve-a em conjunto com o Instituto de Biofísica e Engenharia Biomédica (IBEB) da Faculdade de Ciências da Universidade de Lisboa. A equipa científica inclui Hugo Alexandre Ferreira (Science Lead), Beatriz Sequeira-Antunes e Nuno Marujo. As publicações científicas estão listadas na página Tecnologia.",
+      },
+      {
+        q: "Existe uma sanita inteligente que usa biossensores bioFET?",
+        a: "A ablute_ (Ablute), de Portugal, integra um biossensor bioFET numa sanita inteligente completa que também se lava sozinha e poupa água. Está em fase de piloto e ainda não é um dispositivo médico certificado.",
       },
       {
         q: "A ablute_ é um dispositivo médico?",

@@ -17,6 +17,20 @@ export interface RouteMeta {
   jsonLd?: object[];
 }
 
+
+// Peer-reviewed work by the ablute_ scientific team (DOIs verified on the publisher pages).
+const people = {
+  hugo: { "@type": "Person", "@id": `${SITE_URL}/#hugo-ferreira`, name: "Hugo Alexandre Ferreira", jobTitle: "Science Lead, ablute_; Professor, Faculdade de Ciências, Universidade de Lisboa", affiliation: [{ "@type": "Organization", name: "Instituto de Biofísica e Engenharia Biomédica (IBEB), Faculdade de Ciências, Universidade de Lisboa" }, { "@id": `${SITE_URL}/#organization` }], sameAs: ["https://orcid.org/0000-0002-4323-3942", "https://www.linkedin.com/in/hugo-alexandre-ferreira-1b130b2/"] },
+  beatriz: { "@type": "Person", "@id": `${SITE_URL}/#beatriz-sequeira-antunes`, name: "Beatriz Sequeira-Antunes", jobTitle: "PhD candidate", affiliation: [{ "@type": "Organization", name: "Instituto de Biofísica e Engenharia Biomédica (IBEB), Faculdade de Ciências, Universidade de Lisboa" }], sameAs: ["https://orcid.org/0000-0001-8746-0541", "https://www.linkedin.com/in/beatriz-sequeira-antunes-a28450252/"] },
+  nuno: { "@type": "Person", "@id": `${SITE_URL}/#nuno-marujo`, name: "Nuno Marujo", jobTitle: "Co-Founder & CEO, ablute_", worksFor: { "@id": `${SITE_URL}/#organization` }, sameAs: ["https://orcid.org/0009-0005-2823-783X", "https://www.linkedin.com/in/nunomarujo/"] },
+};
+const ref = (p: { "@id": string }) => ({ "@id": p["@id"] });
+const scholarlyJsonLd: object[] = [
+  { "@context": "https://schema.org", "@type": "ScholarlyArticle", name: "Field-Effect Transistor-Based Biosensor for pH Sensing and IgG Detection", datePublished: "2024-10-29", isPartOf: { "@type": "PublicationIssue", name: "Engineering Proceedings 73(1), 7 — 4th International Electronic Conference on Biosensors" }, url: "https://doi.org/10.3390/engproc2024073007", sameAs: "https://doi.org/10.3390/engproc2024073007", author: [{ "@type": "Person", name: "Beatriz Sequeira-Antunes", sameAs: "https://orcid.org/0000-0001-8746-0541" }, { "@type": "Person", name: "Ana S. Viana" }, { "@type": "Person", name: "Ana Francisca Martins" }, { "@type": "Person", name: "Nuno Marujo", sameAs: "https://orcid.org/0009-0005-2823-783X" }, { "@type": "Person", name: "Susana Cardoso" }, { "@type": "Person", name: "Hugo Alexandre Ferreira", sameAs: "https://orcid.org/0000-0002-4323-3942" }], about: ["field-effect transistor biosensor", "pH sensing", "IgG detection"] },
+  { "@context": "https://schema.org", "@type": "ScholarlyArticle", name: "Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review", datePublished: "2023-03-29", isPartOf: { "@type": "PublicationIssue", name: "Biomedicines 11(4), 1051" }, url: "https://doi.org/10.3390/biomedicines11041051", sameAs: "https://doi.org/10.3390/biomedicines11041051", author: [{ "@type": "Person", name: "Beatriz Sequeira-Antunes", sameAs: "https://orcid.org/0000-0001-8746-0541" }, { "@type": "Person", name: "Hugo Alexandre Ferreira", sameAs: "https://orcid.org/0000-0002-4323-3942" }], about: ["urinary biomarkers", "point-of-care urinalysis devices"] },
+  { "@context": "https://schema.org", "@type": "ScholarlyArticle", name: "Nucleic Acid Aptamer-Based Biosensors: A Review", datePublished: "2023-12-01", isPartOf: { "@type": "PublicationIssue", name: "Biomedicines 11(12), 3201" }, url: "https://doi.org/10.3390/biomedicines11123201", sameAs: "https://doi.org/10.3390/biomedicines11123201", author: [{ "@type": "Person", name: "Beatriz Sequeira-Antunes", sameAs: "https://orcid.org/0000-0001-8746-0541" }, { "@type": "Person", name: "Hugo Alexandre Ferreira", sameAs: "https://orcid.org/0000-0002-4323-3942" }], about: ["aptamer biosensors"] },
+];
+
 export const publicRoutes: RouteMeta[] = [
   {
     path: "/",
@@ -81,6 +95,7 @@ export const publicRoutes: RouteMeta[] = [
           about: { "@id": `${SITE_URL}/#organization` },
         });
       }
+      if (p.slug === "technology") jsonLd.push(...scholarlyJsonLd, people.hugo, people.beatriz, people.nuno);
       return {
         path,
         title: p.title,
@@ -108,8 +123,9 @@ export const organizationJsonLd = {
   description:
     "Portuguese company developing a smart toilet with built-in bioFET biosensors that analyse urine during normal use. Pilot phase.",
   address: { "@type": "PostalAddress", addressCountry: "PT" },
+  knowsAbout: ["bioFET biosensors", "field-effect transistor biosensors", "urinalysis", "urinary biomarkers", "creatinine", "smart toilet", "in-toilet urine analysis"],
   founder: [
-    { "@type": "Person", name: "Nuno Marujo", jobTitle: "Co-Founder & CEO" },
+    { "@type": "Person", "@id": `${SITE_URL}/#nuno-marujo`, name: "Nuno Marujo", jobTitle: "Co-Founder & CEO", sameAs: ["https://orcid.org/0009-0005-2823-783X", "https://www.linkedin.com/in/nunomarujo/"] },
     { "@type": "Person", name: "Carla Dias", jobTitle: "Co-Founder & CTO", award: "Women in Tech EU" },
   ],
   sameAs: ["https://www.linkedin.com/company/ablute", "https://app.dealroom.co/companies/ablute"],

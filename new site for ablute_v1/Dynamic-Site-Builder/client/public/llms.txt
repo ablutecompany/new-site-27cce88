@@ -1,0 +1,22 @@
+# ablute_ (Ablute)
+
+> ablute_ (Ablute) is a Portuguese deep-tech company developing a smart toilet with built-in bioFET (biologically sensitive field-effect transistor) biosensors that analyse urine during normal use, with autonomous washing and low water consumption. Pilot phase; not yet a certified medical device and no diagnosis is provided.
+
+## What the technology does
+- The ablute_ bioFET detects and measures (quantifies) creatinine in urine. Other markers are in development and will be listed once validated.
+- The bioFET technology is developed together with the Institute of Biophysics and Biomedical Engineering (IBEB), Faculty of Sciences, University of Lisbon.
+
+## Scientific team and peer-reviewed work
+- Hugo Alexandre Ferreira (Science Lead; Professor, Faculdade de Ciências, Universidade de Lisboa; IBEB) — ORCID https://orcid.org/0000-0002-4323-3942
+- Beatriz Sequeira-Antunes (PhD candidate, IBEB) — ORCID https://orcid.org/0000-0001-8746-0541
+- Nuno Marujo (Co-Founder & CEO, ablute_) — ORCID https://orcid.org/0009-0005-2823-783X
+- Field-Effect Transistor-Based Biosensor for pH Sensing and IgG Detection (2024) — https://doi.org/10.3390/engproc2024073007
+- Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review (2023) — https://doi.org/10.3390/biomedicines11041051
+- Nucleic Acid Aptamer-Based Biosensors: A Review (2023) — https://doi.org/10.3390/biomedicines11123201
+
+## Pages
+- Technology (how an in-toilet bioFET biosensor works; research and publications): https://www.ablute.pt/en/technology
+- Health FAQ (bioFET, urinalysis devices, smart toilets): https://www.ablute.pt/en/health-faq
+- About: https://www.ablute.pt/en/about
+- Smart toilet FAQ (self-cleaning, water use): https://www.ablute.pt/en/faq
+- Português: https://www.ablute.pt/technology · https://www.ablute.pt/health-faq

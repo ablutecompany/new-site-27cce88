@@ -45,7 +45,7 @@ const founders = [
     role: "Science Lead",
     bio: "Researcher specialised in nanotechnology and biosensors for in vitro diagnostics, responsible for the scientific direction of the ablute_ sensing technologies.",
     linkedin: "https://www.linkedin.com/in/hugo-alexandre-ferreira-1b130b2/",
-    orcid: "#",
+    orcid: "https://orcid.org/0000-0002-4323-3942",
   },
 ];
 
@@ -65,8 +65,8 @@ const rdTeam = [
     name: "Beatriz Antunes",
     role: "PhD Candidate",
     bio: "Researcher working on biosensing technologies and biomarker detection systems associated with the ablute_ platform.",
-    linkedin: "#",
-    orcid: "#",
+    linkedin: "https://www.linkedin.com/in/beatriz-sequeira-antunes-a28450252/",
+    orcid: "https://orcid.org/0000-0001-8746-0541",
   },
   {
     firstName: "Joana",

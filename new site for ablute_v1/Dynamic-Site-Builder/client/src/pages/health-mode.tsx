@@ -1386,7 +1386,7 @@ function ResearchContent() {
         </h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
-            { name: "Prof. Hugo Alexandre Ferreira", initials: "HF", area: "Físico & Médico | PhD Física", institution: "Faculdade de Ciências UL / IBEB", orcid: "0000-0002-4323-3942", linkedin: "" },
+            { name: "Prof. Hugo Alexandre Ferreira", initials: "HF", area: "Físico & Médico | PhD Física", institution: "Faculdade de Ciências UL / IBEB", orcid: "0000-0002-4323-3942", linkedin: "https://www.linkedin.com/in/hugo-alexandre-ferreira-1b130b2/" },
             { name: "Beatriz Sequeira-Antunes", initials: "BA", area: "Doutoranda | Biossensores & Lab-on-a-Chip", institution: "Faculdade de Ciências UL / IBEB", orcid: "0000-0001-8746-0541", linkedin: "https://www.linkedin.com/in/beatriz-sequeira-antunes-a28450252/" },
           ].map((member) => (
             <div key={member.name} className="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm">

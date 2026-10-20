@@ -1,8 +1,9 @@
 import { db } from "./db";
 import { 
-  posts, comments,
+  posts, comments, waitingListSubmissions,
   type InsertPost, type Post,
-  type InsertComment, type Comment
+  type InsertComment, type Comment,
+  type InsertWaitingList, type WaitingListSubmission,
 } from "@shared/schema";
 import { eq, desc } from "drizzle-orm";
 
@@ -13,6 +14,8 @@ export interface IStorage {
   
   getComments(postId: number): Promise<Comment[]>;
   createComment(comment: InsertComment): Promise<Comment>;
+
+  createWaitingListSubmission(data: InsertWaitingList): Promise<WaitingListSubmission>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -37,6 +40,11 @@ export class DatabaseStorage implements IStorage {
   async createComment(comment: InsertComment): Promise<Comment> {
     const [newComment] = await db.insert(comments).values(comment).returning();
     return newComment;
+  }
+
+  async createWaitingListSubmission(data: InsertWaitingList): Promise<WaitingListSubmission> {
+    const [row] = await db.insert(waitingListSubmissions).values(data).returning();
+    return row;
   }
 }
 

@@ -128,7 +128,11 @@ export const organizationJsonLd = {
     { "@type": "Person", "@id": `${SITE_URL}/#nuno-marujo`, name: "Nuno Marujo", jobTitle: "Co-Founder & CEO", sameAs: ["https://orcid.org/0009-0005-2823-783X", "https://www.linkedin.com/in/nunomarujo/"] },
     { "@type": "Person", name: "Carla Dias", jobTitle: "Co-Founder & CTO", award: "Women in Tech EU" },
   ],
-  sameAs: ["https://www.linkedin.com/company/ablute", "https://app.dealroom.co/companies/ablute"],
+  sameAs: [
+    "https://www.linkedin.com/company/ablute",
+    "https://www.crunchbase.com/organization/ablute",
+    "https://app.dealroom.co/companies/ablute",
+  ],
 };
 
 export const websiteJsonLd = {

@@ -669,14 +669,21 @@ export function Layout({ children }: { children: ReactNode }) {
                     style={{ opacity: 0.52 }}
                   />
                 </a>
-                <Link href="/projects">
+                <a
+                  href="/docs/ficha-tprism.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Ficha de projeto T-PRISM — COMPETE 2030"
+                  data-testid="link-footer-compete2030"
+                  className="block group"
+                >
                   <img
                     src={compete2030Logo}
                     alt="COMPETE 2030 / Portugal 2030 / Cofinanciado pela União Europeia"
-                    className="h-6 w-auto object-contain object-left transition-opacity duration-200 hover:opacity-75 cursor-pointer"
+                    className="h-6 w-auto object-contain object-left transition-opacity duration-200 group-hover:opacity-75"
                     style={{ opacity: 0.52 }}
                   />
-                </Link>
+                </a>
               </div>
 
               {/* Official link + Voucher ficha */}

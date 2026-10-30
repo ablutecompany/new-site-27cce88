@@ -113,7 +113,7 @@ export default function Home() {
             >
 
               {/* Raises the whole hero (video + overlays + content) slightly within the viewport */}
-              <div className="absolute inset-0" style={{ transform: "translateY(-5vh)" }}>
+              <div className="absolute inset-0" style={{ transform: "translateY(-10vh)" }}>
 
               {/* ── Video ── mirrored, shifted right ~14vw so the toilet sits right of centre, right edge clips off-screen */}
                 <video

@@ -73,6 +73,7 @@ export function Layout({ children }: { children: ReactNode }) {
   const [logoTeaseMessage, setLogoTeaseMessage] = useState("");
   const logoTeaseTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [isPilotOpen, setIsPilotOpen] = useState(false);
+  const [prrMenuOpen, setPrrMenuOpen] = useState(false);
   const [pilotSubmitted, setPilotSubmitted] = useState(false);
   const [pilotLoading, setPilotLoading] = useState(false);
   const [pilotForm, setPilotForm] = useState({ institution: "", contact: "", email: "", country: "", type: "" });
@@ -211,10 +212,13 @@ export function Layout({ children }: { children: ReactNode }) {
                       style={{ fontFamily: "Inter, sans-serif" }}
                     >
                       <div
-                        className="bg-[#0c0e10]/96 backdrop-blur-sm border border-white/10 rounded-xl px-3.5 py-2 shadow-2xl whitespace-nowrap"
-                        style={{ boxShadow: "0 0 20px rgba(0,180,255,0.06), 0 6px 20px rgba(0,0,0,0.55)" }}
+                        className="backdrop-blur-sm border border-white/10 rounded-xl px-3.5 py-2 shadow-2xl whitespace-nowrap"
+                        style={{
+                          backgroundColor: "rgba(12,14,16,0.96)",
+                          boxShadow: "0 0 20px rgba(0,180,255,0.06), 0 6px 20px rgba(0,0,0,0.55)",
+                        }}
                       >
-                        <p className="text-xs font-light text-white/80">{logoTeaseMessage}</p>
+                        <p className="text-xs font-light" style={{ color: "rgba(255,255,255,0.8)" }}>{logoTeaseMessage}</p>
                       </div>
                     </motion.div>
                   )}
@@ -610,25 +614,67 @@ export function Layout({ children }: { children: ReactNode }) {
 
           {/* Row 1 — Institutional lockup */}
           <div className="max-w-7xl mx-auto px-4 md:px-20 pt-8 pb-5">
-            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5">
+            <div className="flex flex-col items-center gap-5">
 
-              {/* Logos — each opens its project sheet directly */}
-              <div className="flex items-end gap-6 flex-wrap">
-                <a
-                  href="/docs/ficha-prr-hfpt.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Ficha de projeto PRR — HfPT"
-                  data-testid="link-footer-prr"
-                  className="block group"
-                >
-                  <img
-                    src={prrLogoWhite}
-                    alt="PRR — Plano de Recuperação e Resiliência / República Portuguesa / União Europeia — NextGenerationEU"
-                    className="h-8 w-auto object-contain object-left transition-opacity duration-200 group-hover:opacity-75"
-                    style={{ opacity: 0.52 }}
-                  />
-                </a>
+              {/* Logos — PRR opens a discreet popup with both official links; the others open their project sheet directly */}
+              <div className="flex items-end gap-6 flex-wrap justify-center">
+                <div className="relative">
+                  <button
+                    type="button"
+                    onClick={() => setPrrMenuOpen(o => !o)}
+                    aria-label="Hiperligações oficiais PRR"
+                    aria-expanded={prrMenuOpen}
+                    data-testid="link-footer-prr"
+                    className="block group"
+                  >
+                    <img
+                      src={prrLogoWhite}
+                      alt="PRR — Plano de Recuperação e Resiliência / República Portuguesa / União Europeia — NextGenerationEU"
+                      className="h-8 w-auto object-contain object-left transition-opacity duration-200 group-hover:opacity-75"
+                      style={{ opacity: 0.52 }}
+                    />
+                  </button>
+
+                  {/* Discreet popup — recuperarportugal.gov.pt + Voucher Startups ficha */}
+                  <AnimatePresence>
+                    {prrMenuOpen && (
+                      <>
+                        <div className="fixed inset-0 z-[145]" onClick={() => setPrrMenuOpen(false)} />
+                        <motion.div
+                          initial={{ opacity: 0, y: 6, scale: 0.97 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: 4, scale: 0.97 }}
+                          transition={{ duration: 0.16, ease: "easeOut" }}
+                          className="absolute bottom-full left-0 mb-3 z-[150] w-max"
+                        >
+                          <div
+                            className="border border-white/10 rounded-lg px-4 py-3 shadow-2xl flex flex-col gap-2"
+                            style={{ backgroundColor: "#0a0c0d" }}
+                          >
+                            <a
+                              href="https://recuperarportugal.gov.pt/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              data-testid="link-recuperar-portugal"
+                              className="text-[11px] tracking-[0.15em] uppercase text-white/85 hover:text-white transition-colors duration-200 font-medium whitespace-nowrap"
+                            >
+                              recuperarportugal.gov.pt&nbsp;↗
+                            </a>
+                            <a
+                              href="/docs/ficha-prr-voucher-startups.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              data-testid="link-footer-prr-voucher"
+                              className="text-[11px] tracking-[0.15em] uppercase text-white/50 hover:text-white/80 transition-colors duration-200 font-light whitespace-nowrap"
+                            >
+                              Ficha Voucher Startups (PRR)&nbsp;↗
+                            </a>
+                          </div>
+                        </motion.div>
+                      </>
+                    )}
+                  </AnimatePresence>
+                </div>
                 <a href="/docs/ficha-norte2030.pdf" target="_blank" rel="noopener noreferrer" data-testid="link-footer-norte2030" className="block group">
                   <img
                     src={norte2030Logo}
@@ -654,27 +700,16 @@ export function Layout({ children }: { children: ReactNode }) {
                 </a>
               </div>
 
-              {/* Official link + Voucher ficha */}
-              <div className="flex flex-col items-start sm:items-end gap-1.5">
-                <a
-                  href="https://recuperarportugal.gov.pt/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-testid="link-recuperar-portugal"
-                  className="text-[10px] tracking-widest uppercase text-white/38 hover:text-white/63 transition-colors duration-200 font-light"
-                >
-                  recuperarportugal.gov.pt&nbsp;↗
-                </a>
-                <a
-                  href="/docs/ficha-prr-voucher-startups.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-testid="link-footer-prr-voucher"
-                  className="text-[10px] tracking-widest uppercase text-white/38 hover:text-white/63 transition-colors duration-200 font-light"
-                >
-                  Ficha Voucher Startups (PRR)&nbsp;↗
-                </a>
-              </div>
+              {/* Official link — direct, muted gray */}
+              <a
+                href="https://recuperarportugal.gov.pt/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="link-recuperar-portugal-direct"
+                className="text-[10px] tracking-widest uppercase text-gray-500 hover:text-gray-300 transition-colors duration-200 font-light"
+              >
+                recuperarportugal.gov.pt&nbsp;↗
+              </a>
             </div>
           </div>
 

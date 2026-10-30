@@ -612,12 +612,12 @@ export function Layout({ children }: { children: ReactNode }) {
       {mode === "bathroom" && (location === "/" || location === "/projects") && (
         <footer className="w-full border-t border-white/[0.06]" style={{ background: "#07090a" }}>
 
-          {/* Row 1 — Institutional lockup */}
-          <div className="max-w-7xl mx-auto px-4 md:px-20 pt-8 pb-5">
-            <div className="flex flex-col items-center gap-5">
+          {/* Row 1 — Institutional lockup: logo bars left, recuperarportugal.gov.pt right */}
+          <div className="max-w-7xl mx-auto px-4 md:px-20 py-6">
+            <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-4">
 
               {/* Logos — PRR opens a discreet popup with both official links; the others open their project sheet directly */}
-              <div className="flex items-end gap-6 flex-wrap justify-center">
+              <div className="flex items-center gap-7 flex-wrap">
                 <div className="relative">
                   <button
                     type="button"
@@ -631,7 +631,7 @@ export function Layout({ children }: { children: ReactNode }) {
                       src={prrLogoWhite}
                       alt="PRR — Plano de Recuperação e Resiliência / República Portuguesa / União Europeia — NextGenerationEU"
                       className="h-8 w-auto object-contain object-left transition-opacity duration-200 group-hover:opacity-75"
-                      style={{ opacity: 0.52 }}
+                      style={{ opacity: 0.64 }}
                     />
                   </button>
 
@@ -680,7 +680,7 @@ export function Layout({ children }: { children: ReactNode }) {
                     src={norte2030Logo}
                     alt="NORTE2030 — Programa Regional do Norte / Portugal 2030 / Cofinanciado pela União Europeia"
                     className="h-8 w-auto object-contain object-left transition-opacity duration-200 group-hover:opacity-75"
-                    style={{ opacity: 0.52 }}
+                    style={{ opacity: 0.64 }}
                   />
                 </a>
                 <a
@@ -695,26 +695,26 @@ export function Layout({ children }: { children: ReactNode }) {
                     src={compete2030Logo}
                     alt="COMPETE 2030 / Portugal 2030 / Cofinanciado pela União Europeia"
                     className="h-6 w-auto object-contain object-left transition-opacity duration-200 group-hover:opacity-75"
-                    style={{ opacity: 0.52 }}
+                    style={{ opacity: 0.64 }}
                   />
                 </a>
               </div>
 
-              {/* Official link — direct, muted gray */}
+              {/* Official link — direct, muted gray, same row as the logos (wraps below them only when width runs out) */}
               <a
                 href="https://recuperarportugal.gov.pt/"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="link-recuperar-portugal-direct"
-                className="text-[10px] tracking-widest uppercase text-gray-500 hover:text-gray-300 transition-colors duration-200 font-light"
+                className="text-[10px] tracking-widest uppercase text-gray-500 hover:text-gray-300 transition-colors duration-200 font-light whitespace-nowrap"
               >
                 recuperarportugal.gov.pt&nbsp;↗
               </a>
             </div>
           </div>
 
-          {/* Row 2 — Legal documents */}
-          <div className="max-w-7xl mx-auto px-4 md:px-20 pb-7 pt-1">
+          {/* Row 2 — Legal documents, same line, left-aligned */}
+          <div className="max-w-7xl mx-auto px-4 md:px-20 pb-6">
             <div className="flex flex-wrap gap-x-6 gap-y-2">
               {[
                 { label: "Ablute_ Gender Policy", href: "/docs/ablute-gender-policy.pdf" },

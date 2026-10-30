@@ -856,13 +856,13 @@ function ProductPage({ onPilot }: { onPilot: () => void }) {
 
             {/* ── DEMO VIDEO ── */}
             <div className="rounded-2xl overflow-hidden bg-black border border-slate-100 shadow-sm" style={{ aspectRatio: "16/9" }}>
-              <iframe
-                data-testid="iframe-biosensing-video"
+              <video
+                data-testid="video-biosensing-demo"
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/oxYsuPDrQKo"
-                title={hc.biosensing.topTitle}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
+                src="/videos/ablute_health_screening_toilet.mp4"
+                controls
+                playsInline
+                preload="metadata"
               />
             </div>
 

@@ -727,7 +727,7 @@ export function Layout({ children }: { children: ReactNode }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   download
-                  className="flex items-center gap-1.5 text-[10px] tracking-wide text-white/20 hover:text-white/42 transition-colors duration-200 font-light group"
+                  className="flex items-center gap-1.5 text-[10px] tracking-wide text-white/40 hover:text-white/65 transition-colors duration-200 font-light group"
                 >
                   <svg className="w-2.5 h-2.5 shrink-0 opacity-60 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />

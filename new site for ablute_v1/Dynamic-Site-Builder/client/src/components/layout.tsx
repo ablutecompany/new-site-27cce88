@@ -100,7 +100,6 @@ function SparkParticles() {
 
 export function Layout({ children }: { children: ReactNode }) {
   const { mode, setMode, healthTab, setHealthTab, subNavVisible, setSubNavVisible, healthSubTab, setHealthSubTab } = useMode();
-  const [prrMenuOpen, setPrrMenuOpen] = useState(false);
   const { lang, setLang, t } = useLanguage();
   const [location, navigate] = useLocation();
   const [isCreateOpen, setIsCreateOpen] = useState(false);
@@ -645,44 +644,23 @@ export function Layout({ children }: { children: ReactNode }) {
           <div className="max-w-7xl mx-auto px-4 md:px-20 pt-8 pb-5">
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5">
 
-              {/* Logos — each opens its project sheet (PRR has two) */}
+              {/* Logos — each opens its project sheet directly */}
               <div className="flex items-end gap-6 flex-wrap">
-                <div className="relative">
-                  <button
-                    type="button"
-                    onClick={() => setPrrMenuOpen((v) => !v)}
-                    aria-expanded={prrMenuOpen}
-                    aria-label="Fichas de projeto PRR"
-                    data-testid="button-footer-prr"
-                    className="block group"
-                  >
-                    <img
-                      src={prrLogoWhite}
-                      alt="PRR — Plano de Recuperação e Resiliência / República Portuguesa / União Europeia — NextGenerationEU"
-                      className="h-8 w-auto object-contain object-left transition-opacity duration-200 group-hover:opacity-75"
-                      style={{ opacity: 0.52 }}
-                    />
-                  </button>
-                  {prrMenuOpen && (
-                    <div className="absolute bottom-full left-0 mb-3 w-72 rounded-xl border border-white/10 bg-[#0d1012] shadow-xl py-2 z-50">
-                      {[
-                        { label: "HfPT — Health from Portugal (PRR)", href: "/docs/ficha-prr-hfpt.pdf" },
-                        { label: "Voucher para Startups — Novos Produtos Verdes e Digitais (PRR)", href: "/docs/ficha-prr-voucher-startups.pdf" },
-                      ].map((d) => (
-                        <a
-                          key={d.href}
-                          href={d.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={() => setPrrMenuOpen(false)}
-                          className="block px-4 py-2.5 text-[11px] leading-snug text-white/60 hover:text-white hover:bg-white/5 transition-colors"
-                        >
-                          {d.label} ↗
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </div>
+                <a
+                  href="/docs/ficha-prr-hfpt.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Ficha de projeto PRR — HfPT"
+                  data-testid="link-footer-prr"
+                  className="block group"
+                >
+                  <img
+                    src={prrLogoWhite}
+                    alt="PRR — Plano de Recuperação e Resiliência / República Portuguesa / União Europeia — NextGenerationEU"
+                    className="h-8 w-auto object-contain object-left transition-opacity duration-200 group-hover:opacity-75"
+                    style={{ opacity: 0.52 }}
+                  />
+                </a>
                 <a href="/docs/ficha-norte2030.pdf" target="_blank" rel="noopener noreferrer" data-testid="link-footer-norte2030" className="block group">
                   <img
                     src={norte2030Logo}
@@ -701,16 +679,27 @@ export function Layout({ children }: { children: ReactNode }) {
                 </Link>
               </div>
 
-              {/* Official link */}
-              <a
-                href="https://recuperarportugal.gov.pt/"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-testid="link-recuperar-portugal"
-                className="text-[10px] tracking-widest uppercase text-white/38 hover:text-white/63 transition-colors duration-200 font-light"
-              >
-                recuperarportugal.gov.pt&nbsp;↗
-              </a>
+              {/* Official link + Voucher ficha */}
+              <div className="flex flex-col items-start sm:items-end gap-1.5">
+                <a
+                  href="https://recuperarportugal.gov.pt/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="link-recuperar-portugal"
+                  className="text-[10px] tracking-widest uppercase text-white/38 hover:text-white/63 transition-colors duration-200 font-light"
+                >
+                  recuperarportugal.gov.pt&nbsp;↗
+                </a>
+                <a
+                  href="/docs/ficha-prr-voucher-startups.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="link-footer-prr-voucher"
+                  className="text-[10px] tracking-widest uppercase text-white/38 hover:text-white/63 transition-colors duration-200 font-light"
+                >
+                  Ficha Voucher Startups (PRR)&nbsp;↗
+                </a>
+              </div>
             </div>
           </div>
 

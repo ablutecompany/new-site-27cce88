@@ -10,13 +10,15 @@ import { ExternalLink, Layers, Network } from "lucide-react";
 const programmes: { name: string; program: string; href?: string }[] = [
   { name: "T-PRISM", program: "R&D programme", href: "/docs/ficha-tprism.pdf" },
   { name: "PRR — Agenda HfPT", program: "Health from Portugal · Recovery and Resilience Plan", href: "/docs/ficha-prr-hfpt.pdf" },
-  { name: "Women in Tech EU", program: "Award — Carla Dias, co-founder & CTO" },
+  { name: "Women in Tech EU", program: "Award — Carla Dias, co-founder & CTO", href: "/docs/ficha-women-in-tech-eu.pdf" },
 ];
 
 // Moved out of "Projetos de Consórcio" into their own "Prémios" sub-tab (30/10/2026).
+// Women in Tech EU is duplicated here (kept in Consórcio too, per Nuno).
 const awards: { name: string; program: string; href?: string }[] = [
   { name: "Rebuild", program: "Programme" },
   { name: "Innomed Catalyst", program: "Programme" },
+  { name: "Women in Tech EU", program: "Award — Carla Dias, co-founder & CTO", href: "/docs/ficha-women-in-tech-eu.pdf" },
 ];
 
 const partners = [

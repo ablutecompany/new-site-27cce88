@@ -838,21 +838,46 @@ function ProductPage({ onPilot }: { onPilot: () => void }) {
                 PARTE 1 — PLATAFORMA MULTIMODAL DE BIOSSENSORES
             ═══════════════════════════════════════════════════ */}
 
-            {/* ── INTRO + PLATFORM IMAGE ── */}
+            {/* ── INTRO ── */}
+            <div className="max-w-3xl space-y-5">
+              <p className="text-[10px] font-semibold text-blue-500 uppercase tracking-[0.22em]">
+                {hc.biosensing.topLabel}
+              </p>
+              <h2 className="text-2xl font-bold text-slate-900 leading-snug">
+                {hc.biosensing.topTitle}
+              </h2>
+              <p className="text-slate-600 leading-relaxed">
+                {hc.biosensing.topIntro1}
+              </p>
+              <p className="text-slate-500 leading-relaxed text-sm">
+                {hc.biosensing.topIntro2}
+              </p>
+            </div>
+
+            {/* ── DEMO VIDEO ── */}
+            <div className="rounded-2xl overflow-hidden bg-black border border-slate-100 shadow-sm" style={{ aspectRatio: "16/9" }}>
+              <iframe
+                data-testid="iframe-biosensing-video"
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/oxYsuPDrQKo"
+                title={hc.biosensing.topTitle}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+
+            {/* ── MULTIMODAL ARCHITECTURE + PLATFORM IMAGE ── */}
             <div className="grid lg:grid-cols-[3fr_2fr] gap-10 lg:gap-14 items-start">
               <div className="space-y-5">
-                <p className="text-[10px] font-semibold text-blue-500 uppercase tracking-[0.22em]">
-                  {hc.biosensing.topLabel}
-                </p>
-                <h2 className="text-2xl font-bold text-slate-900 leading-snug">
-                  {hc.biosensing.topTitle}
-                </h2>
-                <p className="text-slate-600 leading-relaxed">
-                  {hc.biosensing.topIntro1}
-                </p>
-                <p className="text-slate-500 leading-relaxed text-sm">
-                  {hc.biosensing.topIntro2}
-                </p>
+                <div className="flex items-center gap-2.5">
+                  <div className="w-[3px] h-6 rounded-full bg-blue-500" />
+                  <h2 className="text-xl font-bold text-slate-900">{hc.biosensing.archMultiTitle}</h2>
+                </div>
+                <div className="space-y-4">
+                  <p className="text-slate-600 leading-relaxed">{hc.biosensing.archMultiIntro1}</p>
+                  <p className="text-slate-500 leading-relaxed text-sm">{hc.biosensing.archMultiIntro2}</p>
+                  <p className="text-slate-500 leading-relaxed text-sm">{hc.biosensing.archMultiIntro3}</p>
+                </div>
               </div>
               <figure className="flex flex-col gap-2 items-center self-start pt-2">
                 <div className="rounded-2xl overflow-hidden bg-white border border-slate-100 shadow-sm">
@@ -866,19 +891,6 @@ function ProductPage({ onPilot }: { onPilot: () => void }) {
                   {hc.biosensing.chipCaption}
                 </figcaption>
               </figure>
-            </div>
-
-            {/* ── MULTIMODAL ARCHITECTURE ── */}
-            <div className="space-y-5">
-              <div className="flex items-center gap-2.5">
-                <div className="w-[3px] h-6 rounded-full bg-blue-500" />
-                <h2 className="text-xl font-bold text-slate-900">{hc.biosensing.archMultiTitle}</h2>
-              </div>
-              <div className="max-w-3xl space-y-4">
-                <p className="text-slate-600 leading-relaxed">{hc.biosensing.archMultiIntro1}</p>
-                <p className="text-slate-500 leading-relaxed text-sm">{hc.biosensing.archMultiIntro2}</p>
-                <p className="text-slate-500 leading-relaxed text-sm">{hc.biosensing.archMultiIntro3}</p>
-              </div>
             </div>
 
             {/* ── 5 MULTIMODAL MINI-CARDS ── */}

@@ -1,4 +1,4 @@
-import { motion, AnimatePresence, useScroll } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Layout } from "@/components/layout";
 import { useMode } from "@/context/mode-context";
 import { useLanguage } from "@/context/language-context";
@@ -8,52 +8,86 @@ import HealthMode from "./health-mode";
 export default function Home() {
   const { mode } = useMode();
   const { t } = useLanguage();
-  const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-    layoutEffect: false,
-  });
-
+  // Self-driven open/close loop — independent of scroll, so it always plays
+  // smoothly instead of lagging behind a fast scroll gesture.
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
-    const START_OFFSET = 0.1;
-    const END_OFFSET   = 0.6;
+    const START_OFFSET = 0.1; // closed
+    const OPEN_OFFSET = 0.6; // open
+    const OPEN_MS = 2200;
+    const HOLD_OPEN_MS = 2600;
+    const CLOSE_MS = 1800;
+    const HOLD_CLOSED_MS = 1200;
 
-    let rafId: number;
-    let targetTime   = 0;
-    let displayTime  = 0;
-    let running      = true;
+    let rafId = 0;
+    let cancelled = false;
 
-    const unsubscribe = scrollYProgress.on("change", (p) => {
-      const mapped = START_OFFSET + p * (END_OFFSET - START_OFFSET);
-      targetTime = mapped * (video.duration || 0);
-    });
-
-    const tick = () => {
-      if (!running) return;
-      if (video.duration) {
-        const diff = targetTime - displayTime;
-        displayTime += diff * 0.1;
-        if (Math.abs(diff) > 0.0005) {
-          video.currentTime = displayTime;
+    const waitForMetadata = () =>
+      new Promise<void>((resolve) => {
+        if (video.readyState >= 1 && video.duration) {
+          resolve();
+        } else {
+          video.addEventListener("loadedmetadata", () => resolve(), { once: true });
         }
+      });
+
+    const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
+
+    const animateTime = (from: number, to: number, durationMs: number) =>
+      new Promise<void>((resolve) => {
+        const start = performance.now();
+        const step = (now: number) => {
+          if (cancelled) return resolve();
+          const t = Math.min(1, (now - start) / durationMs);
+          video.currentTime = from + (to - from) * easeOutCubic(t);
+          if (t < 1) {
+            rafId = requestAnimationFrame(step);
+          } else {
+            resolve();
+          }
+        };
+        rafId = requestAnimationFrame(step);
+      });
+
+    const wait = (ms: number) =>
+      new Promise<void>((resolve) => {
+        const id = setTimeout(resolve, ms);
+        if (cancelled) {
+          clearTimeout(id);
+          resolve();
+        }
+      });
+
+    const loop = async () => {
+      await waitForMetadata();
+      if (cancelled) return;
+      const duration = video.duration || 0;
+      const startT = START_OFFSET * duration;
+      const openT = OPEN_OFFSET * duration;
+      video.currentTime = startT;
+
+      while (!cancelled) {
+        await animateTime(startT, openT, OPEN_MS);
+        if (cancelled) break;
+        await wait(HOLD_OPEN_MS);
+        if (cancelled) break;
+        await animateTime(openT, startT, CLOSE_MS);
+        if (cancelled) break;
+        await wait(HOLD_CLOSED_MS);
       }
-      rafId = requestAnimationFrame(tick);
     };
 
-    rafId = requestAnimationFrame(tick);
+    loop();
 
     return () => {
-      running = false;
+      cancelled = true;
       cancelAnimationFrame(rafId);
-      unsubscribe();
     };
-  }, [scrollYProgress]);
+  }, []);
 
   return (
     <Layout>
@@ -66,22 +100,19 @@ export default function Home() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            {/* Scroll Container — 300vh gives room to scrub the video */}
-            <div ref={containerRef} className="relative h-[300vh]">
+            {/* Hero viewport — the toilet opens/closes on a self-driven loop, not tied to scroll */}
+            <div
+              className="relative h-screen w-full overflow-hidden"
+              style={{
+                background:
+                  "radial-gradient(ellipse at 18% 55%, #1d2024 0%, transparent 55%)," +
+                  "radial-gradient(ellipse at 75% 15%, #16191c 0%, transparent 45%)," +
+                  "radial-gradient(ellipse at 60% 85%, #141618 0%, transparent 40%)," +
+                  "linear-gradient(170deg, #141618 0%, #0e1012 35%, #0b0d0f 65%, #10120f 100%)",
+              }}
+            >
 
-              {/* Sticky viewport — stays pinned while user scrolls */}
-              <div
-                className="sticky top-0 h-screen w-full overflow-hidden"
-                style={{
-                  background:
-                    "radial-gradient(ellipse at 18% 55%, #1d2024 0%, transparent 55%)," +
-                    "radial-gradient(ellipse at 75% 15%, #16191c 0%, transparent 45%)," +
-                    "radial-gradient(ellipse at 60% 85%, #141618 0%, transparent 40%)," +
-                    "linear-gradient(170deg, #141618 0%, #0e1012 35%, #0b0d0f 65%, #10120f 100%)",
-                }}
-              >
-
-                {/* ── Video ── mirrored, shifted right ~14vw so the toilet sits right of centre, right edge clips off-screen */}
+              {/* ── Video ── mirrored, shifted right ~14vw so the toilet sits right of centre, right edge clips off-screen */}
                 <video
                   ref={videoRef}
                   src="/videos/ablute_opening.mp4"
@@ -199,7 +230,6 @@ export default function Home() {
                         ))}
                     </motion.div>
 
-                  </div>
                 </div>
               </div>
             </div>

@@ -154,8 +154,24 @@ const fundedProjects: FundedProject[] = [
 // No objective/scope copy is invented for Rebuild or Innomed Catalyst since no
 // documented description has been confirmed yet; flagged in the open-items list.
 const awards: { name: string; category: Bilingual; description?: Bilingual; href?: string }[] = [
-  { name: "Rebuild", category: { pt: "Programa de inovação", en: "Innovation programme" } },
-  { name: "Innomed Catalyst", category: { pt: "Programa de inovação", en: "Innovation programme" } },
+  {
+    name: "Rebuild",
+    category: { pt: "Prémio — Rebuild Expo", en: "Award — Rebuild Expo" },
+    description: {
+      pt: "Prémio Fomenti Go-Global 2025, atribuído à ablute_ no Rebuild Expo.",
+      en: "Fomenti Go-Global 2025 award, given to ablute_ at Rebuild Expo.",
+    },
+    href: "https://www.rebuildexpo.com/en/",
+  },
+  {
+    name: "Innomed Catalyst",
+    category: { pt: "Prémio — Innomed Catalyst", en: "Award — Innomed Catalyst" },
+    description: {
+      pt: "Prémio Best Market Potential (2025), atribuído à ablute_ no âmbito do Innomed Catalyst.",
+      en: "Best Market Potential award (2025), given to ablute_ at Innomed Catalyst.",
+    },
+    href: "https://portugalglobal.pt/noticias/2025/dezembro/metablue-solutions-e-ablute-distinguidas-nos-innomedcatalyst/",
+  },
   {
     name: "Women in Tech EU",
     category: { pt: "Prémio — Carla Dias, co-fundadora & CTO", en: "Award — Carla Dias, co-founder & CTO" },

@@ -10,9 +10,9 @@ import {
   Dna, BarChart3, ArrowRight, CheckCircle2, Leaf, Clock,
   Star, FileText, BookOpen, Globe, Globe2, Bot, Timer, Cpu, X, Download,
 } from "lucide-react";
-import chipRealisticSrc from "@assets/chip_bioFET_1772920609977.png";
 import assentoSensorialSrc from "@assets/assento_sensorial_ablute__1772966927779.png";
 import esquemaBioFetSrc from "@assets/Esquema_1773159363048.png";
+import biochipRealSrc from "@assets/biochip_paddy_holder_real_1793361931.jpg";
 
 const auraWaves = [10, 22, 35, 48, 62, 75, 87];
 const auraDots = [
@@ -937,16 +937,30 @@ function ProductPage({ onPilot }: { onPilot: () => void }) {
                 PARTE 2 — BIOCHIP MULTIPARAMÉTRICO PARA ANÁLISE URINÁRIA
             ═══════════════════════════════════════════════════ */}
 
-            {/* ── 1. INTRO TEXT ── */}
-            <div className="max-w-3xl space-y-5">
-              <p className="text-[10px] font-semibold text-indigo-500 uppercase tracking-[0.22em]">
-                {hc.biosensing.biochipLabel}
-              </p>
-              <h2 className="text-2xl font-bold text-slate-900 leading-snug">
-                {hc.biosensing.biochipTitle}
-              </h2>
-              <p className="text-slate-600 leading-relaxed">{hc.biosensing.biochipIntro1}</p>
-              <p className="text-slate-500 leading-relaxed text-sm">{hc.biosensing.biochipIntro2}</p>
+            {/* ── 1. INTRO TEXT + REAL BIOCHIP PHOTO ── */}
+            <div className="grid lg:grid-cols-[3fr_2fr] gap-10 lg:gap-14 items-start">
+              <div className="space-y-5">
+                <p className="text-[10px] font-semibold text-indigo-500 uppercase tracking-[0.22em]">
+                  {hc.biosensing.biochipLabel}
+                </p>
+                <h2 className="text-2xl font-bold text-slate-900 leading-snug">
+                  {hc.biosensing.biochipTitle}
+                </h2>
+                <p className="text-slate-600 leading-relaxed">{hc.biosensing.biochipIntro1}</p>
+                <p className="text-slate-500 leading-relaxed text-sm">{hc.biosensing.biochipIntro2}</p>
+              </div>
+              <figure className="flex flex-col gap-2 items-center self-start pt-2">
+                <div className="rounded-2xl overflow-hidden bg-white border border-slate-100 shadow-sm">
+                  <img
+                    src={biochipRealSrc}
+                    alt="Biochip multiparamétrico ablute_ — fotografia real, com moeda de 1 cêntimo para escala"
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
+                <figcaption className="text-[9px] text-slate-400 text-center tracking-wide font-light italic">
+                  Fotografia real do biochip multiparamétrico ablute_
+                </figcaption>
+              </figure>
             </div>
 
             {/* ── 2. BIOFET SCHEMATIC — compact, below device diagram ── */}

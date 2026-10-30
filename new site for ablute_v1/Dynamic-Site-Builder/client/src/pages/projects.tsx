@@ -7,12 +7,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Layers, Network } from "lucide-react";
 
 // Confirmed by Nuno (16/10/2026). Add period/description only once confirmed.
-const programmes: { name: string; program: string }[] = [
-  { name: "T-PRISM", program: "R&D programme" },
-  { name: "PRR — Agenda HfPT", program: "Health from Portugal · Recovery and Resilience Plan" },
+const programmes: { name: string; program: string; href?: string }[] = [
+  { name: "T-PRISM", program: "R&D programme", href: "/docs/ficha-tprism.pdf" },
+  { name: "PRR — Agenda HfPT", program: "Health from Portugal · Recovery and Resilience Plan", href: "/docs/ficha-prr-hfpt.pdf" },
+  { name: "Women in Tech EU", program: "Award — Carla Dias, co-founder & CTO" },
+];
+
+// Moved out of "Projetos de Consórcio" into their own "Prémios" sub-tab (30/10/2026).
+const awards: { name: string; program: string; href?: string }[] = [
   { name: "Rebuild", program: "Programme" },
   { name: "Innomed Catalyst", program: "Programme" },
-  { name: "Women in Tech EU", program: "Award — Carla Dias, co-founder & CTO" },
 ];
 
 const partners = [
@@ -44,7 +48,7 @@ export default function Projects() {
   useEffect(() => { setSubNavVisible(true); }, []);
 
   // Partners and Affiliations tabs are hidden until their lists are confirmed.
-  const tabs = [t.projectsPage.tab1];
+  const tabs = [t.projectsPage.tab1, t.projectsPage.tabAwards];
 
 
   const affiliationDescs = [
@@ -117,31 +121,103 @@ export default function Projects() {
                   <h2 className="text-2xl font-light text-white mb-3">{t.projects.consortTitle}</h2>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                  {programmes.map((proj, i) => (
-                    <motion.div
-                      key={proj.name}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: i * 0.07 }}
-                      className="border border-white/8 rounded-2xl p-8 bg-white/[0.02] hover:border-white/16 transition-all duration-300"
-                    >
-                      <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8">
-                        <div>
-                          <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-400/20 flex items-center justify-center mb-4">
-                            <Layers className="w-5 h-5 text-blue-300/80" />
+                  {programmes.map((proj, i) => {
+                    const Card = (
+                      <motion.div
+                        key={proj.name}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: i * 0.07 }}
+                        className={`border border-white/8 rounded-2xl p-8 bg-white/[0.02] transition-all duration-300 ${
+                          proj.href ? "hover:border-white/24 hover:bg-white/[0.04] cursor-pointer" : "hover:border-white/16"
+                        }`}
+                      >
+                        <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8">
+                          <div>
+                            <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-400/20 flex items-center justify-center mb-4">
+                              <Layers className="w-5 h-5 text-blue-300/80" />
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <h3 className="text-lg font-light text-white">{proj.name}</h3>
+                              {proj.href && <ExternalLink className="w-3.5 h-3.5 text-white/25" />}
+                            </div>
+                            <p className="text-xs text-white/30 font-light mt-1">{proj.program}</p>
                           </div>
-                          <h3 className="text-lg font-light text-white">{proj.name}</h3>
-                          <p className="text-xs text-white/30 font-light mt-1">{proj.program}</p>
                         </div>
-                      </div>
-                    </motion.div>
-                  ))}
+                      </motion.div>
+                    );
+                    return proj.href ? (
+                      <a
+                        key={proj.name}
+                        href={proj.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-testid={`link-project-${proj.name}`}
+                        className="block"
+                      >
+                        {Card}
+                      </a>
+                    ) : (
+                      Card
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* AWARDS */}
+            {activeTabIndex === 1 && (
+              <div className="space-y-12">
+                <div className="max-w-2xl">
+                  <h2 className="text-2xl font-light text-white mb-3">{t.projectsPage.tabAwards}</h2>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  {awards.map((proj, i) => {
+                    const Card = (
+                      <motion.div
+                        key={proj.name}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: i * 0.07 }}
+                        className={`border border-white/8 rounded-2xl p-8 bg-white/[0.02] transition-all duration-300 ${
+                          proj.href ? "hover:border-white/24 hover:bg-white/[0.04] cursor-pointer" : "hover:border-white/16"
+                        }`}
+                      >
+                        <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8">
+                          <div>
+                            <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-400/20 flex items-center justify-center mb-4">
+                              <Layers className="w-5 h-5 text-blue-300/80" />
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <h3 className="text-lg font-light text-white">{proj.name}</h3>
+                              {proj.href && <ExternalLink className="w-3.5 h-3.5 text-white/25" />}
+                            </div>
+                            <p className="text-xs text-white/30 font-light mt-1">{proj.program}</p>
+                          </div>
+                        </div>
+                      </motion.div>
+                    );
+                    return proj.href ? (
+                      <a
+                        key={proj.name}
+                        href={proj.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-testid={`link-award-${proj.name}`}
+                        className="block"
+                      >
+                        {Card}
+                      </a>
+                    ) : (
+                      Card
+                    );
+                  })}
                 </div>
               </div>
             )}
 
             {/* PARTNERS */}
-            {activeTabIndex === 1 && (
+            {activeTabIndex === 2 && (
               <div className="space-y-12">
                 <div className="max-w-2xl">
                   <h2 className="text-2xl font-light text-white mb-3">{t.projects.partnersTitle}</h2>
@@ -172,7 +248,7 @@ export default function Projects() {
             )}
 
             {/* AFFILIATIONS */}
-            {activeTabIndex === 2 && (
+            {activeTabIndex === 3 && (
               <div className="space-y-12">
                 <div className="max-w-2xl">
                   <h2 className="text-2xl font-light text-white mb-3">{t.projects.affiliationsTitle}</h2>

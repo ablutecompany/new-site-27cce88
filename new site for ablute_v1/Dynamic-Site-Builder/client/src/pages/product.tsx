@@ -40,7 +40,6 @@ const stageStatuses = ["done", "done", "done", "active", "upcoming"] as const;
 
 export default function Product() {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
-  const [videoOpen, setVideoOpen] = useState(false);
   const [pilotOpen, setPilotOpen] = useState(false);
   const [imgLightboxOpen, setImgLightboxOpen] = useState(false);
   const { mode, subNavVisible, setSubNavVisible } = useMode();
@@ -332,31 +331,16 @@ export default function Product() {
                       {t.product.tech8Desc}
                     </p>
                   </div>
-                  <button
-                    data-testid="button-open-video"
-                    onClick={() => setVideoOpen(true)}
-                    className="group relative w-full overflow-hidden rounded-2xl cursor-pointer block"
-                    style={{ aspectRatio: "9/16", maxHeight: "70vh" }}
-                  >
-                    <img
-                      src="/video/ablute_thumb.jpg"
-                      alt="ablute_ — produto em contexto real"
-                      className="w-full h-full object-cover object-bottom transition-transform duration-700 group-hover:scale-105"
+                  <div className="w-full overflow-hidden rounded-2xl bg-black" style={{ aspectRatio: "16/9" }}>
+                    <iframe
+                      data-testid="iframe-product-video"
+                      className="w-full h-full"
+                      src="https://www.youtube.com/embed/6p5B7wyb-Ww"
+                      title={t.product.tech8tag}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
                     />
-                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300 pointer-events-none" />
-                    {/* Play button */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-20 h-20 rounded-full bg-white/15 border border-white/35 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/25 group-hover:scale-110 transition-all duration-300">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" className="ml-1.5">
-                          <polygon points="5,3 19,12 5,21"/>
-                        </svg>
-                      </div>
-                    </div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/70 via-transparent">
-                      <p className="text-[10px] text-white/50 tracking-widest uppercase font-medium mb-1">Vídeo · ablute_</p>
-                      <p className="text-sm text-white/80 font-light">{t.product.tech8tag}</p>
-                    </div>
-                  </button>
+                  </div>
                 </div>
 
               </div>
@@ -714,48 +698,6 @@ export default function Product() {
           </motion.div>
         </AnimatePresence>
       </div>
-
-      {/* VIDEO MODAL */}
-      <AnimatePresence>
-        {videoOpen && (
-          <motion.div
-            className="fixed inset-0 z-[200] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setVideoOpen(false)}
-          >
-            <motion.div
-              className="relative w-full max-w-sm"
-              initial={{ scale: 0.93, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.93, opacity: 0 }}
-              transition={{ duration: 0.22 }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button
-                data-testid="button-close-video-modal"
-                onClick={() => setVideoOpen(false)}
-                className="absolute -top-10 right-0 text-white/60 hover:text-white text-sm tracking-widest uppercase font-light transition-colors"
-              >
-                Fechar ✕
-              </button>
-              <div className="overflow-hidden rounded-2xl bg-black shadow-2xl" style={{ aspectRatio: "1080/1096" }}>
-                <video
-                  src={import.meta.env.VITE_VIDEO_HERO_URL || "/video/ablute_hero.mp4"}
-                  controls
-                  autoPlay
-                  playsInline
-                  className="w-full h-full object-cover object-bottom"
-                />
-              </div>
-              <p className="mt-3 text-[9px] text-white/25 text-center tracking-wider">
-                Música: SoundHelix — CC Attribution 3.0 · T. Schürger
-              </p>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       {/* PILOT VIDEO MODAL */}
       <AnimatePresence>

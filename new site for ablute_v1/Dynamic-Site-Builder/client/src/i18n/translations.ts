@@ -258,7 +258,7 @@ export interface Translations {
     tab1: string; tab2: string; tab3: string; tab4: string;
   };
   projectsPage: {
-    tab1: string; tab2: string; tab3: string; tab4: string;
+    tab1: string; tab2: string; tab3: string; tab4: string; tabAwards: string;
   };
   product: {
     techTitle: string; techDesc: string;
@@ -492,7 +492,7 @@ export const translations: Record<Lang, Translations> = {
     },
     productPage: { tab1: "Tecnologia", tab2: "Ficha de Produto", tab3: "Segurança e Conformidade", tab4: "Fases de Desenvolvimento" },
     companyPage: { tab1: "Missão e Valores", tab2: "Equipa", tab3: "Certificações", tab4: "Infraestruturas" },
-    projectsPage: { tab1: "Projetos de Consórcio", tab2: "Parceiros", tab3: "Afiliações", tab4: "Papel Social" },
+    projectsPage: { tab1: "Projetos de Consórcio", tab2: "Parceiros", tab3: "Afiliações", tab4: "Papel Social", tabAwards: "Prémios" },
     product: {
       techTitle: "Como funciona a ablute_",
       techDesc: "A ablute_ integra sensores para tornar a lavagem eficiente ao nível do consumo de água e da higienização. Encerra sozinha e inicia o ciclo de lavagem autonomamente. Termina o processo de lavagem quando deteta que está limpa. Aspersores dinâmicos permitem um eficaz uso da água, enquanto uma bomba maceradora suga toda a matéria. No fim, uma poderosa turbina deixa a superfície do assento seca. Tudo isto num equipamento de dimensões domésticas, capaz de se integrar em w.c.'s já existentes.",
@@ -742,7 +742,7 @@ export const translations: Record<Lang, Translations> = {
     },
     productPage: { tab1: "Technology", tab2: "Product Sheet", tab3: "Safety & Compliance", tab4: "Development Stages" },
     companyPage: { tab1: "Mission & Values", tab2: "Team", tab3: "Certifications", tab4: "Infrastructure" },
-    projectsPage: { tab1: "Projects", tab2: "Partners", tab3: "Affiliations", tab4: "Social Role" },
+    projectsPage: { tab1: "Projects", tab2: "Partners", tab3: "Affiliations", tab4: "Social Role", tabAwards: "Awards" },
     product: {
       techTitle: "How ablute_ Works",
       techDesc: "ablute_ integrates water management, intelligent sensing, and health analytics into a single, seamlessly engineered platform. Every component is designed to operate autonomously, require zero user intervention, and continuously improve through learned usage data.",
@@ -983,7 +983,7 @@ export const translations: Record<Lang, Translations> = {
     },
     productPage: { tab1: "Technologie", tab2: "Fiche Produit", tab3: "Sécurité & Conformité", tab4: "Étapes de Développement" },
     companyPage: { tab1: "Mission & Valeurs", tab2: "Équipe", tab3: "Certifications", tab4: "Infrastructures" },
-    projectsPage: { tab1: "Projets", tab2: "Partenaires", tab3: "Affiliations", tab4: "Rôle Social" },
+    projectsPage: { tab1: "Projets", tab2: "Partenaires", tab3: "Affiliations", tab4: "Rôle Social", tabAwards: "Prix" },
     product: {
       techTitle: "Comment fonctionne ablute_",
       techDesc: "ablute_ intègre la gestion de l'eau, la détection intelligente et l'analyse de santé en une seule plateforme. Chaque composant est conçu pour fonctionner de manière autonome, sans intervention de l'utilisateur, s'améliorant continuellement grâce aux données d'utilisation.",
@@ -1231,7 +1231,7 @@ export const translations: Record<Lang, Translations> = {
     },
     productPage: { tab1: "Technologie", tab2: "Produktblatt", tab3: "Sicherheit & Compliance", tab4: "Entwicklungsphasen" },
     companyPage: { tab1: "Mission & Werte", tab2: "Team", tab3: "Zertifizierungen", tab4: "Infrastruktur" },
-    projectsPage: { tab1: "Projekte", tab2: "Partner", tab3: "Mitgliedschaften", tab4: "Soziale Rolle" },
+    projectsPage: { tab1: "Projekte", tab2: "Partner", tab3: "Mitgliedschaften", tab4: "Soziale Rolle", tabAwards: "Auszeichnungen" },
     product: {
       techTitle: "So funktioniert ablute_",
       techDesc: "ablute_ vereint Wassermanagement, intelligente Sensorik und Gesundheitsanalytik in einer einzigen Plattform. Jede Komponente ist darauf ausgelegt, autonom zu arbeiten, keine Benutzereingriffe zu erfordern und sich durch Nutzungsdaten kontinuierlich zu verbessern.",
@@ -1479,7 +1479,7 @@ export const translations: Record<Lang, Translations> = {
     },
     productPage: { tab1: "Tecnologia", tab2: "Scheda Prodotto", tab3: "Sicurezza & Conformità", tab4: "Fasi di Sviluppo" },
     companyPage: { tab1: "Missione & Valori", tab2: "Team", tab3: "Certificazioni", tab4: "Infrastrutture" },
-    projectsPage: { tab1: "Progetti", tab2: "Partner", tab3: "Affiliazioni", tab4: "Ruolo Sociale" },
+    projectsPage: { tab1: "Progetti", tab2: "Partner", tab3: "Affiliazioni", tab4: "Ruolo Sociale", tabAwards: "Premi" },
     product: {
       techTitle: "Come funziona ablute_",
       techDesc: "ablute_ integra la gestione dell'acqua, i sensori intelligenti e l'analisi della salute in un'unica piattaforma. Ogni componente è progettato per operare autonomamente, senza intervento dell'utente, migliorando continuamente grazie ai dati d'utilizzo.",
@@ -1727,7 +1727,7 @@ export const translations: Record<Lang, Translations> = {
     },
     productPage: { tab1: "التقنية", tab2: "صحيفة المنتج", tab3: "السلامة والامتثال", tab4: "مراحل التطوير" },
     companyPage: { tab1: "المهمة والقيم", tab2: "الفريق", tab3: "الشهادات", tab4: "البنية التحتية" },
-    projectsPage: { tab1: "المشاريع", tab2: "الشركاء", tab3: "الانتماءات", tab4: "الدور الاجتماعي" },
+    projectsPage: { tab1: "المشاريع", tab2: "الشركاء", tab3: "الانتماءات", tab4: "الدور الاجتماعي", tabAwards: "الجوائز" },
     product: {
       techTitle: "كيف تعمل ablute_",
       techDesc: "تدمج ablute_ إدارة المياه والاستشعار الذكي وتحليل الصحة في منصة واحدة متكاملة. تم تصميم كل مكون للعمل باستقلالية تامة دون تدخل المستخدم، مع التحسين المستمر بناءً على بيانات الاستخدام.",

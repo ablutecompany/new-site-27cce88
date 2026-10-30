@@ -49,54 +49,16 @@ const LANGUAGES: { code: Lang; label: string }[] = [
   { code: "ar", label: "AR" },
 ];
 
-const DELIGHT_MESSAGES: Record<string, string[]> = {
-  pt: ["Obrigado, gosto muito de ti.", "Ahaha, isso faz cócegas.", "Estamos juntos — eu acredito em ti.", "Obrigado por estares desse lado.", "Pequenos cliques, grandes futuros.", "Boa escolha.", "Seguimos juntos.", "Há beleza em quem repara nos detalhes.", "Obrigado por tocares no coração da ablute_.", "Tu és dos bons."],
-  en: ["Thank you — I really like you too.", "Haha, that tickles.", "We're in this together — I believe in you.", "Thanks for being here.", "Small clicks, big futures.", "Good choice.", "We move forward together.", "There's beauty in people who notice details.", "Thanks for touching the heart of ablute_.", "You're one of the good ones."],
-  fr: ["Merci — j'aime beaucoup ça aussi.", "Ha ha, ça chatouille.", "On est ensemble — je crois en toi.", "Merci d'être là.", "Petits clics, grands avenirs.", "Bon choix.", "On avance ensemble.", "Il y a de la beauté en ceux qui remarquent les détails.", "Merci de toucher le cœur d'ablute_.", "Tu es l'un des bons."],
-  de: ["Danke — ich mag dich auch sehr.", "Haha, das kitzelt.", "Wir sind gemeinsam — ich glaube an dich.", "Danke, dass du da bist.", "Kleine Klicks, große Zukünfte.", "Gute Wahl.", "Wir gehen gemeinsam vorwärts.", "Es gibt Schönheit in Menschen, die Details bemerken.", "Danke, dass du das Herz von ablute_ berührst.", "Du gehörst zu den Guten."],
-  it: ["Grazie — anch'io ti voglio molto bene.", "Haha, fa il solletico.", "Siamo insieme — credo in te.", "Grazie per essere qui.", "Piccoli clic, grandi futuri.", "Buona scelta.", "Andiamo avanti insieme.", "C'è bellezza in chi nota i dettagli.", "Grazie per toccare il cuore di ablute_.", "Sei tra i buoni."],
-  ar: ["شكراً لك — أنا أحبك كثيراً أيضاً.", "هاها، هذا يُدغدغ.", "نحن معاً — أنا أؤمن بك.", "شكراً لوجودك هنا.", "نقرات صغيرة، مستقبلات كبيرة.", "اختيار جيد.", "نتقدم معاً.", "هناك جمال في من يلاحظ التفاصيل.", "شكراً لمسّ قلب ablute_.", "أنت من الطيبين."],
+// Shown when the logo is clicked again while the chime is still playing or
+// within its 20s cooldown — a discreet nudge to come back and try again.
+const LOGO_TEASE_MESSAGES: Record<string, string[]> = {
+  pt: ["Faz cócegas, repete!", "Vá lá, mais uma vez.", "Ainda a tocar — espera só um bocadinho.", "Paciência, o coro ainda está a soar.", "Calma, deixa a música acabar.", "Repete daqui a uns segundos.", "Ainda a ecoar... aguenta aí."],
+  en: ["That tickles, do it again!", "Come on, one more time.", "Still playing — give it a moment.", "Patience, the choir's still singing.", "Let the music finish first.", "Try again in a few seconds.", "Still echoing... hang tight."],
+  fr: ["Ça chatouille, recommence !", "Allez, encore une fois.", "Ça joue encore — attends un peu.", "Patience, le chœur chante encore.", "Laisse la musique finir d'abord.", "Réessaie dans quelques secondes."],
+  de: ["Das kitzelt, mach's nochmal!", "Komm schon, noch einmal.", "Spielt noch — warte kurz.", "Geduld, der Chor singt noch.", "Lass die Musik erst zu Ende spielen.", "Versuch's in ein paar Sekunden nochmal."],
+  it: ["Fa il solletico, ripeti!", "Dai, ancora una volta.", "Sta ancora suonando — aspetta un attimo.", "Pazienza, il coro sta ancora cantando.", "Lascia finire la musica.", "Riprova tra qualche secondo."],
+  ar: ["هذا يُدغدغ، كرّرها!", "هيا، مرة أخرى.", "لا يزال يعمل — انتظر لحظة.", "بالصبر، الجوقة لا تزال تغني.", "دع الموسيقى تنتهي أولاً.", "حاول مرة أخرى بعد ثوانٍ قليلة."],
 };
-
-const SPARK_ANGLES = Array.from({ length: 12 }, (_, i) => ({
-  angle: (i / 12) * 360,
-  distance: 38 + (i % 3) * 14,
-  size: 2.5 + (i % 4) * 0.8,
-  color: i % 3 === 0 ? "#22d3ee" : i % 3 === 1 ? "#ffffff" : "#93c5fd",
-  dur: 0.75 + (i % 4) * 0.12,
-  delay: (i % 5) * 0.04,
-}));
-
-function SparkParticles() {
-  return (
-    <div className="absolute inset-0 pointer-events-none overflow-visible">
-      {SPARK_ANGLES.map((p, i) => {
-        const rad = (p.angle * Math.PI) / 180;
-        const tx = Math.cos(rad) * p.distance;
-        const ty = Math.sin(rad) * p.distance;
-        return (
-          <motion.div
-            key={i}
-            initial={{ opacity: 1, x: 0, y: 0, scale: 1 }}
-            animate={{ opacity: 0, x: tx, y: ty, scale: 0.2 }}
-            transition={{ duration: p.dur, delay: p.delay, ease: "easeOut" }}
-            style={{
-              position: "absolute",
-              left: "50%",
-              top: "50%",
-              width: p.size,
-              height: p.size,
-              borderRadius: "50%",
-              backgroundColor: p.color,
-              marginLeft: -p.size / 2,
-              marginTop: -p.size / 2,
-            }}
-          />
-        );
-      })}
-    </div>
-  );
-}
 
 export function Layout({ children }: { children: ReactNode }) {
   const { mode, setMode, healthTab, setHealthTab, subNavVisible, setSubNavVisible, healthSubTab, setHealthSubTab } = useMode();
@@ -104,11 +66,12 @@ export function Layout({ children }: { children: ReactNode }) {
   const [location, navigate] = useLocation();
   const [isCreateOpen, setIsCreateOpen] = useState(false);
   const [engineeringOpen, setEngineeringOpen] = useState(false);
-  const [delightOpen, setDelightOpen] = useState(false);
-  const [delightMessage, setDelightMessage] = useState("");
   const logoClickTimesRef = useRef<number[]>([]);
-  const singleClickTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const delightTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const logoAudioRef = useRef<HTMLAudioElement>(null);
+  const logoSoundCooldownRef = useRef(0); // epoch ms — chime can't restart before this
+  const [logoTeaseOpen, setLogoTeaseOpen] = useState(false);
+  const [logoTeaseMessage, setLogoTeaseMessage] = useState("");
+  const logoTeaseTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [isPilotOpen, setIsPilotOpen] = useState(false);
   const [pilotSubmitted, setPilotSubmitted] = useState(false);
   const [pilotLoading, setPilotLoading] = useState(false);
@@ -167,8 +130,7 @@ export function Layout({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     return () => {
-      if (delightTimerRef.current) clearTimeout(delightTimerRef.current);
-      if (singleClickTimerRef.current) clearTimeout(singleClickTimerRef.current);
+      if (logoTeaseTimerRef.current) clearTimeout(logoTeaseTimerRef.current);
     };
   }, []);
 
@@ -188,8 +150,27 @@ export function Layout({ children }: { children: ReactNode }) {
             <div className="flex items-center gap-10 flex-1">
               <Link
                 href="/"
-                className="flex items-center gap-1"
+                className="relative flex items-center gap-1"
                 onClick={() => {
+                  // Angelical choir chime — plays to completion, uninterrupted;
+                  // a repeat click while it's playing or within its 20s cooldown
+                  // shows a discreet tease instead of restarting it.
+                  const audio = logoAudioRef.current;
+                  if (audio) {
+                    const now = Date.now();
+                    if (!audio.paused || now < logoSoundCooldownRef.current) {
+                      const msgs = LOGO_TEASE_MESSAGES[lang] ?? LOGO_TEASE_MESSAGES["en"];
+                      setLogoTeaseMessage(msgs[Math.floor(Math.random() * msgs.length)]);
+                      setLogoTeaseOpen(true);
+                      if (logoTeaseTimerRef.current) clearTimeout(logoTeaseTimerRef.current);
+                      logoTeaseTimerRef.current = setTimeout(() => setLogoTeaseOpen(false), 1800);
+                    } else {
+                      setLogoTeaseOpen(false);
+                      audio.currentTime = 0;
+                      audio.play().catch(() => {});
+                    }
+                  }
+
                   if (mode === "bathroom" && location === "/") {
                     const now = Date.now();
                     logoClickTimesRef.current = logoClickTimesRef.current.filter(ts => now - ts < 1200);
@@ -197,25 +178,7 @@ export function Layout({ children }: { children: ReactNode }) {
                     const count = logoClickTimesRef.current.length;
                     if (count >= 5) {
                       logoClickTimesRef.current = [];
-                      if (singleClickTimerRef.current) clearTimeout(singleClickTimerRef.current);
                       setEngineeringOpen(o => !o);
-                    } else if (count === 1) {
-                      if (singleClickTimerRef.current) clearTimeout(singleClickTimerRef.current);
-                      singleClickTimerRef.current = setTimeout(() => {
-                        if (logoClickTimesRef.current.length === 1 && !delightOpen) {
-                          logoClickTimesRef.current = [];
-                          const msgs = DELIGHT_MESSAGES[lang] ?? DELIGHT_MESSAGES["en"];
-                          setDelightMessage(msgs[Math.floor(Math.random() * msgs.length)]);
-                          setDelightOpen(true);
-                          if (delightTimerRef.current) clearTimeout(delightTimerRef.current);
-                          delightTimerRef.current = setTimeout(() => {
-                            setDelightOpen(false);
-                            setTimeout(() => window.location.reload(), 350);
-                          }, 2200);
-                        }
-                      }, 320);
-                    } else {
-                      if (singleClickTimerRef.current) clearTimeout(singleClickTimerRef.current);
                     }
                   }
                   if (mode === "health") {
@@ -223,9 +186,39 @@ export function Layout({ children }: { children: ReactNode }) {
                   }
                 }}
               >
+                <audio
+                  ref={logoAudioRef}
+                  src="/sounds/ablute-logo-chime.mp3"
+                  preload="auto"
+                  onEnded={() => {
+                    logoSoundCooldownRef.current = Date.now() + 20000;
+                  }}
+                  className="hidden"
+                />
                 <span dir="ltr" style={{ fontFamily: 'Comfortaa, sans-serif' }} className={`text-2xl font-bold transition-colors duration-500 ${mode === "bathroom" ? "text-white" : "text-slate-900"}`}>
                   ablute<span className="text-cyan-400">_</span>
                 </span>
+
+                {/* Discreet tease popup — shown when the chime is replayed too soon */}
+                <AnimatePresence>
+                  {logoTeaseOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 6, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: -4, scale: 0.96 }}
+                      transition={{ duration: 0.18, ease: "easeOut" }}
+                      className="absolute top-full left-0 mt-2 z-[155] pointer-events-none"
+                      style={{ fontFamily: "Inter, sans-serif" }}
+                    >
+                      <div
+                        className="bg-[#0c0e10]/96 backdrop-blur-sm border border-white/10 rounded-xl px-3.5 py-2 shadow-2xl whitespace-nowrap"
+                        style={{ boxShadow: "0 0 20px rgba(0,180,255,0.06), 0 6px 20px rgba(0,0,0,0.55)" }}
+                      >
+                        <p className="text-xs font-light text-white/80">{logoTeaseMessage}</p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </Link>
 
               <nav className="hidden lg:flex items-center gap-8">
@@ -597,31 +590,6 @@ export function Layout({ children }: { children: ReactNode }) {
               </div>
             </motion.div>
           </>
-        )}
-      </AnimatePresence>
-
-      {/* Delight popup — single logo click on home in Bathroom Mode */}
-      <AnimatePresence>
-        {delightOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 10, scale: 0.93 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -8, scale: 0.96 }}
-            transition={{ duration: 0.22, ease: "easeOut" }}
-            className="fixed top-[72px] left-4 md:left-8 z-[155] pointer-events-none"
-            style={{ fontFamily: "Inter, sans-serif" }}
-          >
-            <div className="relative">
-              <SparkParticles />
-              <div
-                className="bg-[#0c0e10]/96 backdrop-blur-sm border border-white/10 rounded-2xl px-5 py-4 shadow-2xl max-w-[260px]"
-                style={{ boxShadow: "0 0 28px rgba(0,180,255,0.07), 0 8px 32px rgba(0,0,0,0.65)" }}
-              >
-                <p className="text-[10px] tracking-[0.18em] uppercase text-cyan-400/50 font-medium mb-2">ablute_</p>
-                <p className="text-sm font-light text-white/80 leading-relaxed">{delightMessage}</p>
-              </div>
-            </div>
-          </motion.div>
         )}
       </AnimatePresence>
 
